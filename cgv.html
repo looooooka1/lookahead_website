@@ -1,0 +1,962 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conditions générales de vente | Lookahead</title>
+  <meta name="description" content="Conditions générales de vente du site lookahead.fr." />
+  <meta name="robots" content="index, follow" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+CiAgPHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTQiIGZpbGw9IiMwQTBBMEEiLz4KICA8dGV4dCB4PSI1MCUiIHk9IjU0JSIgZG9taW5hbnQtYmFzZWxpbmU9Im1pZGRsZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsIHNlcmlmIiBmb250LXN0eWxlPSJpdGFsaWMiIGZvbnQtc2l6ZT0iMzQiIGZpbGw9IiM0QjQ5RUMiPkw8L3RleHQ+Cjwvc3ZnPgo=" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
+  <style>
+/* =========================================================================
+   LOOKAHEAD — Feuille de style globale
+   Palette claire, minimaliste, accent #4B49EC, esprit "journal / brouillon".
+   ========================================================================= */
+
+:root {
+  --bg: #ffffff;
+  --soft: #fafafb;
+  --ink: #0a0a0a;
+  --body: #44464f;
+  --body2: #5a5c66;
+  --muted: #8a8c96;
+  --muted2: #a0a2ac;
+  --line: #ececf1;
+  --line2: #f2f2f5;
+  --accent: #4b49ec;
+  --accent-2: #6361f0;
+  --accent-soft: rgba(75, 73, 236, 0.06);
+  --accent-soft2: rgba(75, 73, 236, 0.12);
+  --lilac: #a9a8f5;
+  --dark: #0a0a0a;
+  --green: #16a34a;
+  --radius: 24px;
+  --radius-lg: 32px;
+  --shadow-card: 0 24px 60px -20px rgba(75, 73, 236, 0.22);
+  --sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --serif: "Instrument Serif", Georgia, serif;
+  --maxw: 1152px;
+}
+
+/* ---------- Reset ---------- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  font-family: var(--sans);
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+button { font-family: inherit; cursor: pointer; border: none; background: none; }
+::selection { background: rgba(75, 73, 236, 0.18); }
+
+/* ---------- Layout ---------- */
+.container { width: 100%; max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+.section { padding: 96px 0; }
+.bg-soft { background: var(--soft); }
+.bg-dark { background: var(--dark); }
+.maxw-2 { max-width: 640px; }
+.maxw-3 { max-width: 760px; }
+.center { text-align: center; }
+
+/* ---------- Typographie ---------- */
+h1, h2, h3, h4 { letter-spacing: -0.02em; font-weight: 800; line-height: 1.08; color: var(--ink); }
+.h1 { font-size: clamp(2.5rem, 5.2vw, 4rem); line-height: 1.05; }
+.h2 { font-size: clamp(2rem, 4vw, 3rem); line-height: 1.1; }
+.h3 { font-size: 1.25rem; font-weight: 700; }
+.lead { font-size: clamp(1.05rem, 1.6vw, 1.25rem); color: var(--body2); line-height: 1.7; }
+p { color: var(--body); }
+
+/* Mot mis en avant : MÊME taille (un poil plus grande) que le titre, pas plus petit */
+.accent {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 400;
+  color: var(--accent);
+  font-size: 1.06em;       /* agrandi pour compenser la x-height du serif */
+  line-height: 0.9;
+  letter-spacing: 0;
+  display: inline-block;
+  vertical-align: baseline;
+}
+.accent--light { color: var(--lilac); }
+
+.eyebrow {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.eyebrow--light { color: var(--lilac); }
+
+/* ---------- Éléments "stylo / journal" ---------- */
+/* Soulignement tracé à la main */
+.pen-underline { position: relative; display: inline-block; }
+.pen-underline svg { position: absolute; left: -2%; bottom: -0.32em; width: 104%; height: 0.5em; pointer-events: none; overflow: visible; }
+.pen-underline path { stroke: var(--accent); stroke-width: 3; fill: none; stroke-linecap: round; }
+
+/* Cercle dessiné au stylo autour d'un mot */
+.pen-circle { position: relative; display: inline-block; padding: 0 0.12em; }
+.pen-circle svg { position: absolute; left: -10%; top: -28%; width: 120%; height: 156%; pointer-events: none; overflow: visible; }
+.pen-circle path { stroke: var(--accent); stroke-width: 2.5; fill: none; stroke-linecap: round; }
+
+/* Surligneur */
+.mark { background: linear-gradient(180deg, transparent 56%, rgba(75, 73, 236, 0.20) 56%); padding: 0 0.12em; }
+
+/* Rature (mot barré au stylo) */
+.rature { position: relative; display: inline-block; color: var(--muted); }
+.rature svg { position: absolute; left: -4%; top: 42%; width: 108%; height: 0.6em; pointer-events: none; overflow: visible; }
+.rature path { stroke: var(--accent); stroke-width: 2.5; fill: none; stroke-linecap: round; }
+
+/* ---------- Boutons ---------- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  border-radius: 999px; font-weight: 600; font-size: 0.95rem;
+  padding: 14px 26px; transition: background .2s ease, transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+  will-change: transform;
+}
+.btn svg { width: 18px; height: 18px; }
+.btn--dark { background: var(--ink); color: #fff; }
+.btn--dark:hover { background: #222; transform: translateY(-1px); }
+.btn--primary { background: var(--accent); color: #fff; }
+.btn--primary:hover { background: var(--accent-2); transform: translateY(-1px); box-shadow: 0 16px 40px -12px rgba(75,73,236,.45); }
+.btn--outline { background: #fff; color: var(--ink); border: 1px solid var(--line); }
+.btn--outline:hover { border-color: rgba(75,73,236,.4); transform: translateY(-1px); }
+.btn--ghost { background: rgba(255,255,255,.1); color: #fff; border: 1px solid rgba(255,255,255,.15); }
+.btn--ghost:hover { background: rgba(255,255,255,.16); }
+
+/* ---------- Navigation ---------- */
+.nav {
+  position: fixed; top: 12px; left: 50%; transform: translateX(-50%);
+  width: calc(100% - 24px); max-width: var(--maxw); z-index: 50;
+}
+.nav__inner {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 12px 20px; border-radius: 20px;
+  background: rgba(255,255,255,.6); border: 1px solid var(--line);
+  backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+  transition: background .3s ease, box-shadow .3s ease, border-color .3s ease;
+}
+.nav.is-scrolled .nav__inner { background: rgba(255,255,255,.88); box-shadow: 0 8px 30px -12px rgba(10,10,10,.12); }
+.nav__logo { font-size: 1.25rem; font-weight: 800; letter-spacing: -.02em; }
+.nav__logo span { color: var(--accent); }
+.nav__links { display: flex; align-items: center; gap: 28px; list-style: none; }
+.nav__links a { font-size: .9rem; font-weight: 500; color: var(--body); transition: color .2s; }
+.nav__links a:hover { color: var(--accent); }
+.nav__actions { display: flex; align-items: center; gap: 8px; }
+.nav__burger { width: 40px; height: 40px; border: 1px solid var(--line); border-radius: 12px; display: none; align-items: center; justify-content: center; }
+.nav__burger svg { width: 20px; height: 20px; }
+.nav__mobile { display: none; margin-top: 8px; background: #fff; border: 1px solid var(--line); border-radius: 20px; padding: 14px; box-shadow: 0 20px 40px -16px rgba(10,10,10,.15); }
+.nav__mobile.is-open { display: block; }
+.nav__mobile a { display: block; padding: 11px 12px; border-radius: 12px; font-size: .95rem; font-weight: 500; color: var(--body); }
+.nav__mobile a:hover { background: var(--soft); }
+.nav__mobile .btn { width: 100%; margin-top: 6px; }
+
+/* ---------- Hero ---------- */
+.hero { position: relative; padding: 150px 0 96px; overflow: hidden; }
+.hero__glow { position: absolute; inset: 0; z-index: -2; background: radial-gradient(60% 50% at 50% 0%, rgba(75,73,236,.10) 0%, transparent 70%); }
+.hero__dots { position: absolute; inset: 0; z-index: -1; opacity: .5;
+  background-image: radial-gradient(circle at 1px 1px, rgba(10,10,10,.05) 1px, transparent 0); background-size: 26px 26px;
+  -webkit-mask-image: radial-gradient(70% 60% at 50% 0%, #000, transparent); mask-image: radial-gradient(70% 60% at 50% 0%, #000, transparent); }
+.hero .badge {
+  display: inline-flex; align-items: center; gap: 8px; background: #fff; border: 1px solid var(--line);
+  border-radius: 999px; padding: 7px 16px; font-size: .9rem; font-weight: 500; color: var(--body);
+  box-shadow: 0 2px 8px rgba(10,10,10,.04);
+}
+.hero .badge .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+.hero h1 { margin-top: 28px; }
+.hero__sub { margin: 24px auto 0; max-width: 640px; }
+.hero__actions { margin-top: 36px; display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+.hero__trust { margin-top: 48px; display: flex; flex-wrap: wrap; gap: 12px 32px; justify-content: center; font-size: .9rem; color: var(--muted); }
+.hero__trust span { display: inline-flex; align-items: center; gap: 8px; }
+.hero__trust svg { width: 16px; height: 16px; color: var(--accent); }
+
+/* ---------- Cartes génériques ---------- */
+.card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 28px; height: 100%; }
+.card--hover { transition: border-color .3s ease, box-shadow .3s ease, transform .3s ease; }
+.card--hover:hover { border-color: rgba(75,73,236,.3); box-shadow: 0 20px 50px -24px rgba(75,73,236,.3); transform: translateY(-2px); }
+.icon-box { width: 48px; height: 48px; border-radius: 16px; background: var(--accent-soft); display: flex; align-items: center; justify-content: center; margin-bottom: 20px; }
+.icon-box svg { width: 22px; height: 22px; color: var(--accent); }
+
+.grid { display: grid; gap: 24px; }
+.grid-2 { grid-template-columns: repeat(2, 1fr); }
+.grid-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-services { grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.split { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+
+/* ---------- Avant / Après ---------- */
+.ba-card { padding: 28px; border-radius: var(--radius); height: 100%; }
+.ba-card--before { background: #fff; border: 1px solid var(--line); }
+.ba-card--after { background: var(--dark); }
+.ba-head { display: flex; align-items: center; gap: 8px; font-weight: 600; margin-bottom: 20px; }
+.ba-card--before .ba-head { color: #b4453c; }
+.ba-card--after .ba-head { color: var(--lilac); }
+.ba-head svg { width: 20px; height: 20px; }
+.ba-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+.ba-list li { display: flex; align-items: center; gap: 12px; font-size: .95rem; }
+.ba-card--before li { color: var(--body); }
+.ba-card--after li { color: rgba(255,255,255,.85); }
+.ba-bullet { width: 20px; height: 20px; border-radius: 50%; flex-shrink: 0; }
+.ba-card--before .ba-bullet { border: 2px solid #e4b5b0; }
+.ba-check { width: 20px; height: 20px; border-radius: 50%; background: var(--accent); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.ba-check svg { width: 11px; height: 11px; }
+.ba-card--after li .txt { text-decoration: line-through; text-decoration-color: rgba(75,73,236,.6); text-decoration-thickness: 2px; }
+.ba-foot { margin-top: 24px; font-size: .875rem; }
+.ba-card--before .ba-foot { color: var(--muted); }
+.ba-card--after .ba-foot { color: rgba(255,255,255,.55); }
+
+/* ---------- Timeline diagnostic ---------- */
+.timeline { position: relative; max-width: 760px; margin: 0 auto; }
+.timeline__track { position: absolute; left: 24px; top: 8px; bottom: 8px; width: 2px; background: var(--line); }
+.timeline__fill { position: absolute; left: 24px; top: 8px; width: 2px; background: var(--accent); transform-origin: top; transform: scaleY(0); transition: transform .1s linear; height: calc(100% - 16px); }
+.step { position: relative; padding-left: 64px; padding-bottom: 44px; }
+.step:last-child { padding-bottom: 0; }
+.step__node { position: absolute; left: 0; top: 0; width: 50px; height: 50px; border-radius: 16px; background: #fff; border: 1px solid var(--line); box-shadow: 0 2px 8px rgba(10,10,10,.05); display: flex; align-items: center; justify-content: center; z-index: 2; }
+.step__node svg { width: 20px; height: 20px; color: var(--accent); }
+.step__tag { font-size: .75rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); }
+.step__title { font-size: clamp(1.25rem, 2.2vw, 1.5rem); font-weight: 800; margin-top: 8px; }
+.step__body { margin-top: 8px; max-width: 560px; color: var(--body2); font-size: .95rem; }
+.chip { display: inline-flex; align-items: center; gap: 8px; margin-top: 16px; border-radius: 999px; background: var(--accent-soft); border: 1px solid rgba(75,73,236,.15); padding: 7px 14px; font-size: .9rem; font-weight: 600; color: var(--accent); }
+
+/* ---------- Section service (voicebot / chatbot / automatisation) ---------- */
+.feature-list { margin-top: 32px; display: flex; flex-direction: column; gap: 20px; }
+.feature-item { display: flex; gap: 16px; }
+.feature-item .fi-ic { width: 40px; height: 40px; border-radius: 12px; background: var(--accent-soft); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.feature-item .fi-ic svg { width: 18px; height: 18px; color: var(--accent); }
+.feature-item h4 { font-size: 1rem; font-weight: 700; }
+.feature-item p { font-size: .95rem; color: var(--body2); margin-top: 2px; }
+.bullets { margin-top: 32px; list-style: none; display: flex; flex-direction: column; gap: 12px; }
+.bullets li { display: flex; gap: 12px; align-items: flex-start; font-size: 1rem; color: var(--body); }
+.bullets .b-check { width: 20px; height: 20px; border-radius: 50%; background: var(--accent-soft2); display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
+.bullets .b-check svg { width: 11px; height: 11px; color: var(--accent); }
+
+/* ---------- Démo VOICE ---------- */
+.voice { width: 100%; max-width: 560px; margin: 0 auto; }
+.voice__tabs { display: flex; gap: 8px; justify-content: center; margin-bottom: 24px; }
+.voice__tab { padding: 9px 16px; border-radius: 999px; font-size: .9rem; font-weight: 600; background: #fff; color: var(--body); border: 1px solid var(--line); transition: .2s; }
+.voice__tab.is-active { background: var(--accent); color: #fff; border-color: var(--accent); }
+.voice__card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius-lg); box-shadow: 0 24px 60px -20px rgba(75,73,236,.25); overflow: hidden; }
+.voice__header { display: flex; align-items: center; justify-content: space-between; padding: 16px 24px; border-bottom: 1px solid var(--line2); background: var(--soft); }
+.voice__id { display: flex; align-items: center; gap: 12px; }
+.voice__avatar { width: 40px; height: 40px; border-radius: 50%; background: rgba(75,73,236,.1); display: flex; align-items: center; justify-content: center; }
+.voice__avatar svg { width: 20px; height: 20px; color: var(--accent); }
+.voice__name { font-size: .9rem; font-weight: 600; }
+.voice__meta { font-size: .8rem; color: var(--muted); }
+.voice__status { display: inline-flex; align-items: center; gap: 6px; font-size: .8rem; font-weight: 500; color: var(--green); }
+.voice__status .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green); animation: blink 1.6s infinite; }
+/* Hauteur FIXE -> aucun décalage du reste de la page */
+.voice__convo { height: 320px; overflow: hidden; padding: 24px; display: flex; flex-direction: column; gap: 16px; justify-content: flex-end; }
+.turn { display: flex; }
+.turn.ia { justify-content: flex-start; }
+.turn.client { justify-content: flex-end; }
+.turn__wrap { max-width: 85%; }
+.turn__who { font-size: .68rem; font-weight: 600; text-transform: uppercase; letter-spacing: .06em; margin-bottom: 6px; }
+.turn.ia .turn__who { color: var(--accent); }
+.turn.client .turn__who { color: var(--muted); }
+.bubble { border-radius: 18px; padding: 12px 16px; font-size: .95rem; line-height: 1.5; }
+.turn.ia .bubble { background: var(--accent-soft); color: var(--ink); border-top-left-radius: 6px; }
+.turn.client .bubble { background: #f4f4f6; color: var(--ink); border-top-right-radius: 6px; }
+.bubble .word { color: transparent; transition: color .15s ease; }
+.bubble .word.spoken { color: var(--ink); }
+.turn.ia .bubble .word.speaking { color: var(--accent); font-weight: 600; }
+.turn.client .bubble .word.speaking { color: var(--ink); font-weight: 600; }
+.voice__foot { display: flex; align-items: center; gap: 12px; padding: 16px 24px; border-top: 1px solid var(--line2); background: var(--soft); }
+.voice__foot > svg { width: 16px; height: 16px; color: var(--accent); flex-shrink: 0; }
+.wave { display: flex; align-items: flex-end; gap: 3px; height: 20px; flex: 1; }
+.wave span { flex: 1; border-radius: 999px; background: rgba(75,73,236,.4); height: 20%; transition: height .18s ease; }
+.voice__speaking { font-size: .8rem; color: var(--muted); white-space: nowrap; }
+
+/* ---------- Démo CHAT ---------- */
+.chat { width: 100%; max-width: 420px; margin: 0 auto; background: #fff; border: 1px solid var(--line); border-radius: var(--radius-lg); box-shadow: 0 24px 60px -20px rgba(75,73,236,.22); overflow: hidden; }
+.chat__header { display: flex; align-items: center; gap: 12px; padding: 16px 20px; border-bottom: 1px solid var(--line2); background: var(--soft); }
+.chat__avatar { width: 36px; height: 36px; border-radius: 50%; background: var(--accent); color: #fff; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+.chat__name { font-size: .9rem; font-weight: 600; }
+.chat__meta { font-size: .8rem; color: var(--green); }
+/* Hauteur FIXE -> nouveaux messages apparaissent, anciens disparaissent vers le haut, page stable */
+.chat__body { height: 360px; overflow: hidden; padding: 20px; display: flex; flex-direction: column; gap: 12px; justify-content: flex-end; }
+.cmsg { display: flex; opacity: 0; transform: translateY(8px); transition: opacity .3s ease, transform .3s ease; }
+.cmsg.show { opacity: 1; transform: none; }
+.cmsg.bot { justify-content: flex-start; }
+.cmsg.user { justify-content: flex-end; }
+.cmsg .b { max-width: 80%; border-radius: 18px; padding: 10px 15px; font-size: .92rem; line-height: 1.45; }
+.cmsg.bot .b { background: var(--accent-soft); color: var(--ink); border-top-left-radius: 6px; }
+.cmsg.user .b { background: var(--ink); color: #fff; border-top-right-radius: 6px; }
+.typing { display: flex; gap: 4px; padding: 12px 16px; background: var(--accent-soft); border-radius: 18px; border-top-left-radius: 6px; width: fit-content; }
+.typing span { width: 6px; height: 6px; border-radius: 50%; background: rgba(75,73,236,.6); animation: bounce 1s infinite; }
+.typing span:nth-child(2) { animation-delay: .15s; }
+.typing span:nth-child(3) { animation-delay: .3s; }
+
+/* ---------- Démo AUTOMATION ---------- */
+.auto { width: 100%; max-width: 420px; margin: 0 auto; }
+.auto__rows { position: relative; padding-left: 2px; display: flex; flex-direction: column; gap: 12px; }
+.auto__line { position: absolute; left: 27px; top: 26px; bottom: 26px; width: 2px; background: var(--line); }
+.auto__row { position: relative; display: flex; align-items: center; gap: 16px; }
+.auto__node { position: relative; z-index: 2; width: 52px; height: 52px; border-radius: 16px; display: flex; align-items: center; justify-content: center; border: 1px solid var(--line); background: #fff; transition: .3s; }
+.auto__node svg { width: 20px; height: 20px; color: #c9cad2; transition: color .3s; }
+.auto__card { flex: 1; border-radius: 16px; border: 1px solid var(--line); background: var(--soft); padding: 12px 16px; transition: .3s; }
+.auto__card .t { font-size: .9rem; font-weight: 600; color: #a0a2ac; transition: color .3s; }
+.auto__card .s { font-size: .78rem; color: #c0c2cb; transition: color .3s; }
+.auto__row.on .auto__node { background: var(--accent); border-color: var(--accent); box-shadow: 0 8px 24px -6px rgba(75,73,236,.5); }
+.auto__row.on .auto__node svg { color: #fff; }
+.auto__row.on .auto__card { background: #fff; border-color: rgba(75,73,236,.3); box-shadow: 0 2px 8px rgba(10,10,10,.04); }
+.auto__row.on .auto__card .t { color: var(--ink); }
+.auto__row.on .auto__card .s { color: var(--body2); }
+.auto__note { margin-top: 20px; text-align: center; font-size: .9rem; color: var(--muted); }
+.auto__note b { color: var(--accent); }
+
+/* ---------- Pourquoi nous (dark) ---------- */
+.why-card { background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.1); border-radius: var(--radius); padding: 28px; height: 100%; }
+.why-card .num { font-family: var(--serif); font-style: italic; font-size: 1.6rem; color: var(--accent); margin-bottom: 16px; }
+.why-card h3 { color: #fff; font-size: 1.25rem; margin-bottom: 12px; }
+.why-card p { color: rgba(255,255,255,.65); font-size: .95rem; }
+.eyebrow--light { color: var(--lilac); }
+
+/* ---------- Résultats ---------- */
+.stat-card { background: var(--soft); border: 1px solid var(--line); border-radius: var(--radius); padding: 28px; height: 100%; }
+.stat-card .big { font-size: 2.25rem; font-weight: 800; color: var(--accent); letter-spacing: -.02em; }
+.stat-card .lab { margin-top: 8px; font-size: .95rem; font-weight: 600; }
+.stat-card .pf { margin-top: 8px; font-size: .875rem; color: var(--muted); }
+.cases { border: 1px solid var(--line); border-radius: var(--radius); display: grid; grid-template-columns: repeat(3, 1fr); overflow: hidden; }
+.cases > div { padding: 28px; }
+.cases > div + div { border-left: 1px solid var(--line); }
+.cases .n { font-size: 1.5rem; font-weight: 800; }
+.cases .l { font-size: .875rem; font-weight: 500; color: var(--accent); margin-top: 4px; }
+.cases .s { font-size: .875rem; color: var(--body2); margin-top: 12px; }
+
+/* ---------- Tarifs ---------- */
+.ai-cost { margin-top: 32px; display: flex; gap: 12px; align-items: flex-start; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 20px; }
+.ai-cost svg { width: 20px; height: 20px; color: var(--accent); flex-shrink: 0; margin-top: 2px; }
+.ai-cost p { font-size: .95rem; color: var(--body); }
+.ai-cost strong { color: var(--ink); }
+.tiers { margin-top: 48px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; align-items: start; }
+.tier { position: relative; border-radius: var(--radius-lg); padding: 28px; display: flex; flex-direction: column; background: #fff; border: 1px solid var(--line); }
+.tier--featured { background: var(--ink); color: #fff; box-shadow: 0 30px 70px -25px rgba(75,73,236,.55); transform: translateY(-12px); }
+.tier__badge { position: absolute; top: -12px; left: 28px; background: var(--accent); color: #fff; font-size: .75rem; font-weight: 800; padding: 4px 12px; border-radius: 999px; }
+.tier__name { font-size: .9rem; font-weight: 600; color: var(--accent); }
+.tier--featured .tier__name { color: var(--lilac); }
+.tier__tag { font-size: .95rem; color: var(--body2); margin-top: 4px; }
+.tier--featured .tier__tag { color: rgba(255,255,255,.7); }
+.tier__price { font-size: 1.875rem; font-weight: 800; margin-top: 20px; letter-spacing: -.02em; }
+.tier--featured .tier__price { color: #fff; }
+.tier__setup { font-size: .875rem; color: var(--muted); margin-top: 4px; }
+.tier--featured .tier__setup { color: rgba(255,255,255,.55); }
+.tier__list { list-style: none; margin: 24px 0; display: flex; flex-direction: column; gap: 12px; flex: 1; }
+.tier__list li { display: flex; gap: 10px; align-items: flex-start; font-size: .92rem; color: var(--body); }
+.tier--featured .tier__list li { color: rgba(255,255,255,.85); }
+.tier__list svg { width: 16px; height: 16px; color: var(--accent); flex-shrink: 0; margin-top: 2px; }
+.tier--featured .tier__list svg { color: var(--lilac); }
+.tier .btn { width: 100%; }
+.custom { margin-top: 24px; background: #fff; border: 1px solid var(--line); border-radius: var(--radius-lg); padding: 36px; display: flex; gap: 24px; align-items: center; justify-content: space-between; flex-wrap: wrap; }
+.custom__txt { max-width: 640px; }
+.custom h3 { font-size: 1.5rem; margin-top: 4px; }
+.custom p { font-size: .95rem; color: var(--body2); margin-top: 12px; }
+
+/* ---------- Tableau comparatif ---------- */
+.compare-wrap { margin-top: 56px; overflow-x: auto; }
+.compare { width: 100%; min-width: 680px; border-collapse: collapse; }
+.compare th { text-align: center; padding-bottom: 16px; font-size: .9rem; font-weight: 800; color: var(--ink); }
+.compare th.lab { text-align: left; color: var(--muted); width: 40%; }
+.compare th.feat { color: var(--accent); }
+.compare .sec td { padding: 24px 0 8px; font-size: .75rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); }
+.compare td { padding: 12px 0; border-top: 1px solid var(--line2); font-size: .92rem; color: var(--body); }
+.compare td.c { text-align: center; }
+.compare td.featcol { background: rgba(75,73,236,.03); }
+.compare svg { width: 16px; height: 16px; }
+.compare .yes { color: var(--accent); }
+.compare .no { color: #c9cad2; }
+
+/* ---------- Message intuition ---------- */
+.intuition { margin-top: 80px; max-width: 640px; margin-left: auto; margin-right: auto; text-align: center; }
+.intuition .lead-serif { font-family: var(--serif); font-size: clamp(1.25rem, 2.4vw, 1.6rem); line-height: 1.4; color: var(--ink); }
+.intuition p { margin-top: 20px; font-size: 1rem; color: var(--body2); }
+
+/* ---------- Lettre fondateur ---------- */
+.letter { max-width: 660px; margin: 0 auto; }
+.letter__body { margin-top: 32px; display: flex; flex-direction: column; gap: 20px; }
+.letter__body p { font-size: 1.06rem; line-height: 1.85; color: #3a3c44; }
+.letter__sign { margin-top: 32px; display: flex; align-items: center; gap: 16px; }
+.letter__sign .a { width: 48px; height: 48px; border-radius: 50%; background: rgba(75,73,236,.1); color: var(--accent); font-weight: 700; display: flex; align-items: center; justify-content: center; }
+.letter__sign .n { font-weight: 600; }
+.letter__sign .r { font-size: .875rem; color: var(--muted); }
+
+/* ---------- Témoignages (marquee fluide) ---------- */
+.testi__cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; height: 520px; overflow: hidden;
+  -webkit-mask-image: linear-gradient(to bottom, transparent, #000 12%, #000 88%, transparent);
+  mask-image: linear-gradient(to bottom, transparent, #000 12%, #000 88%, transparent); }
+.testi__col { position: relative; }
+.testi__track { display: flex; flex-direction: column; gap: 16px; animation: scrollY linear infinite; will-change: transform; }
+.testi__col:hover .testi__track { animation-play-state: paused; }
+.testi-card { background: #fff; border: 1px solid var(--line); border-radius: 18px; padding: 24px; }
+.testi-card .q { width: 20px; height: 20px; color: rgba(75,73,236,.4); margin-bottom: 12px; }
+.testi-card p { font-size: .95rem; color: #3a3c44; }
+.testi-card .who { margin-top: 16px; display: flex; align-items: center; gap: 12px; }
+.testi-card .av { width: 36px; height: 36px; border-radius: 50%; background: rgba(75,73,236,.1); color: var(--accent); font-weight: 700; display: flex; align-items: center; justify-content: center; font-size: .9rem; }
+.testi-card .nm { font-size: .875rem; font-weight: 600; }
+.testi-card .rl { font-size: .78rem; color: var(--muted); }
+.stars { display: flex; gap: 4px; margin-bottom: 12px; }
+.stars svg { width: 16px; height: 16px; color: var(--accent); fill: var(--accent); }
+
+/* ---------- CTA finale ---------- */
+.cta-box { position: relative; border-radius: var(--radius-lg); background: var(--ink); padding: 56px 40px; text-align: center; overflow: hidden; }
+.cta-box__glow { position: absolute; inset: 0; background: radial-gradient(70% 80% at 50% 0%, rgba(75,73,236,.25) 0%, transparent 70%); }
+.cta-box > * { position: relative; }
+.cta-box h2 { color: #fff; }
+.cta-box p { margin: 20px auto 0; max-width: 520px; color: rgba(255,255,255,.65); font-size: 1.05rem; }
+.cta-box__actions { margin-top: 32px; display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+.cta-box .fine { margin-top: 20px; font-size: .875rem; color: rgba(255,255,255,.4); }
+
+/* ---------- Footer ---------- */
+.footer { background: #fff; border-top: 1px solid var(--line); padding: 56px 0; }
+.footer__grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+.footer__brand .logo { font-size: 1.25rem; font-weight: 800; }
+.footer__brand .logo span { color: var(--accent); }
+.footer__brand p { margin-top: 12px; font-size: .875rem; color: var(--muted); max-width: 280px; }
+.footer__social { display: flex; gap: 12px; margin-top: 20px; }
+.footer__social a { width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--line); display: flex; align-items: center; justify-content: center; transition: border-color .2s; }
+.footer__social a:hover { border-color: rgba(75,73,236,.4); }
+.footer__social svg { width: 16px; height: 16px; color: var(--muted); }
+.footer__col h5 { font-size: .75rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: var(--muted2); margin-bottom: 16px; }
+.footer__col a { display: block; font-size: .875rem; color: var(--body2); margin-bottom: 10px; transition: color .2s; }
+.footer__col a:hover { color: var(--accent); }
+.footer__bottom { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding-top: 32px; border-top: 1px solid var(--line); font-size: .85rem; color: var(--muted2); flex-wrap: wrap; }
+.footer__legal { display: flex; gap: 20px; flex-wrap: wrap; }
+.footer__legal a:hover { color: var(--accent); }
+
+/* ---------- Animations d'apparition ---------- */
+.reveal { opacity: 0; transform: translateY(28px); transition: opacity .6s cubic-bezier(.16,1,.3,1), transform .6s cubic-bezier(.16,1,.3,1); will-change: opacity, transform; }
+.reveal.is-visible { opacity: 1; transform: none; }
+.fade { opacity: 0; transform: translateY(24px); transition: opacity .55s cubic-bezier(.16,1,.3,1), transform .55s cubic-bezier(.16,1,.3,1); will-change: opacity, transform; }
+.fade.is-in { opacity: 1; transform: none; }
+
+@keyframes blink { 0%,100% { opacity: 1; } 50% { opacity: .4; } }
+@keyframes bounce { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
+@keyframes scrollY { from { transform: translateY(0); } to { transform: translateY(-50%); } }
+
+/* ---------- Pages légales ---------- */
+.legal-hero { padding: 130px 0 32px; }
+.legal-back { display: inline-flex; align-items: center; gap: 8px; font-size: .9rem; font-weight: 600; color: var(--accent); margin-bottom: 24px; }
+.legal-back svg { width: 16px; height: 16px; }
+.legal { max-width: 820px; margin: 0 auto; padding-bottom: 96px; }
+.legal h1 { font-size: clamp(2rem, 4vw, 3rem); }
+.legal .updated { color: var(--muted); margin-top: 12px; font-size: .95rem; }
+.legal h2 { font-size: 1.4rem; margin-top: 40px; margin-bottom: 12px; }
+.legal h3 { font-size: 1.1rem; font-weight: 700; margin-top: 24px; margin-bottom: 8px; }
+.legal p { color: var(--body); margin-bottom: 14px; line-height: 1.8; }
+.legal strong { color: var(--ink); }
+.legal a { color: var(--accent); text-decoration: underline; }
+
+/* ---------- Page réservation ---------- */
+.booking { padding: 130px 0 96px; }
+.booking__frame { max-width: 760px; margin: 24px auto 0; border: 1px solid var(--line); border-radius: var(--radius-lg); overflow: hidden; background: #fff; box-shadow: var(--shadow-card); }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 980px) {
+  .nav__links { display: none; }
+  .nav__burger { display: flex; }
+  .nav__actions .btn--dark { display: none; }
+  .grid-3, .grid-services, .tiers, .cases { grid-template-columns: 1fr; }
+  .grid-2, .split { grid-template-columns: 1fr; gap: 32px; }
+  .footer__grid { grid-template-columns: 1fr 1fr; }
+  .tier--featured { transform: none; }
+  .testi__cols { grid-template-columns: 1fr; }
+  .testi__col:nth-child(2), .testi__col:nth-child(3) { display: none; }
+  .split .order-1 { order: 1; }
+  .split .order-2 { order: 2; }
+}
+@media (max-width: 560px) {
+  .section { padding: 72px 0; }
+  .footer__grid { grid-template-columns: 1fr; }
+  .cta-box { padding: 40px 24px; }
+  .custom { padding: 28px; }
+}
+
+/* ---------- Accessibilité : mouvement réduit ---------- */
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; scroll-behavior: auto !important; }
+  .reveal, .fade { opacity: 1 !important; transform: none !important; }
+  .testi__track { animation: none !important; }
+}
+
+</style>
+</head>
+<body>
+  <header class="nav is-scrolled">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">Look<span>ahead</span></a>
+      <div class="nav__actions">
+        <a href="index.html" class="btn btn--outline">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          Retour au site
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="legal-hero">
+    <div class="container">
+      <div class="legal">
+        <a href="index.html" class="legal-back">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          Retour à l'accueil
+        </a>
+        <h1>Conditions générales de vente</h1>
+<p class="updated">Date d&#x27;entrée en vigueur : 03 novembre 2025 — Dernière mise à jour : 03 novembre 2025</p>
+<h2>PRÉAMBULE</h2>
+<p>Les présentes Conditions Générales de Vente (ci-après &quot;CGV&quot;) régissent l&#x27;ensemble des relations contractuelles entre :</p>
+<p>D&#x27;une part, LOOKAHEAD, micro-entreprise représentée par Monsieur Luka GALLAGHER, SIRET : 924 346 109 00029, RCS Grenoble : 924 346 109, siège social : 24 Chemin du Biaron, 38410 Vaulnaveys-le-Haut, France, email : <a href="mailto:luka@lookahead.fr">luka@lookahead.fr</a>, téléphone : 06 42 68 10 06 (ci-après dénommée &quot;le Prestataire&quot; ou &quot;LOOKAHEAD&quot;).</p>
+<p>Et d&#x27;autre part, toute personne morale (entreprise, société, association) souscrivant à l&#x27;un des services proposés par LOOKAHEAD (ci-après dénommée &quot;le Client&quot; ou &quot;l&#x27;Abonné&quot;).</p>
+<p>Les présentes CGV s&#x27;appliquent exclusivement aux relations entre professionnels (B2B). LOOKAHEAD ne propose pas ses services aux consommateurs (particuliers).</p>
+<h2>ARTICLE 1 - OBJET ET CHAMP D&#x27;APPLICATION</h2>
+<p>Les présentes CGV ont pour objet de définir les conditions dans lesquelles LOOKAHEAD fournit au Client un accès à une plateforme SaaS (Software as a Service) personnalisée, comprenant la création, configuration et implémentation de chatbots à intelligence artificielle, l&#x27;accès à une plateforme de gestion CRM rebrandée aux couleurs du Client, la configuration de modules d&#x27;automatisation (prise de rendez-vous, formulaires, messagerie automatisée), l&#x27;intégration avec les canaux de communication du Client (site web, Instagram, WhatsApp, Facebook Messenger), la fourniture d&#x27;un tableau de bord personnalisé, le support technique et la maintenance de la solution, et la formation à l&#x27;utilisation de la plateforme (selon la formule choisie).</p>
+<p>Les présentes CGV s&#x27;appliquent sans restriction ni réserve à l&#x27;ensemble des services proposés par LOOKAHEAD, quelle que soit la modalité de commande (site web, email, téléphone, réseaux sociaux). Toute commande ou souscription à un abonnement implique l&#x27;adhésion sans réserve du Client aux présentes CGV, à l&#x27;exclusion de toute autre condition.</p>
+<p>LOOKAHEAD se réserve le droit de modifier à tout moment les présentes CGV. Les CGV applicables sont celles en vigueur à la date de souscription du Client. Toute modification sera notifiée au Client par email au moins 30 jours avant son entrée en vigueur.</p>
+<h2>ARTICLE 2 - DESCRIPTION DES SERVICES</h2>
+<h3>Nature des services</h3>
+<p>LOOKAHEAD propose des services d&#x27;automatisation marketing et commerciale via une plateforme SaaS personnalisée, comprenant :</p>
+<p>Création et configuration de chatbots IA : Analyse des besoins du Client, conception de scénarios conversationnels, configuration des agents conversationnels intelligents, intégration sur les canaux du Client (site web, réseaux sociaux), tests et optimisation des performances.</p>
+<p>Plateforme SaaS rebrandée : Accès à une interface CRM personnalisée (nom, logo, couleurs du Client), gestion des contacts et prospects, automatisation des workflows marketing, gestion des rendez-vous et calendriers, messagerie multi-canal (SMS, email, WhatsApp, Instagram, Facebook), tableaux de bord et reporting.</p>
+<p>Intégration et paramétrage : Connexion aux outils existants du Client (si techniquement possible), configuration des formulaires de capture, mise en place de campagnes automatisées, paramétrage des notifications et alertes.</p>
+<p>Formation et accompagnement : Formation initiale à l&#x27;utilisation de la plateforme, documentation et tutoriels vidéo, support technique par email et visioconférence.</p>
+<h3>Précisions importantes</h3>
+<p>LOOKAHEAD n&#x27;est pas un développeur de logiciels. Le Prestataire exploite une solution SaaS tierce existante (GoHighLevel) qu&#x27;il personnalise et paramètre selon les besoins spécifiques de chaque Client. LOOKAHEAD ne développe aucun code informatique sur mesure. Toutes les fonctionnalités proposées sont basées sur les capacités natives de la plateforme GoHighLevel. Le Client reconnaît et accepte que LOOKAHEAD agit en qualité d&#x27;intégrateur et de configurateur de solutions existantes, et non de créateur de logiciels.</p>
+<h2>ARTICLE 3 - TARIFICATION ET MODALITÉS DE PAIEMENT</h2>
+<h3>Principe de tarification</h3>
+<p>Les services de LOOKAHEAD sont proposés sur la base d&#x27;abonnements mensuels personnalisés. Il n&#x27;existe pas de tarif fixe standard. Chaque prestation est évaluée individuellement en fonction de la complexité du projet du Client, le nombre de chatbots à créer, le volume de contacts et de messages à traiter, les intégrations spécifiques demandées, le niveau d&#x27;accompagnement et de formation souhaité, et la valeur apportée au business du Client. Un devis personnalisé et détaillé est systématiquement établi avant toute souscription.</p>
+<h3>Composition du tarif</h3>
+<p>Le tarif mensuel proposé au Client inclut l&#x27;accès complet à la plateforme SaaS rebrandée, la création et configuration initiale des chatbots, le support technique par email, les mises à jour de la plateforme GoHighLevel, et l&#x27;hébergement des données sur les serveurs GoHighLevel.</p>
+<p>Le tarif mensuel peut inclure en option (selon devis) : formation avancée en visioconférence, support téléphonique prioritaire, création de contenus marketing personnalisés, optimisations et ajustements mensuels des chatbots, et intégrations techniques complexes.</p>
+<h3>Révision des tarifs</h3>
+<p>LOOKAHEAD se réserve le droit de modifier ses tarifs à tout moment. Toutefois, les tarifs convenus dans le devis accepté par le Client restent valables pendant toute la durée de l&#x27;abonnement en cours. En cas de modification tarifaire, le Client en sera informé par email au moins 30 jours avant l&#x27;application du nouveau tarif. Le Client pourra alors choisir d&#x27;accepter la nouvelle tarification ou de résilier son abonnement sans frais ni pénalités.</p>
+<h3>Modalités de paiement</h3>
+<p>Les paiements s&#x27;effectuent exclusivement par virement bancaire (IBAN communiqué sur facture), carte bancaire (via système de paiement sécurisé en ligne), ou prélèvement automatique SEPA (après autorisation du Client).</p>
+<p>Le paiement est dû mensuellement, à date fixe convenue lors de la souscription. Une facture est émise automatiquement chaque mois et envoyée par email au Client. Les factures sont également accessibles depuis l&#x27;espace client.</p>
+<h3>Régime de TVA</h3>
+<p>LOOKAHEAD est soumis au régime de la franchise en base de TVA (article 293 B du CGI). En conséquence, aucune TVA n&#x27;est facturée au Client et la mention &quot;TVA non applicable, article 293 B du CGI&quot; figure sur toutes les factures.</p>
+<h2>ARTICLE 4 - COMMANDE ET SOUSCRIPTION</h2>
+<h3>Processus de souscription</h3>
+<p>La souscription aux services de LOOKAHEAD s&#x27;effectue en plusieurs étapes :</p>
+<p>Étape 1 - Prise de contact : Le Client contacte LOOKAHEAD via le site web, par email, téléphone ou réseaux sociaux pour exprimer ses besoins.</p>
+<p>Étape 2 - Analyse des besoins : LOOKAHEAD organise un entretien (visioconférence ou téléphone) avec le Client pour comprendre précisément ses objectifs, son activité et ses attentes.</p>
+<p>Étape 3 - Devis personnalisé : LOOKAHEAD établit un devis détaillé comprenant la description précise des services inclus, le tarif mensuel de l&#x27;abonnement, la durée d&#x27;engagement (sans engagement ou avec engagement minimal), les conditions de résiliation, et le délai de mise en œuvre.</p>
+<p>Étape 4 - Acceptation du devis : Le Client accepte le devis en le signant (signature électronique ou manuscrite) et en cochant la case &quot;J&#x27;accepte les Conditions Générales de Vente&quot;.</p>
+<p>Étape 5 - Paiement du premier mois : Le Client règle le montant du premier mois d&#x27;abonnement conformément aux modalités précisées dans le devis.</p>
+<p>Étape 6 - Mise en œuvre : LOOKAHEAD lance la création et la configuration de la solution dans le délai indiqué au devis.</p>
+<h3>Validation de la commande</h3>
+<p>La commande n&#x27;est considérée comme définitive qu&#x27;après signature du devis par le Client, acceptation explicite des présentes CGV, et réception du paiement du premier mois.</p>
+<p>LOOKAHEAD se réserve le droit de refuser toute commande pour un motif légitime, notamment en cas de non-paiement d&#x27;une commande antérieure, litige en cours avec le Client, informations fournies incomplètes ou erronées, ou demande incompatible avec les services proposés.</p>
+<h2>ARTICLE 5 - DURÉE DU CONTRAT ET RENOUVELLEMENT</h2>
+<h3>Durée d&#x27;engagement</h3>
+<p>Les abonnements proposés par LOOKAHEAD sont sans engagement de durée, sauf mention contraire explicite dans le devis accepté par le Client. Le contrat prend effet à la date de souscription et se poursuit par tacite reconduction mensuellement, jusqu&#x27;à résiliation par l&#x27;une des parties.</p>
+<h3>Renouvellement automatique</h3>
+<p>L&#x27;abonnement est reconduit automatiquement chaque mois à la date anniversaire de la souscription, sauf résiliation dans les conditions prévues à l&#x27;article 6. Le paiement est prélevé ou doit être effectué automatiquement à chaque échéance mensuelle.</p>
+<h3>Période d&#x27;essai</h3>
+<p>LOOKAHEAD ne propose pas de période d&#x27;essai gratuite. Cependant, le Client peut résilier son abonnement à tout moment sans frais.</p>
+<h2>ARTICLE 6 - RÉSILIATION</h2>
+<h3>Résiliation par le Client</h3>
+<p>Le Client peut résilier son abonnement à tout moment, sans justification et sans frais, en respectant un préavis de 30 jours.</p>
+<p>La demande de résiliation doit être adressée par email à <a href="mailto:luka@lookahead.fr">luka@lookahead.fr</a>. L&#x27;email doit mentionner le nom de l&#x27;entreprise Cliente, le numéro de client ou de contrat, et la date souhaitée de fin d&#x27;abonnement (en respectant le préavis de 30 jours).</p>
+<p>L&#x27;abonnement prendra fin à la date d&#x27;échéance mensuelle suivant la fin du préavis de 30 jours. Le Client reste redevable du paiement jusqu&#x27;à la date effective de fin d&#x27;abonnement. Aucun remboursement prorata temporis ne sera effectué pour le mois en cours. L&#x27;accès à la plateforme sera désactivé à la date de fin effective.</p>
+<h3>Résiliation par LOOKAHEAD</h3>
+<p>LOOKAHEAD se réserve le droit de résilier l&#x27;abonnement du Client, avec un préavis de 30 jours, dans les cas suivants :</p>
+<p>Résiliation pour motif légitime (sans préavis) : Non-paiement des sommes dues après mise en demeure restée sans effet pendant 15 jours, utilisation frauduleuse ou abusive de la plateforme, violation des conditions d&#x27;utilisation de la plateforme GoHighLevel, manquement grave aux présentes CGV, comportement préjudiciable à l&#x27;image de LOOKAHEAD, ou cessation d&#x27;activité du Client.</p>
+<p>Résiliation de convenance (avec préavis de 30 jours) : LOOKAHEAD peut résilier le contrat pour tout autre motif en respectant un préavis de 30 jours notifié par email recommandé.</p>
+<h3>Conséquences de la résiliation</h3>
+<p>À la date effective de résiliation, l&#x27;accès du Client à la plateforme SaaS est immédiatement suspendu, le Client perd l&#x27;accès à toutes les données hébergées sur la plateforme, et LOOKAHEAD n&#x27;est pas tenue de conserver les données du Client au-delà de 30 jours après la résiliation.</p>
+<p>Il est de la responsabilité du Client d&#x27;exporter et de sauvegarder ses données avant la date de résiliation. LOOKAHEAD ne pourra être tenue responsable de la perte de données consécutive à la résiliation. Le Client peut demander à LOOKAHEAD une extraction de ses données dans un délai de 15 jours avant la date de résiliation. Cette prestation pourra faire l&#x27;objet d&#x27;une facturation séparée selon la complexité.</p>
+<h2>ARTICLE 7 - OBLIGATIONS DU PRESTATAIRE (LOOKAHEAD)</h2>
+<p>LOOKAHEAD s&#x27;engage à fournir un accès à la plateforme SaaS conformément aux caractéristiques décrites dans le devis, assurer la création et configuration initiale des chatbots selon les besoins exprimés par le Client, maintenir la plateforme en état de fonctionnement optimal, et corriger les dysfonctionnements techniques relevant de sa responsabilité dans un délai raisonnable.</p>
+<p>LOOKAHEAD mettra en œuvre tous les moyens raisonnables pour assurer une disponibilité maximale de la plateforme, informera le Client en cas de maintenance planifiée, et interviendra rapidement en cas d&#x27;incident technique majeur. LOOKAHEAD ne peut garantir une disponibilité de 100% de la plateforme, celle-ci dépendant également de l&#x27;infrastructure de GoHighLevel LLC (tiers hébergeur).</p>
+<p>LOOKAHEAD répondra aux demandes de support par email dans un délai de 48 heures ouvrées maximum, fournira une documentation d&#x27;utilisation de la plateforme, et formera le Client à l&#x27;utilisation des fonctionnalités incluses dans son abonnement.</p>
+<p>LOOKAHEAD respectera la confidentialité des données du Client, ne divulguera pas les informations commerciales sensibles du Client à des tiers, appliquera les mises à jour de sécurité et fonctionnelles de la plateforme GoHighLevel, et informera le Client des évolutions majeures de la plateforme.</p>
+<h2>ARTICLE 8 - OBLIGATIONS DU CLIENT</h2>
+<p>Le Client s&#x27;engage à régler les factures aux échéances convenues, communiquer toute modification de ses coordonnées bancaires, et informer LOOKAHEAD de toute difficulté de paiement anticipée.</p>
+<p>Le Client utilisera la plateforme conformément à sa destination et aux conditions d&#x27;utilisation de GoHighLevel, ne l&#x27;utilisera pas à des fins illégales, frauduleuses ou contraires aux bonnes mœurs, ne tentera pas de contourner les limitations techniques de la plateforme, et ne revendra ou sous-louera pas l&#x27;accès à la plateforme à des tiers sans autorisation écrite de LOOKAHEAD.</p>
+<p>Le Client conservera confidentiels ses identifiants de connexion, informera immédiatement LOOKAHEAD en cas de suspicion d&#x27;utilisation non autorisée de son compte, et mettra en œuvre des mots de passe robustes.</p>
+<p>Le Client s&#x27;assurera de la légalité des contenus qu&#x27;il diffuse via la plateforme, respectera les droits de propriété intellectuelle des tiers, respectera le RGPD et la réglementation applicable en matière de protection des données personnelles, et obtiendra le consentement des utilisateurs finaux pour l&#x27;envoi de messages automatisés.</p>
+<p>Le Client fournira des informations exactes et à jour lors de la souscription, répondra dans des délais raisonnables aux demandes d&#x27;information de LOOKAHEAD, et notifiera par écrit tout changement dans sa situation (coordonnées, raison sociale, etc.).</p>
+<p>Le Client s&#x27;interdit formellement d&#x27;utiliser la plateforme pour envoyer des spams ou messages non sollicités, diffuser des contenus illégaux, diffamatoires, discriminatoires ou haineux, porter atteinte aux droits des tiers, ou violer la réglementation en matière de démarchage commercial.</p>
+<h2>ARTICLE 9 - GARANTIES ET LIMITATIONS DE RESPONSABILITÉ</h2>
+<h3>Absence de garantie satisfait ou remboursé</h3>
+<p>LOOKAHEAD ne propose pas de garantie &quot;Satisfait ou Remboursé&quot;. Aucun remboursement des sommes versées ne pourra être demandé, même en cas de résiliation anticipée par le Client.</p>
+<h3>Obligation de moyens</h3>
+<p>LOOKAHEAD est soumise à une obligation de moyens et non de résultat. Le Prestataire s&#x27;engage à mettre en œuvre tous les moyens raisonnables pour fournir un service de qualité, mais ne peut garantir l&#x27;atteinte d&#x27;objectifs commerciaux spécifiques par le Client (nombre de leads, taux de conversion, chiffre d&#x27;affaires, etc.).</p>
+<h3>Limitation de responsabilité - Plateforme tierce</h3>
+<p>LOOKAHEAD exploite une plateforme SaaS tierce (GoHighLevel LLC). En conséquence, LOOKAHEAD ne peut être tenue responsable des indisponibilités, pannes ou dysfonctionnements de la plateforme GoHighLevel relevant de la responsabilité de GoHighLevel LLC, pertes de données causées par un incident technique sur les serveurs de GoHighLevel, modifications unilatérales des fonctionnalités de GoHighLevel par son éditeur, ou fermeture ou cessation d&#x27;activité de GoHighLevel LLC.</p>
+<p>En cas de problème majeur imputable à GoHighLevel, LOOKAHEAD s&#x27;engage à informer immédiatement le Client, mettre en œuvre toutes les démarches possibles pour rétablir le service, et le cas échéant, proposer une solution alternative.</p>
+<h3>Limitation de responsabilité - Contenu du Client</h3>
+<p>LOOKAHEAD ne peut être tenue responsable du contenu diffusé par le Client via les chatbots et la plateforme, des conséquences juridiques liées à un usage non conforme de la plateforme par le Client (spam, violation du RGPD, etc.), ou des litiges entre le Client et ses propres clients/prospects. Le Client est seul responsable des messages et contenus qu&#x27;il configure et diffuse via la plateforme.</p>
+<h3>Limitation des dommages et intérêts</h3>
+<p>En toute hypothèse, la responsabilité de LOOKAHEAD est strictement limitée au montant total des sommes effectivement versées par le Client au titre de l&#x27;abonnement au cours des 3 derniers mois précédant le fait générateur de responsabilité. Cette limitation ne s&#x27;applique pas en cas de dol ou de faute lourde de LOOKAHEAD.</p>
+<h3>Exclusion des dommages indirects</h3>
+<p>LOOKAHEAD ne pourra en aucun cas être tenue responsable des dommages indirects subis par le Client, tels que perte de chiffre d&#x27;affaires, perte de clientèle, perte de chance, perte d&#x27;image ou de réputation, ou préjudice commercial.</p>
+<h3>Force majeure</h3>
+<p>LOOKAHEAD ne pourra être tenue responsable de l&#x27;inexécution ou de la mauvaise exécution de ses obligations résultant d&#x27;un cas de force majeure tel que défini par la jurisprudence française. Sont notamment considérés comme cas de force majeure : catastrophes naturelles, incendie, grève totale ou partielle (y compris interne), guerre, émeutes, interruption des télécommunications, cyberattaque majeure, décision gouvernementale ou réglementaire, et pandémie.</p>
+<h2>ARTICLE 10 - PROPRIÉTÉ INTELLECTUELLE</h2>
+<h3>Propriété de la plateforme</h3>
+<p>La plateforme SaaS utilisée (GoHighLevel) est la propriété exclusive de GoHighLevel LLC. LOOKAHEAD ne détient aucun droit de propriété sur la plateforme elle-même. LOOKAHEAD dispose d&#x27;une licence d&#x27;utilisation de GoHighLevel qu&#x27;elle rebrand et sous-licence au Client dans le cadre de l&#x27;abonnement.</p>
+<h3>Droits du Client</h3>
+<p>Le Client bénéficie d&#x27;un droit d&#x27;utilisation non exclusif et non cessible de la plateforme pour la durée de son abonnement. Ce droit d&#x27;utilisation prend automatiquement fin à la date de résiliation de l&#x27;abonnement. Le Client ne peut en aucun cas céder, louer ou prêter son accès à la plateforme, effectuer de la rétro-ingénierie sur la plateforme, ou copier ou reproduire tout ou partie de la plateforme.</p>
+<h3>Propriété des contenus créés par LOOKAHEAD</h3>
+<p>Les chatbots, workflows, scénarios conversationnels et configurations créés par LOOKAHEAD pour le compte du Client restent la propriété intellectuelle de LOOKAHEAD. Toutefois, le Client dispose d&#x27;un droit d&#x27;utilisation illimité sur ces éléments pendant toute la durée de son abonnement.</p>
+<h3>Propriété des contenus du Client</h3>
+<p>Le Client reste propriétaire exclusif de ses données (contacts, conversations, etc.), ses contenus (textes, images, vidéos, etc.), et sa marque, logo et éléments graphiques. LOOKAHEAD ne revendique aucun droit de propriété sur les contenus et données du Client.</p>
+<h3>Licence d&#x27;utilisation accordée à LOOKAHEAD</h3>
+<p>Le Client accorde à LOOKAHEAD une licence d&#x27;utilisation de sa marque, logo et éléments graphiques, strictement limitée au paramétrage de la plateforme rebrandée. Cette licence prend automatiquement fin à la date de résiliation de l&#x27;abonnement.</p>
+<h2>ARTICLE 11 - DONNÉES PERSONNELLES ET RGPD</h2>
+<h3>Rôles des parties</h3>
+<p>Dans le cadre de l&#x27;utilisation de la plateforme SaaS, le Client est responsable de traitement au sens du RGPD pour les données personnelles de ses propres clients/prospects qu&#x27;il collecte et traite via la plateforme. LOOKAHEAD agit en qualité de sous-traitant pour le compte du Client en ce qui concerne le traitement des données personnelles des clients/prospects du Client. GoHighLevel LLC agit en qualité de sous-traitant ultérieur et héberge les données sur ses serveurs aux États-Unis.</p>
+<h3>Obligations du Client (responsable de traitement)</h3>
+<p>Le Client s&#x27;engage à respecter l&#x27;intégralité du RGPD et de la législation applicable, obtenir le consentement valide des personnes dont il collecte les données, informer les personnes de leurs droits (accès, rectification, effacement, etc.), tenir un registre des traitements de données, réaliser une analyse d&#x27;impact si nécessaire, ne collecter que les données strictement nécessaires, et respecter les durées de conservation légales.</p>
+<h3>Obligations de LOOKAHEAD (sous-traitant)</h3>
+<p>LOOKAHEAD s&#x27;engage à traiter les données uniquement sur instruction documentée du Client, garantir la confidentialité des données, assister le Client dans le respect de ses obligations RGPD, notifier le Client de toute violation de données dans les 48 heures, supprimer ou restituer les données à la fin du contrat (sur demande du Client), et ne pas transférer les données en dehors de l&#x27;UE sans garanties appropriées.</p>
+<h3>Transfert de données hors UE</h3>
+<p>Les données sont hébergées sur les serveurs de GoHighLevel LLC situés aux États-Unis. Ce transfert est encadré par les Clauses Contractuelles Types (CCT) de la Commission Européenne et les mesures de sécurité techniques et organisationnelles de GoHighLevel. Le Client reconnaît être informé de ce transfert et l&#x27;accepte expressément.</p>
+<h3>Sécurité des données</h3>
+<p>LOOKAHEAD et GoHighLevel mettent en œuvre des mesures de sécurité techniques et organisationnelles appropriées, notamment chiffrement des données en transit (SSL/TLS), contrôle d&#x27;accès par authentification, sauvegardes régulières, surveillance des accès, et tests de sécurité réguliers.</p>
+<h3>Droits des personnes concernées</h3>
+<p>Les utilisateurs finaux (clients/prospects du Client) disposent des droits suivants : droit d&#x27;accès, droit de rectification, droit à l&#x27;effacement, droit à la limitation du traitement, droit d&#x27;opposition, et droit à la portabilité. Le Client est responsable de répondre aux demandes d&#x27;exercice de droits dans les délais légaux (1 mois). LOOKAHEAD s&#x27;engage à assister le Client dans cette démarche si nécessaire.</p>
+<h2>ARTICLE 12 - MÉDIATION DE LA CONSOMMATION (B2B)</h2>
+<p>Conformément à l&#x27;article L.612-1 du Code de la consommation, LOOKAHEAD propose un dispositif de médiation. Bien que LOOKAHEAD opère exclusivement en B2B, la législation impose la désignation d&#x27;un médiateur pour les activités de vente en ligne.</p>
+<p>Médiateur désigné : CM2C - Centre de Médiation de la Consommation de Conciliateurs de Justice, adresse : 14 rue Saint Jean, 75017 Paris, France, site web : <a href="https://www.cm2c.net" target="_blank" rel="noopener">www.cm2c.net</a>, email : <a href="mailto:cm2c@cm2c.net">cm2c@cm2c.net</a>.</p>
+<p>En cas de litige, le Client peut saisir gratuitement le médiateur dans un délai d&#x27;un an à compter de sa réclamation écrite auprès de LOOKAHEAD. Le Client adresse d&#x27;abord une réclamation écrite à LOOKAHEAD à <a href="mailto:luka@lookahead.fr">luka@lookahead.fr</a>. En l&#x27;absence de réponse satisfaisante dans un délai de 60 jours, le Client peut saisir le médiateur CM2C. Le médiateur tente de rapprocher les parties pour aboutir à une solution amiable. Ce dispositif de médiation ne fait pas obstacle à la saisine des tribunaux compétents.</p>
+<h2>ARTICLE 13 - DROIT APPLICABLE ET JURIDICTION</h2>
+<h3>Droit applicable</h3>
+<p>Les présentes CGV sont régies par le droit français.</p>
+<p>Langue</p>
+<p>Les présentes CGV sont rédigées en langue française. En cas de traduction dans une autre langue, seule la version française fait foi.</p>
+<h3>Règlement amiable des litiges</h3>
+<p>En cas de litige, les parties s&#x27;engagent à tenter de trouver une solution amiable avant toute action judiciaire. Le Client doit adresser une réclamation écrite à : email <a href="mailto:luka@lookahead.fr">luka@lookahead.fr</a> ou courrier LOOKAHEAD, 24 Chemin du Biaron, 38410 Vaulnaveys-le-Haut. LOOKAHEAD s&#x27;engage à répondre dans un délai de 30 jours.</p>
+<h3>Juridiction compétente</h3>
+<p>À défaut de résolution amiable, tout litige relève de la compétence exclusive des tribunaux du ressort de Grenoble, nonobstant pluralité de défendeurs ou appel en garantie.</p>
+<h2>ARTICLE 14 - NULLITÉ PARTIELLE</h2>
+<p>Si une ou plusieurs stipulations des présentes CGV sont tenues pour non valides ou déclarées telles en application d&#x27;une loi, d&#x27;un règlement ou à la suite d&#x27;une décision définitive d&#x27;une juridiction compétente, les autres stipulations garderont toute leur force et leur portée.</p>
+<h2>ARTICLE 15 - MODIFICATIONS DES CGV</h2>
+<p>LOOKAHEAD se réserve le droit de modifier à tout moment les présentes CGV. Les CGV applicables au Client sont celles en vigueur à la date de sa souscription.</p>
+<p>En cas de modification substantielle des CGV, le Client en sera informé par email au moins 30 jours avant l&#x27;entrée en vigueur des nouvelles CGV. Le Client pourra alors choisir d&#x27;accepter les nouvelles CGV (poursuite de l&#x27;abonnement) ou de refuser et résilier son abonnement sans frais dans les 30 jours.</p>
+<h2>ARTICLE 16 - INTÉGRALITÉ DE L&#x27;ACCORD</h2>
+<p>Les présentes CGV, ainsi que le devis accepté par le Client, constituent l&#x27;intégralité de l&#x27;accord entre les parties et annulent et remplacent tous accords, arrangements et conventions antérieurs, écrits ou oraux, relatifs à leur objet. Aucune modification des présentes CGV ne sera valable sans l&#x27;accord écrit et préalable de LOOKAHEAD.</p>
+<h2>ARTICLE 17 - CONTACT ET RÉCLAMATIONS</h2>
+<p>Pour toute question relative aux présentes CGV ou pour formuler une réclamation, le Client peut contacter LOOKAHEAD :</p>
+<p>Par email : <a href="mailto:luka@lookahead.fr">luka@lookahead.fr</a></p>
+<p>Par téléphone : 06 42 68 10 06</p>
+<p>Par courrier : LOOKAHEAD, 24 Chemin du Biaron, 38410 Vaulnaveys-le-Haut, France</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__bottom" style="border:0;padding-top:0;">
+        <span>© <span data-year>2025</span> Lookahead. Tous droits réservés.</span>
+        <div class="footer__legal">
+          <a href="mentions-legales.html">Mentions légales</a>
+          <a href="cgv.html">CGV</a>
+          <a href="cgu.html">CGU</a>
+          <a href="confidentialite.html">Confidentialité</a>
+          <a href="cookies.html">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script>
+/* =========================================================================
+   LOOKAHEAD — Interactions
+   Objectif : fluidité maximale, aucune animation qui décale la page.
+   ========================================================================= */
+(function () {
+  "use strict";
+
+  var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* ---------------- NAVIGATION ---------------- */
+  var nav = document.querySelector(".nav");
+  if (nav) {
+    var onScroll = function () { nav.classList.toggle("is-scrolled", window.scrollY > 30); };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+    var burger = nav.querySelector(".nav__burger");
+    var mobile = document.querySelector(".nav__mobile");
+    if (burger && mobile) {
+      burger.addEventListener("click", function () { mobile.classList.toggle("is-open"); });
+      mobile.querySelectorAll("a").forEach(function (a) {
+        a.addEventListener("click", function () { mobile.classList.remove("is-open"); });
+      });
+    }
+  }
+
+  /* ---------------- REVEAL (apparition, une fois) ---------------- */
+  var revealEls = document.querySelectorAll(".reveal");
+  if (revealEls.length) {
+    if (reduced) {
+      revealEls.forEach(function (el) { el.classList.add("is-visible"); });
+    } else {
+      var ro = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            var el = e.target;
+            var d = parseFloat(el.getAttribute("data-delay") || "0");
+            setTimeout(function () { el.classList.add("is-visible"); }, d * 1000);
+            ro.unobserve(el);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: "0px 0px -10% 0px" });
+      revealEls.forEach(function (el) { ro.observe(el); });
+    }
+  }
+
+  /* ---------------- FADE (apparait en descendant, s'estompe en remontant) ---------------- */
+  var fadeEls = document.querySelectorAll(".fade");
+  if (fadeEls.length) {
+    if (reduced) {
+      fadeEls.forEach(function (el) { el.classList.add("is-in"); });
+    } else {
+      var fo = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) { e.target.classList.toggle("is-in", e.isIntersecting); });
+      }, { threshold: 0.15, rootMargin: "-12% 0px -12% 0px" });
+      fadeEls.forEach(function (el) { fo.observe(el); });
+    }
+  }
+
+  /* ---------------- TIMELINE : remplissage au scroll ---------------- */
+  var timeline = document.querySelector(".timeline");
+  if (timeline) {
+    var fill = timeline.querySelector(".timeline__fill");
+    var updateFill = function () {
+      var r = timeline.getBoundingClientRect();
+      var vh = window.innerHeight;
+      var start = vh * 0.7, end = vh * 0.7;
+      var total = r.height;
+      var scrolled = Math.min(Math.max(start - r.top, 0), total + (start - end));
+      var ratio = Math.min(Math.max(scrolled / total, 0), 1);
+      if (fill) fill.style.transform = "scaleY(" + ratio + ")";
+    };
+    window.addEventListener("scroll", updateFill, { passive: true });
+    window.addEventListener("resize", updateFill);
+    updateFill();
+  }
+
+  /* Petit utilitaire : observer de visibilité pour piloter une animation */
+  function whenVisible(el, onShow, onHide) {
+    if (!el) return;
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { e.isIntersecting ? onShow() : onHide(); });
+    }, { threshold: 0.25 });
+    io.observe(el);
+  }
+
+  /* ---------------- DÉMO VOICEBOT ---------------- */
+  var voice = document.querySelector("[data-voice]");
+  if (voice) {
+    var SCRIPTS = {
+      service: {
+        caller: "Appel entrant · 21h47",
+        turns: [
+          { s: "ia", t: "Agence Lefèvre Immobilier, bonjour. Je suis l'assistante de l'agence, comment puis-je vous aider ?" },
+          { s: "client", t: "Bonsoir, je vous appelle pour le trois pièces rue des Capucins, il est toujours disponible ?" },
+          { s: "ia", t: "Oui, il est encore au catalogue. Souhaitez-vous que je vous bloque un créneau de visite cette semaine ?" },
+          { s: "client", t: "Jeudi en fin de journée si c'est possible." },
+          { s: "ia", t: "Jeudi 18h30 est libre. Je vous envoie la confirmation par SMS et je préviens le conseiller. C'est noté." }
+        ]
+      },
+      prospection: {
+        caller: "Appel sortant · relance lead",
+        turns: [
+          { s: "ia", t: "Bonjour Madame Rolland, Lookahead pour l'agence Lefèvre. Vous aviez estimé votre maison il y a deux mois, vous avez deux minutes ?" },
+          { s: "client", t: "Oui, mais je ne suis pas encore sûre de vouloir vendre." },
+          { s: "ia", t: "C'est tout à fait normal. Les prix de votre quartier ont bougé depuis. Voulez-vous une réévaluation gratuite, sans engagement ?" },
+          { s: "client", t: "Pourquoi pas, ça m'aiderait à décider." },
+          { s: "ia", t: "Parfait. Je cale un rendez-vous avec un conseiller mardi 14h et je vous envoie le récapitulatif. Bonne journée à vous." }
+        ]
+      }
+    };
+
+    var vConvo = voice.querySelector(".voice__convo");
+    var vCaller = voice.querySelector("[data-voice-caller]");
+    var vSpeaking = voice.querySelector(".voice__speaking");
+    var vWave = voice.querySelector(".wave");
+    var vTabs = voice.querySelectorAll(".voice__tab");
+
+    var mode = "service", turnIdx = 0, wordIdx = 0;
+    var vTimer = null, waveTimer = null, visible = false;
+
+    // build wave bars
+    if (vWave) { for (var i = 0; i < 28; i++) { var b = document.createElement("span"); vWave.appendChild(b); } }
+    var waveBars = vWave ? vWave.querySelectorAll("span") : [];
+
+    function renderVoice() {
+      var turns = SCRIPTS[mode].turns;
+      vConvo.innerHTML = "";
+      for (var ti = 0; ti <= turnIdx && ti < turns.length; ti++) {
+        var turn = turns[ti];
+        var words = turn.t.split(" ");
+        var visibleCount = ti === turnIdx ? wordIdx : words.length;
+        var wrap = document.createElement("div");
+        wrap.className = "turn " + turn.s;
+        var inner = '<div class="turn__wrap"><div class="turn__who">' + (turn.s === "ia" ? "Agent IA" : "Client") + '</div><div class="bubble">';
+        for (var w = 0; w < words.length; w++) {
+          var cls = "word";
+          if (w < visibleCount) cls += " spoken";
+          if (ti === turnIdx && w === visibleCount - 1) cls += " speaking";
+          inner += '<span class="' + cls + '">' + words[w] + (w < words.length - 1 ? " " : "") + "</span>";
+        }
+        inner += "</div></div>";
+        wrap.innerHTML = inner;
+        vConvo.appendChild(wrap);
+      }
+      vConvo.scrollTop = vConvo.scrollHeight; // ancre en bas, jamais de décalage de page
+      var sp = turns[turnIdx] ? turns[turnIdx].s : "ia";
+      if (vSpeaking) vSpeaking.textContent = sp === "ia" ? "L'agent parle" : "Le client parle";
+    }
+
+    function stepVoice() {
+      if (!visible || reduced) return;
+      var turns = SCRIPTS[mode].turns;
+      var words = turns[turnIdx].t.split(" ");
+      if (wordIdx < words.length) {
+        var word = words[wordIdx];
+        var dur = 130 + Math.min(word.length * 24, 220) + (/[.,!?]$/.test(word) ? 260 : 0);
+        wordIdx++;
+        renderVoice();
+        vTimer = setTimeout(stepVoice, dur);
+      } else {
+        vTimer = setTimeout(function () {
+          if (turnIdx < turns.length - 1) { turnIdx++; wordIdx = 0; renderVoice(); vTimer = setTimeout(stepVoice, 120); }
+          else { vTimer = setTimeout(function () { turnIdx = 0; wordIdx = 0; renderVoice(); vTimer = setTimeout(stepVoice, 200); }, 2200); }
+        }, 650);
+      }
+    }
+
+    function animateWave() {
+      if (!visible) return;
+      for (var k = 0; k < waveBars.length; k++) {
+        var h = 20 + Math.abs(Math.sin((k + turnIdx + wordIdx + Date.now() / 220) * 0.9)) * 80;
+        waveBars[k].style.height = Math.round(h) + "%";
+      }
+      waveTimer = setTimeout(animateWave, 180);
+    }
+
+    function startVoice() {
+      visible = true;
+      if (!reduced) { stepVoice(); animateWave(); }
+      else { var t = SCRIPTS[mode].turns; turnIdx = t.length - 1; wordIdx = t[turnIdx].t.split(" ").length; renderVoice(); }
+    }
+    function stopVoice() {
+      visible = false;
+      clearTimeout(vTimer); clearTimeout(waveTimer);
+    }
+
+    vTabs.forEach(function (tab) {
+      tab.addEventListener("click", function () {
+        vTabs.forEach(function (t) { t.classList.remove("is-active"); });
+        tab.classList.add("is-active");
+        mode = tab.getAttribute("data-mode");
+        if (vCaller) vCaller.textContent = SCRIPTS[mode].caller;
+        clearTimeout(vTimer);
+        turnIdx = 0; wordIdx = 0; renderVoice();
+        if (visible && !reduced) vTimer = setTimeout(stepVoice, 400);
+      });
+    });
+
+    if (vCaller) vCaller.textContent = SCRIPTS[mode].caller;
+    renderVoice();
+    whenVisible(voice, startVoice, stopVoice);
+  }
+
+  /* ---------------- DÉMO CHATBOT ---------------- */
+  var chat = document.querySelector("[data-chat]");
+  if (chat) {
+    var CHAT = [
+      { f: "bot", t: "Bonjour 👋 Vous cherchez à louer, acheter, ou faire estimer un bien ?" },
+      { f: "user", t: "Acheter, un T3 vers le centre." },
+      { f: "bot", t: "Parfait. Quel est votre budget maximum, frais inclus ?" },
+      { f: "user", t: "Autour de 280 000 €." },
+      { f: "bot", t: "Top. J'ai 4 biens qui correspondent. Je vous envoie la sélection par email et je réserve un créneau de visite ?" },
+      { f: "user", t: "Oui, samedi matin si possible." },
+      { f: "bot", t: "C'est noté pour samedi 10h. Un conseiller vous confirme dans la foulée. À samedi !" }
+    ];
+    var cBody = chat.querySelector(".chat__body");
+    var cCount = 1, cTimer = null, cVisible = false, cTyping = false;
+
+    function renderChat() {
+      cBody.innerHTML = "";
+      for (var i = 0; i < cCount && i < CHAT.length; i++) {
+        var m = CHAT[i];
+        var d = document.createElement("div");
+        d.className = "cmsg show " + m.f;
+        d.innerHTML = '<div class="b">' + m.t + "</div>";
+        cBody.appendChild(d);
+      }
+      if (cTyping) {
+        var tp = document.createElement("div");
+        tp.className = "cmsg bot show";
+        tp.innerHTML = '<div class="typing"><span></span><span></span><span></span></div>';
+        cBody.appendChild(tp);
+      }
+      cBody.scrollTop = cBody.scrollHeight; // page jamais décalée
+    }
+
+    function stepChat() {
+      if (!cVisible || reduced) return;
+      if (cCount >= CHAT.length) {
+        cTimer = setTimeout(function () { cCount = 1; renderChat(); cTimer = setTimeout(stepChat, 900); }, 2600);
+        return;
+      }
+      var next = CHAT[cCount];
+      if (next.f === "bot") {
+        cTyping = true; renderChat();
+        cTimer = setTimeout(function () {
+          cTyping = false; cCount++; renderChat();
+          cTimer = setTimeout(stepChat, 900);
+        }, 1100);
+      } else {
+        cTimer = setTimeout(function () { cCount++; renderChat(); cTimer = setTimeout(stepChat, 700); }, 600);
+      }
+    }
+
+    renderChat();
+    whenVisible(chat,
+      function () { cVisible = true; if (reduced) { cCount = CHAT.length; renderChat(); } else { cTimer = setTimeout(stepChat, 1000); } },
+      function () { cVisible = false; clearTimeout(cTimer); }
+    );
+  }
+
+  /* ---------------- DÉMO AUTOMATISATION ---------------- */
+  var auto = document.querySelector("[data-auto]");
+  if (auto) {
+    var rows = auto.querySelectorAll(".auto__row");
+    var aTimer = null, aVisible = false, aI = -1;
+    function setActive(n) { rows.forEach(function (r, idx) { r.classList.toggle("on", idx <= n); }); }
+    function stepAuto() {
+      if (!aVisible || reduced) return;
+      aI++;
+      if (aI >= rows.length) {
+        aTimer = setTimeout(function () { aI = -1; setActive(-1); aTimer = setTimeout(stepAuto, 800); }, 2200);
+        return;
+      }
+      setActive(aI);
+      aTimer = setTimeout(stepAuto, 950);
+    }
+    whenVisible(auto,
+      function () { aVisible = true; if (reduced) { setActive(rows.length - 1); } else { aI = -1; setActive(-1); aTimer = setTimeout(stepAuto, 500); } },
+      function () { aVisible = false; clearTimeout(aTimer); }
+    );
+  }
+
+  /* ---------------- Année footer ---------------- */
+  var yr = document.querySelector("[data-year]");
+  if (yr) yr.textContent = new Date().getFullYear();
+})();
+
+</script>
+</body>
+</html>
