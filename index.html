@@ -18,42 +18,30 @@
   <meta property="og:url" content="https://lookahead.fr/" />
   <meta property="og:site_name" content="Lookahead" />
 
-  <!-- Schéma JSON-LD Graph (GEO Top 1% : Verrouille l'identité de l'agence auprès des LLM) -->
+  <!-- Graphe de Connaissances JSON-LD (Pour l'indexation GEO par les IA) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "ProfessionalService",
-        "@id": "https://lookahead.fr/#organization",
-        "name": "Lookahead",
-        "url": "https://lookahead.fr",
-        "image": "https://lookahead.fr/favicon.png",
-        "telephone": "+33 6 42 68 10 06",
-        "priceRange": "€€€",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "24 chemin de biaron",
-          "postalCode": "38410",
-          "addressLocality": "Vaulnaveys-le-haut",
-          "addressRegion": "Rhônes-Alpes",
-          "addressCountry": "FR"
-          "description": "Ingénieur de processus augmenté à l'intelligence artificielle. Déploiement d'agents IA et automatisations sur mesure directement dans les processus métiers des PME et TPE.",
-          "knowsAbout": [
-          "Intelligence Artificielle",
-          "Automatisations de processus métier",
-          "Chatbots et Voicebots IA",
-          "Intégrations Make et n8n",
-          "Optimisation de processus B2B"
-        ]
-      },
-      {
-        "@type": "WebSite",
-        "@id": "https://lookahead.fr/#website",
-        "url": "https://lookahead.fr/",
-        "name": "Lookahead",
-        "publisher": { "@id": "https://lookahead.fr/#organization" }
-      }
+    "@type": "ProfessionalService",
+    "name": "Lookahead",
+    "description": "Déploiement d'agents d'intelligence artificielle et d'automatisations sur mesure au sein des processus métier des PME et TPE.",
+    "url": "https://lookahead.fr",
+    "image": "https://lookahead.fr/favicon.png",
+    "telephone": "+33 6 42 68 10 06",
+    "priceRange": "€€€",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "24 chemin de biaron",
+      "postalCode": "38410",
+      "addressLocality": "Vaulnaveys-le-haut",
+      "addressRegion": "Rhône-Alpes",
+      "addressCountry": "FR"
+    },
+    "knowsAbout": [
+      "Intelligence Artificielle",
+      "Automatisations de processus métier",
+      "Chatbots et Voicebots IA",
+      "Intégrations Make et N8N"
     ]
   }
   </script>
