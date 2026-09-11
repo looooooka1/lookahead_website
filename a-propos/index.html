@@ -39,6 +39,64 @@
     "@context": "https://schema.org",
     "@graph": [
       {
+        "@type": [
+          "ProfessionalService",
+          "Organization"
+        ],
+        "@id": "https://lookahead.fr/#organization",
+        "name": "LookAhead",
+        "alternateName": "Lookahead",
+        "description": "LookAhead est une agence française qui déploie des agents vocaux IA et des automatisations n8n et Make pour les PME et TPE.",
+        "url": "https://lookahead.fr/",
+        "logo": "https://lookahead.fr/assets/og-image.png",
+        "image": "https://lookahead.fr/assets/og-image.png",
+        "telephone": "+33642681006",
+        "priceRange": "290€ - 1490€ / mois",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "24 chemin de Biaron",
+          "postalCode": "38410",
+          "addressLocality": "Vaulnaveys-le-Haut",
+          "addressRegion": "Auvergne-Rhône-Alpes",
+          "addressCountry": "FR"
+        },
+        "areaServed": {
+          "@type": "Country",
+          "name": "France"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/in/luka-gallagher-lookahead/"
+        ],
+        "email": "luka@lookahead.fr",
+        "founder": {
+          "@id": "https://lookahead.fr/#founder"
+        },
+        "vatID": "FR92924346109",
+        "taxID": "92434610900029",
+        "identifier": [
+          {
+            "@type": "PropertyValue",
+            "name": "SIRET",
+            "value": "92434610900029"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "RCS",
+            "value": "924 346 109 RCS Grenoble"
+          }
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://lookahead.fr/#website",
+        "url": "https://lookahead.fr/",
+        "name": "LookAhead",
+        "publisher": {
+          "@id": "https://lookahead.fr/#organization"
+        },
+        "inLanguage": "fr-FR"
+      },
+      {
         "@type": "BreadcrumbList",
         "@id": "https://lookahead.fr/a-propos/#breadcrumb",
         "itemListElement": [
@@ -309,14 +367,14 @@
           </div>
         </div>
         <div class="footer__col">
-          <h5>Services</h5>
+          <h2 class="footer__h">Services</h2>
           <a href="/agent-vocal-ia/">Voicebots</a>
           <a href="/chatbot-ia-entreprise/">Chatbots</a>
           <a href="/automatisation-n8n-make/">Automatisation</a>
           <a href="/tarifs/">Tarifs</a>
         </div>
         <div class="footer__col">
-          <h5>Entreprise</h5>
+          <h2 class="footer__h">Entreprise</h2>
           <a href="/a-propos/">À propos</a>
           <a href="/agence-automatisation-ia-grenoble/">Agence IA Grenoble</a>
           <a href="/tarifs/">Tarifs</a>
@@ -324,7 +382,7 @@
           <a href="mailto:luka@lookahead.fr">Contact</a>
         </div>
         <div class="footer__col">
-          <h5>Légal</h5>
+          <h2 class="footer__h">Légal</h2>
           <a href="/mentions-legales/">Mentions légales</a>
           <a href="/cgv/">Conditions générales de vente</a>
           <a href="/cgu/">Conditions générales d'utilisation</a>

@@ -198,7 +198,7 @@
           "@id": "https://lookahead.fr/#organization"
         },
         "primaryImageOfPage": {
-          "@id": "https://lookahead.fr/#organization"
+          "@id": "https://lookahead.fr/#primaryimage"
         },
         "inLanguage": "fr-FR"
       },
@@ -354,7 +354,7 @@
             "name": "n8n ou Make : quelle plateforme d'automatisation choisir ?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "n8n et Make automatisent toutes deux des workflows entre logiciels métier. n8n est open source, auto-hébergeable et plus flexible techniquement, ce qui facilite la maîtrise de l'emplacement des données. Make est plus rapide à prendre en main grâce à son éditeur visuel et à son catalogue de connecteurs. LookAhead choisit la plateforme après le diagnostic, selon les outils déjà en place et les contraintes de conformité de l'entreprise."
+              "text": "n8n et Make automatisent toutes deux des workflows entre logiciels métier. n8n est open source, auto-hébergeable et plus flexible techniquement, ce qui facilite la maîtrise de l'emplacement des données. Make est plus rapide à prendre en main grâce à son éditeur visuel et à son large catalogue de connecteurs. LookAhead choisit la plateforme après le diagnostic, selon les outils déjà en place et les contraintes de conformité de l'entreprise."
             }
           },
           {
@@ -412,6 +412,15 @@
         ],
         "email": "luka@lookahead.fr",
         "url": "https://lookahead.fr/a-propos/"
+      },
+      {
+        "@type": "ImageObject",
+        "@id": "https://lookahead.fr/#primaryimage",
+        "url": "https://lookahead.fr/assets/og-image.png",
+        "contentUrl": "https://lookahead.fr/assets/og-image.png",
+        "width": 1200,
+        "height": 630,
+        "caption": "LookAhead — agent vocal IA et automatisation n8n pour PME"
       }
     ]
   }
@@ -646,7 +655,7 @@ p { color: var(--body); }
 .feature-item { display: flex; gap: 16px; }
 .feature-item .fi-ic { width: 40px; height: 40px; border-radius: 12px; background: var(--accent-soft); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
 .feature-item .fi-ic svg { width: 18px; height: 18px; color: var(--accent); }
-.feature-item h4 { font-size: 1rem; font-weight: 700; }
+.feature-item h4, .feature-item .feat__t { font-size: 1rem; font-weight: 700; }
 .feature-item p { font-size: .95rem; color: var(--body2); margin-top: 2px; }
 .bullets { margin-top: 32px; list-style: none; display: flex; flex-direction: column; gap: 12px; }
 .bullets li { display: flex; gap: 12px; align-items: flex-start; font-size: 1rem; color: var(--body); }
@@ -838,7 +847,7 @@ p { color: var(--body); }
 .footer__social a { width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--line); display: flex; align-items: center; justify-content: center; transition: border-color .2s; }
 .footer__social a:hover { border-color: rgba(75,73,236,.4); }
 .footer__social svg { width: 16px; height: 16px; color: var(--muted); }
-.footer__col h5 { font-size: .75rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: var(--muted2); margin-bottom: 16px; }
+.footer__col h5, .footer__col .footer__h { font-size: .75rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: var(--muted2); margin-bottom: 16px; }
 .footer__col a { display: block; font-size: .875rem; color: var(--body2); margin-bottom: 10px; transition: color .2s; }
 .footer__col a:hover { color: var(--accent); }
 .footer__bottom { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding-top: 32px; border-top: 1px solid var(--line); font-size: .85rem; color: var(--muted2); flex-wrap: wrap; }
@@ -1115,10 +1124,10 @@ p { color: var(--body); }
           <h2 class="h2" style="margin-top:12px;">Agent vocal IA : le standard téléphonique qui ne dort <span class="accent">jamais</span>.</h2>
           <p class="lead" style="margin-top:20px;">Un agent IA pour votre service client et votre prospection. Il prend les appels, qualifie la demande, cale les rendez-vous et rappelle vos anciens contacts. Les cas complexes sont transférés à un humain, en douceur.</p>
           <div class="feature-list">
-            <div class="feature-item"><span class="fi-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.68 12 19.79 19.79 0 0 1 1.61 3.56 2 2 0 0 1 3.6 1.4h3a2 2 0 0 1 2 1.72"/></svg></span><div><h4>Disponible 24h/24, jamais en attente</h4><p>L'agent décroche à la première sonnerie, à n'importe quelle heure, sans menu à touches ni musique d'attente.</p></div></div>
-            <div class="feature-item"><span class="fi-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.68 12 19.79 19.79 0 0 1 1.61 3.56 2 2 0 0 1 3.6 1.4h3a2 2 0 0 1 2 1.72"/></svg></span><div><h4>Une conversation qui sonne juste</h4><p>Il écoute, gère les interruptions, relance avec les bonnes questions et s'adapte au ton de votre interlocuteur.</p></div></div>
-            <div class="feature-item"><span class="fi-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.68 12 19.79 19.79 0 0 1 1.61 3.56 2 2 0 0 1 3.6 1.4h3a2 2 0 0 1 2 1.72"/></svg></span><div><h4>En entrant comme en sortant</h4><p>Service client le jour, prospection et relance des anciens leads le soir. Le même agent, deux usages.</p></div></div>
-            <div class="feature-item"><span class="fi-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.68 12 19.79 19.79 0 0 1 1.61 3.56 2 2 0 0 1 3.6 1.4h3a2 2 0 0 1 2 1.72"/></svg></span><div><h4>Connecté à votre CRM en direct</h4><p>Pendant l'appel, il lit la fiche client, met à jour les informations et crée la tâche de suivi.</p></div></div>
+            <div class="feature-item"><span class="fi-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.68 12 19.79 19.79 0 0 1 1.61 3.56 2 2 0 0 1 3.6 1.4h3a2 2 0 0 1 2 1.72"/></svg></span><div><h3 class="feat__t">Disponible 24h/24, jamais en attente</h3><p>L'agent décroche à la première sonnerie, à n'importe quelle heure, sans menu à touches ni musique d'attente.</p></div></div>
+            <div class="feature-item"><span class="fi-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.68 12 19.79 19.79 0 0 1 1.61 3.56 2 2 0 0 1 3.6 1.4h3a2 2 0 0 1 2 1.72"/></svg></span><div><h3 class="feat__t">Une conversation qui sonne juste</h3><p>Il écoute, gère les interruptions, relance avec les bonnes questions et s'adapte au ton de votre interlocuteur.</p></div></div>
+            <div class="feature-item"><span class="fi-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.68 12 19.79 19.79 0 0 1 1.61 3.56 2 2 0 0 1 3.6 1.4h3a2 2 0 0 1 2 1.72"/></svg></span><div><h3 class="feat__t">En entrant comme en sortant</h3><p>Service client le jour, prospection et relance des anciens leads le soir. Le même agent, deux usages.</p></div></div>
+            <div class="feature-item"><span class="fi-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.68 12 19.79 19.79 0 0 1 1.61 3.56 2 2 0 0 1 3.6 1.4h3a2 2 0 0 1 2 1.72"/></svg></span><div><h3 class="feat__t">Connecté à votre CRM en direct</h3><p>Pendant l'appel, il lit la fiche client, met à jour les informations et crée la tâche de suivi.</p></div></div>
           </div>
         </div>
         <div class="reveal" data-delay="0.1">
@@ -1200,9 +1209,9 @@ p { color: var(--body); }
         </div>
         <div class="fade">
           <div class="feature-list" style="margin-top:0;">
-            <div class="feature-item"><span class="fi-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m17 2 4 4-4 4"/><path d="M3 11v-1a4 4 0 0 1 4-4h14"/><path d="m7 22-4-4 4-4"/><path d="M21 13v1a4 4 0 0 1-4 4H3"/></svg></span><div><h4>Vous décrivez le flux une fois</h4><p>Un nouveau lead, un devis signé, un dossier complet : on définit ce qui doit se passer ensuite.</p></div></div>
-            <div class="feature-item"><span class="fi-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 7H6a2 2 0 0 0-2 2v.5a2.5 2.5 0 0 0 0 5V15a2 2 0 0 0 2 2h3"/><path d="M15 7h3a2 2 0 0 1 2 2v.5a2.5 2.5 0 0 1 0 5V15a2 2 0 0 1-2 2h-3"/><line x1="9" y1="12" x2="15" y2="12"/></svg></span><div><h4>On connecte vos outils existants</h4><p>CRM, agenda, messagerie, ERP. Via n8n et Make, sans remplacer ce que vous utilisez déjà.</p></div></div>
-            <div class="feature-item"><span class="fi-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></span><div><h4>On surveille et on ajuste</h4><p>Chaque workflow est suivi. Si quelque chose change dans votre activité, on l'adapte.</p></div></div>
+            <div class="feature-item"><span class="fi-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m17 2 4 4-4 4"/><path d="M3 11v-1a4 4 0 0 1 4-4h14"/><path d="m7 22-4-4 4-4"/><path d="M21 13v1a4 4 0 0 1-4 4H3"/></svg></span><div><h3 class="feat__t">Vous décrivez le flux une fois</h3><p>Un nouveau lead, un devis signé, un dossier complet : on définit ce qui doit se passer ensuite.</p></div></div>
+            <div class="feature-item"><span class="fi-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 7H6a2 2 0 0 0-2 2v.5a2.5 2.5 0 0 0 0 5V15a2 2 0 0 0 2 2h3"/><path d="M15 7h3a2 2 0 0 1 2 2v.5a2.5 2.5 0 0 1 0 5V15a2 2 0 0 1-2 2h-3"/><line x1="9" y1="12" x2="15" y2="12"/></svg></span><div><h3 class="feat__t">On connecte vos outils existants</h3><p>CRM, agenda, messagerie, ERP. Via n8n et Make, sans remplacer ce que vous utilisez déjà.</p></div></div>
+            <div class="feature-item"><span class="fi-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></span><div><h3 class="feat__t">On surveille et on ajuste</h3><p>Chaque workflow est suivi. Si quelque chose change dans votre activité, on l'adapte.</p></div></div>
           </div>
         </div>
       </div>
@@ -1543,14 +1552,14 @@ p { color: var(--body); }
           </div>
         </div>
         <div class="footer__col">
-          <h5>Services</h5>
+          <h2 class="footer__h">Services</h2>
           <a href="/agent-vocal-ia/">Voicebots</a>
           <a href="/chatbot-ia-entreprise/">Chatbots</a>
           <a href="/automatisation-n8n-make/">Automatisation</a>
           <a href="#tarifs">Tarifs</a>
         </div>
         <div class="footer__col">
-          <h5>Entreprise</h5>
+          <h2 class="footer__h">Entreprise</h2>
           <a href="/a-propos/">À propos</a>
           <a href="/agence-automatisation-ia-grenoble/">Agence IA Grenoble</a>
           <a href="#tarifs">Tarifs</a>
@@ -1558,7 +1567,7 @@ p { color: var(--body); }
           <a href="mailto:luka@lookahead.fr">Contact</a>
         </div>
         <div class="footer__col">
-          <h5>Légal</h5>
+          <h2 class="footer__h">Légal</h2>
           <a href="/mentions-legales/">Mentions légales</a>
           <a href="/cgv/">Conditions générales de vente</a>
           <a href="/cgu/">Conditions générales d'utilisation</a>
@@ -1575,7 +1584,9 @@ p { color: var(--body); }
         </div>
       </div>
     </div>
-          <p style="margin-top:14px;font-size:13.5px;line-height:1.7;opacity:.72;">LookAhead — 24 chemin de Biaron, 38410 Vaulnaveys-le-Haut, Isère. Agence d'automatisation IA basée près de Grenoble, en Auvergne-Rhône-Alpes, intervenant à distance partout en France. SIRET 924 346 109 00029.</p>
+      <div class="container">
+        <p style="margin-top:8px;font-size:13px;line-height:1.7;opacity:.6;">LookAhead — 24 chemin de Biaron, 38410 Vaulnaveys-le-Haut, Isère. Agence d'automatisation IA basée près de Grenoble, en Auvergne-Rhône-Alpes, intervenant à distance partout en France. SIRET 924 346 109 00029.</p>
+      </div>
   </footer>
 
   <script>

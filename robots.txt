@@ -3,7 +3,8 @@
 
 User-agent: *
 Allow: /
-Disallow: /merci-rendez-vous/
+# /merci-rendez-vous/ est en noindex : le crawl doit rester autorisé
+# pour que Google puisse lire la balise.
 
 # --- Crawlers des moteurs de réponse IA ---
 User-agent: OAI-SearchBot
