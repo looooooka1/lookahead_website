@@ -1,0 +1,30 @@
+# robots.txt — lookahead.fr
+# Agence d'automatisation IA, agents vocaux et chatbots pour PME (Isère, France)
+
+User-agent: *
+Allow: /
+Disallow: /merci-rendez-vous/
+
+# --- Crawlers des moteurs de réponse IA ---
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: GPTBot
+Allow: /
+User-agent: Claude-SearchBot
+Allow: /
+User-agent: Claude-User
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Perplexity-User
+Allow: /
+User-agent: Google-Extended
+Allow: /
+User-agent: Applebot-Extended
+Allow: /
+
+Sitemap: https://lookahead.fr/sitemap.xml

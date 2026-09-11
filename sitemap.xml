@@ -2,44 +2,98 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://lookahead.fr/</loc>
-    <lastmod>2026-05-31</lastmod>
-    <changefreq>daily</changefreq>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.00</priority>
   </url>
   <url>
-    <loc>https://lookahead.fr/reserver.html</loc>
-    <lastmod>2026-05-31</lastmod>
-    <changefreq>weekly</changefreq>
+    <loc>https://lookahead.fr/agent-vocal-ia/</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://lookahead.fr/mentions-legales.html</loc>
-    <lastmod>2026-05-31</lastmod>
+    <loc>https://lookahead.fr/chatbot-ia-entreprise/</loc>
+    <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.30</priority>
+    <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://lookahead.fr/cgv.html</loc>
-    <lastmod>2026-05-31</lastmod>
+    <loc>https://lookahead.fr/automatisation-n8n-make/</loc>
+    <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.30</priority>
+    <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://lookahead.fr/cgu.html</loc>
-    <lastmod>2026-05-31</lastmod>
+    <loc>https://lookahead.fr/ia-souveraine-rgpd/</loc>
+    <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.30</priority>
+    <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://lookahead.fr/confidentialite.html</loc>
-    <lastmod>2026-05-31</lastmod>
+    <loc>https://lookahead.fr/agence-automatisation-ia-grenoble/</loc>
+    <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.30</priority>
+    <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://lookahead.fr/cookies.html</loc>
-    <lastmod>2026-05-31</lastmod>
+    <loc>https://lookahead.fr/recuperation-projet-ia/</loc>
+    <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.30</priority>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://lookahead.fr/tarifs/</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://lookahead.fr/a-propos/</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://lookahead.fr/contact/</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://lookahead.fr/reserver/</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://lookahead.fr/mentions-legales/</loc>
+    <lastmod>2026-05-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.20</priority>
+  </url>
+  <url>
+    <loc>https://lookahead.fr/cgv/</loc>
+    <lastmod>2026-05-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.20</priority>
+  </url>
+  <url>
+    <loc>https://lookahead.fr/cgu/</loc>
+    <lastmod>2026-05-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.20</priority>
+  </url>
+  <url>
+    <loc>https://lookahead.fr/confidentialite/</loc>
+    <lastmod>2026-05-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.20</priority>
+  </url>
+  <url>
+    <loc>https://lookahead.fr/cookies/</loc>
+    <lastmod>2026-05-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.20</priority>
   </url>
 </urlset>

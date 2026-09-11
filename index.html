@@ -14,43 +14,405 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <!-- Métadonnées SEO Principales (Cible Dirigeants de PME) -->
-  <title>Lookahead | Agents IA & Automatisations sur Mesure pour PME</title>
-  <meta name="description" content="Lookahead déploie des agents IA et automatisations sur mesure (n8n, Make) pour aider les dirigeants de PME à récupérer le temps et l'argent perdus sur les tâches répétitives." />
-  <meta name="robots" content="index, follow" />
+  <title>Agent vocal IA &amp; automatisation n8n pour PME | LookAhead</title>
+  <meta name="description" content="Agents vocaux IA qui répondent au téléphone 24/7 et automatisations n8n et Make pour PME françaises. Diagnostic gratuit de 15 minutes." />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
   <link rel="canonical" href="https://lookahead.fr/" />
+  <meta name="author" content="LookAhead" />
+  <meta name="geo.region" content="FR-ARA" />
+  <meta name="geo.placename" content="Grenoble, Auvergne-Rhône-Alpes" />
 
   <!-- Open Graph Avancé (LinkedIn, Twitter, Slack) -->
   <meta property="og:locale" content="fr_FR" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Lookahead | Agents IA & Automatisations sur Mesure" />
-  <meta property="og:description" content="Augmentez la productivité de votre entreprise. Intégration d'agents conversationnels et de workflows intelligents sans toucher à votre stack existante." />
+  <meta property="og:title" content="Agent vocal IA &amp; automatisation n8n pour PME | LookAhead" />
+  <meta property="og:description" content="Agents vocaux IA qui répondent au téléphone 24/7 et automatisations n8n et Make pour PME françaises. Diagnostic gratuit de 15 minutes." />
   <meta property="og:url" content="https://lookahead.fr/" />
-  <meta property="og:site_name" content="Lookahead" />
+  <meta property="og:site_name" content="LookAhead" />
+  <meta property="og:image" content="https://lookahead.fr/assets/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="LookAhead — agents vocaux IA et automatisations n8n et Make pour PME" />
 
-  <!-- Graphe de Connaissances JSON-LD (Pour l'indexation GEO par les IA) -->
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Agent vocal IA &amp; automatisation n8n pour PME | LookAhead" />
+  <meta name="twitter:description" content="Agents vocaux IA qui répondent au téléphone 24/7 et automatisations n8n et Make pour PME françaises." />
+  <meta name="twitter:image" content="https://lookahead.fr/assets/og-image.png" />
+
+  <!-- Graphe de Connaissances JSON-LD (SEO + GEO / citation par les IA) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "Lookahead",
-    "description": "Déploiement d'agents d'intelligence artificielle et d'automatisations sur mesure au sein des processus métier des PME et TPE.",
-    "url": "https://lookahead.fr",
-    "image": "https://lookahead.fr/favicon.png",
-    "telephone": "+33 6 42 68 10 06",
-    "priceRange": "€€€",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "24 chemin de biaron",
-      "postalCode": "38410",
-      "addressLocality": "Vaulnaveys-le-haut",
-      "addressRegion": "Rhône-Alpes",
-      "addressCountry": "FR"
-    },
-    "knowsAbout": [
-      "Intelligence Artificielle",
-      "Automatisations de processus métier",
-      "Chatbots et Voicebots IA",
-      "Intégrations Make et N8N"
+    "@graph": [
+      {
+        "@type": [
+          "ProfessionalService",
+          "Organization"
+        ],
+        "@id": "https://lookahead.fr/#organization",
+        "name": "LookAhead",
+        "alternateName": "Lookahead",
+        "description": "LookAhead est une agence française qui déploie des agents vocaux IA et des automatisations n8n et Make pour les PME et TPE.",
+        "url": "https://lookahead.fr/",
+        "logo": "https://lookahead.fr/assets/og-image.png",
+        "image": "https://lookahead.fr/assets/og-image.png",
+        "telephone": "+33642681006",
+        "priceRange": "290€ - 1490€ / mois",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "24 chemin de Biaron",
+          "postalCode": "38410",
+          "addressLocality": "Vaulnaveys-le-Haut",
+          "addressRegion": "Auvergne-Rhône-Alpes",
+          "addressCountry": "FR"
+        },
+        "areaServed": {
+          "@type": "Country",
+          "name": "France"
+        },
+        "knowsAbout": [
+          "Agent vocal IA",
+          "Voicebot téléphonique",
+          "Chatbot IA",
+          "Automatisation de processus métier",
+          "n8n",
+          "Make (Integromat)",
+          "Intégration CRM",
+          "Prise de rendez-vous automatisée",
+          "RGPD"
+        ],
+        "makesOffer": [
+          {
+            "@id": "https://lookahead.fr/#service-voicebot"
+          },
+          {
+            "@id": "https://lookahead.fr/#service-chatbot"
+          },
+          {
+            "@id": "https://lookahead.fr/#service-automatisation"
+          },
+          {
+            "@id": "https://lookahead.fr/#service-rdv"
+          },
+          {
+            "@id": "https://lookahead.fr/#service-relances"
+          },
+          {
+            "@id": "https://lookahead.fr/#service-documents"
+          }
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Offres LookAhead",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "name": "Essentiel",
+              "description": "1 chatbot ou 1 voicebot, réponses 24/7, qualification et routage, intégration à 1 outil.",
+              "price": "290",
+              "priceCurrency": "EUR",
+              "url": "https://lookahead.fr/#tarifs",
+              "priceSpecification": {
+                "@type": "UnitPriceSpecification",
+                "price": "290",
+                "priceCurrency": "EUR",
+                "unitCode": "MON",
+                "billingIncrement": 1
+              }
+            },
+            {
+              "@type": "Offer",
+              "name": "Croissance",
+              "description": "Voicebot entrant et chatbot multicanal, prise de rendez-vous et relances, lecture/écriture CRM, jusqu'à 3 workflows n8n ou Make.",
+              "price": "690",
+              "priceCurrency": "EUR",
+              "url": "https://lookahead.fr/#tarifs",
+              "priceSpecification": {
+                "@type": "UnitPriceSpecification",
+                "price": "690",
+                "priceCurrency": "EUR",
+                "unitCode": "MON",
+                "billingIncrement": 1
+              }
+            },
+            {
+              "@type": "Offer",
+              "name": "Performance",
+              "description": "Agents vocaux entrants et sortants, prospection et nurturing automatisés, workflows illimités, chef de projet dédié.",
+              "price": "1490",
+              "priceCurrency": "EUR",
+              "url": "https://lookahead.fr/#tarifs",
+              "priceSpecification": {
+                "@type": "UnitPriceSpecification",
+                "price": "1490",
+                "priceCurrency": "EUR",
+                "unitCode": "MON",
+                "billingIncrement": 1
+              }
+            }
+          ]
+        },
+        "sameAs": [
+          "https://www.linkedin.com/in/luka-gallagher-lookahead/"
+        ],
+        "email": "luka@lookahead.fr",
+        "founder": {
+          "@id": "https://lookahead.fr/#founder"
+        },
+        "vatID": "FR92924346109",
+        "taxID": "92434610900029",
+        "identifier": [
+          {
+            "@type": "PropertyValue",
+            "name": "SIRET",
+            "value": "92434610900029"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "RCS",
+            "value": "924 346 109 RCS Grenoble"
+          }
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://lookahead.fr/#website",
+        "url": "https://lookahead.fr/",
+        "name": "LookAhead",
+        "publisher": {
+          "@id": "https://lookahead.fr/#organization"
+        },
+        "inLanguage": "fr-FR"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://lookahead.fr/#webpage",
+        "url": "https://lookahead.fr/",
+        "name": "Agent vocal IA & automatisation n8n / Make pour PME | LookAhead",
+        "description": "LookAhead déploie des agents vocaux IA qui répondent au téléphone 24/7 et des automatisations n8n et Make pour les PME françaises.",
+        "isPartOf": {
+          "@id": "https://lookahead.fr/#website"
+        },
+        "about": {
+          "@id": "https://lookahead.fr/#organization"
+        },
+        "primaryImageOfPage": {
+          "@id": "https://lookahead.fr/#organization"
+        },
+        "inLanguage": "fr-FR"
+      },
+      {
+        "@type": "Service",
+        "@id": "https://lookahead.fr/#service-voicebot",
+        "name": "Agent vocal IA (voicebot téléphonique)",
+        "serviceType": "Agent vocal IA",
+        "description": "Un agent vocal IA qui décroche le téléphone 24h/24 et 7j/7, qualifie l'appelant, prend les rendez-vous et transfère à un humain quand c'est nécessaire.",
+        "provider": {
+          "@id": "https://lookahead.fr/#organization"
+        },
+        "areaServed": {
+          "@type": "Country",
+          "name": "France"
+        },
+        "audience": {
+          "@type": "BusinessAudience",
+          "name": "PME et TPE françaises"
+        },
+        "url": "https://lookahead.fr/#voicebots"
+      },
+      {
+        "@type": "Service",
+        "@id": "https://lookahead.fr/#service-chatbot",
+        "name": "Chatbot IA pour site web et WhatsApp",
+        "serviceType": "Chatbot IA",
+        "description": "Un chatbot IA installé sur le site web et WhatsApp de la PME pour répondre instantanément aux visiteurs, qualifier les demandes et convertir les leads.",
+        "provider": {
+          "@id": "https://lookahead.fr/#organization"
+        },
+        "areaServed": {
+          "@type": "Country",
+          "name": "France"
+        },
+        "audience": {
+          "@type": "BusinessAudience",
+          "name": "PME et TPE françaises"
+        },
+        "url": "https://lookahead.fr/#chatbots"
+      },
+      {
+        "@type": "Service",
+        "@id": "https://lookahead.fr/#service-automatisation",
+        "name": "Automatisation de workflows n8n et Make",
+        "serviceType": "Automatisation de processus métier",
+        "description": "Automatisation des tâches répétitives d'une PME en connectant ses outils métier entre eux avec n8n ou Make, sans changer le CRM existant.",
+        "provider": {
+          "@id": "https://lookahead.fr/#organization"
+        },
+        "areaServed": {
+          "@type": "Country",
+          "name": "France"
+        },
+        "audience": {
+          "@type": "BusinessAudience",
+          "name": "PME et TPE françaises"
+        },
+        "url": "https://lookahead.fr/#automatisations"
+      },
+      {
+        "@type": "Service",
+        "@id": "https://lookahead.fr/#service-rdv",
+        "name": "Prise de rendez-vous automatisée",
+        "serviceType": "Automatisation de la prise de rendez-vous",
+        "description": "Prise, confirmation et rappel des rendez-vous automatiquement depuis le téléphone, le site ou WhatsApp, synchronisés avec l'agenda de l'entreprise.",
+        "provider": {
+          "@id": "https://lookahead.fr/#organization"
+        },
+        "areaServed": {
+          "@type": "Country",
+          "name": "France"
+        },
+        "audience": {
+          "@type": "BusinessAudience",
+          "name": "PME et TPE françaises"
+        },
+        "url": "https://lookahead.fr/#automatisations"
+      },
+      {
+        "@type": "Service",
+        "@id": "https://lookahead.fr/#service-relances",
+        "name": "Relances et nurturing automatisés",
+        "serviceType": "Automatisation des relances commerciales",
+        "description": "Relance automatique des devis non signés, des anciens leads et des clients inactifs, au bon moment et sans intervention manuelle.",
+        "provider": {
+          "@id": "https://lookahead.fr/#organization"
+        },
+        "areaServed": {
+          "@type": "Country",
+          "name": "France"
+        },
+        "audience": {
+          "@type": "BusinessAudience",
+          "name": "PME et TPE françaises"
+        },
+        "url": "https://lookahead.fr/#automatisations"
+      },
+      {
+        "@type": "Service",
+        "@id": "https://lookahead.fr/#service-documents",
+        "name": "Génération automatique de documents",
+        "serviceType": "Automatisation documentaire",
+        "description": "Génération et envoi automatiques des devis, contrats et comptes rendus à partir des données du CRM de l'entreprise.",
+        "provider": {
+          "@id": "https://lookahead.fr/#organization"
+        },
+        "areaServed": {
+          "@type": "Country",
+          "name": "France"
+        },
+        "audience": {
+          "@type": "BusinessAudience",
+          "name": "PME et TPE françaises"
+        },
+        "url": "https://lookahead.fr/#automatisations"
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://lookahead.fr/#faq",
+        "url": "https://lookahead.fr/#faq",
+        "isPartOf": {
+          "@id": "https://lookahead.fr/#webpage"
+        },
+        "inLanguage": "fr-FR",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Qu'est-ce que LookAhead ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "LookAhead est une agence française d'automatisation et d'agents IA, basée à Vaulnaveys-le-Haut en Isère, qui accompagne les PME et TPE partout en France. Elle déploie des agents vocaux IA, des chatbots et des workflows n8n et Make, facture l'infrastructure IA à prix coûtant et commence chaque mission par un diagnostic gratuit de 15 minutes."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Qu'est-ce qu'un agent vocal IA ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Un agent vocal IA, aussi appelé voicebot, est un logiciel qui décroche le téléphone à la place d'un standardiste. Il comprend la demande de l'appelant en langage naturel, répond aux questions courantes, qualifie le prospect, prend un rendez-vous dans l'agenda et transfère à un humain lorsque la demande sort de son périmètre. Il fonctionne 24h/24 et 7j/7, sans file d'attente."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Combien coûte un agent vocal IA pour une PME ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Chez LookAhead, un agent vocal IA démarre à 290 € par mois pour l'offre Essentiel, avec une mise en place à partir de 1 500 €. L'offre Croissance est à 690 € par mois (mise en place à partir de 2 500 €) et l'offre Performance à 1 490 € par mois (mise en place à partir de 4 500 €). Les minutes d'appel et les conversations IA sont refacturées à prix coûtant, sans marge."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "n8n ou Make : quelle plateforme d'automatisation choisir ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "n8n et Make automatisent toutes deux des workflows entre logiciels métier. n8n est open source, auto-hébergeable et plus flexible techniquement, ce qui facilite la maîtrise de l'emplacement des données. Make est plus rapide à prendre en main grâce à son éditeur visuel et à son catalogue de connecteurs. LookAhead choisit la plateforme après le diagnostic, selon les outils déjà en place et les contraintes de conformité de l'entreprise."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Les automatisations IA sont-elles conformes au RGPD ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "LookAhead conçoit ses automatisations dans le respect du RGPD : minimisation des données collectées, finalité définie pour chaque traitement, et choix d'hébergement discuté avec le client. L'emplacement exact des données dépend des fournisseurs retenus pour la téléphonie, le CRM et la plateforme d'automatisation. Ce point est cadré et validé pendant le diagnostic, avant tout déploiement."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Combien de temps faut-il pour déployer un agent IA ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "LookAhead met ses agents en production en moins de 4 semaines. Le déroulé est constant : cartographie des processus, identification des tâches répétitives, chiffrage de leur coût réel, conception de l'automatisation, puis déploiement et mesure. Un premier voicebot ou chatbot simple se déploie plus vite qu'un dispositif multicanal relié au CRM."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Faut-il changer de CRM ou d'outils pour automatiser son entreprise ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Non. LookAhead se connecte aux outils déjà utilisés par l'entreprise, en lecture et en écriture, sans imposer de logiciel ni forcer de migration. Les agents IA et les workflows n8n ou Make viennent se greffer sur le CRM, l'agenda et la téléphonie existants."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Quelle différence entre un chatbot et un agent vocal IA ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Un chatbot répond par écrit, sur un site web ou WhatsApp, à un visiteur déjà en ligne. Un agent vocal IA répond à la voix, au téléphone, et capte les appels entrants qui seraient autrement perdus en dehors des horaires d'ouverture. Les deux qualifient et prennent des rendez-vous. Beaucoup de PME déploient les deux, le téléphone captant les demandes les plus urgentes."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Quelles tâches une PME peut-elle automatiser en premier ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Les gains les plus rapides viennent des tâches répétitives à faible valeur et à fort volume : réponse aux appels et aux questions fréquentes, prise de rendez-vous, relance des devis non signés, saisie des informations dans le CRM et génération des documents commerciaux. LookAhead chiffre le coût réel de ces tâches pendant le diagnostic gratuit avant de recommander quoi automatiser."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "Person",
+        "@id": "https://lookahead.fr/#founder",
+        "name": "Luka Gallagher",
+        "jobTitle": "Fondateur",
+        "worksFor": {
+          "@id": "https://lookahead.fr/#organization"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/in/luka-gallagher-lookahead/"
+        ],
+        "email": "luka@lookahead.fr",
+        "url": "https://lookahead.fr/a-propos/"
+      }
     ]
   }
   </script>
@@ -538,6 +900,41 @@ p { color: var(--body); }
   .testi__track { animation: none !important; }
 }
 
+
+/* ---------- FAQ (accordéon natif, sans JS) ---------- */
+.faq { max-width: 860px; margin-inline: auto; }
+.faq__item {
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: #fff;
+  margin-bottom: 12px;
+  overflow: hidden;
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+.faq__item[open] { border-color: var(--accent); box-shadow: 0 12px 32px -18px rgba(75,73,236,.35); }
+.faq__q {
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  padding: 22px 26px; cursor: pointer; list-style: none; user-select: none;
+}
+.faq__q::-webkit-details-marker { display: none; }
+.faq__q::marker { content: ""; }
+.faq__q h3 { font-size: 17px; font-weight: 600; line-height: 1.45; margin: 0; color: var(--ink); }
+.faq__item:hover .faq__q h3 { color: var(--accent); }
+.faq__ico { position: relative; flex: 0 0 20px; height: 20px; }
+.faq__ico::before, .faq__ico::after {
+  content: ""; position: absolute; inset: 0; margin: auto;
+  background: var(--accent); border-radius: 2px; transition: transform .25s ease, opacity .25s ease;
+}
+.faq__ico::before { width: 14px; height: 2px; }
+.faq__ico::after  { width: 2px; height: 14px; }
+.faq__item[open] .faq__ico::after { transform: rotate(90deg); opacity: 0; }
+.faq__a { padding: 0 26px 24px; }
+.faq__a p { color: var(--body); line-height: 1.75; margin: 0; font-size: 15.5px; }
+@media (max-width: 640px) {
+  .faq__q { padding: 18px 20px; }
+  .faq__q h3 { font-size: 16px; }
+  .faq__a { padding: 0 20px 20px; }
+}
 </style>
 </head>
 <body>
@@ -547,26 +944,28 @@ p { color: var(--body); }
     <div class="nav__inner">
       <a href="#top" class="nav__logo">Look<span>ahead</span></a>
       <ul class="nav__links">
-        <li><a href="#voicebots">Voicebots</a></li>
-        <li><a href="#chatbots">Chatbots</a></li>
-        <li><a href="#automatisations">Automatisations</a></li>
+        <li><a href="/agent-vocal-ia/">Agent vocal IA</a></li>
+        <li><a href="/chatbot-ia-entreprise/">Chatbot IA</a></li>
+        <li><a href="/automatisation-n8n-make/">Automatisation n8n</a></li>
         <li><a href="#tarifs">Tarifs</a></li>
-        <li><a href="#apropos">À propos</a></li>
+        <li><a href="/a-propos/">À propos</a></li>
+        <li><a href="#faq">FAQ</a></li>
       </ul>
       <div class="nav__actions">
-        <a href="reserver.html" class="btn btn--dark">Diagnostic gratuit</a>
+        <a href="/reserver/" class="btn btn--dark">Diagnostic gratuit</a>
         <button class="nav__burger" aria-label="Menu">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
         </button>
       </div>
     </div>
     <div class="nav__mobile">
-      <a href="#voicebots">Voicebots</a>
-      <a href="#chatbots">Chatbots</a>
-      <a href="#automatisations">Automatisations</a>
+      <a href="/agent-vocal-ia/">Agent vocal IA</a>
+      <a href="/chatbot-ia-entreprise/">Chatbot IA</a>
+      <a href="/automatisation-n8n-make/">Automatisation n8n</a>
       <a href="#tarifs">Tarifs</a>
-      <a href="#apropos">À propos</a>
-      <a href="reserver.html" class="btn btn--dark">Diagnostic gratuit</a>
+      <a href="/a-propos/">À propos</a>
+      <a href="#faq">FAQ</a>
+      <a href="/reserver/" class="btn btn--dark">Diagnostic gratuit</a>
     </div>
   </header>
 
@@ -575,18 +974,17 @@ p { color: var(--body); }
     <div class="hero__glow"></div>
     <div class="hero__dots"></div>
     <div class="container center">
-      <span class="badge reveal"><span class="dot"></span> Agents IA vocaux · Chatbots · Automatisation</span>
+      <span class="badge reveal"><span class="dot"></span> Agent vocal IA · Chatbot · Automatisation n8n &amp; Make</span>
       <h1 class="h1 reveal" data-delay="0.08">
-        L'infrastructure IA qui fait
-        <span class="accent">tourner</span>
-        votre PME
-        <span class="pen-underline">sans vous<svg viewBox="0 0 300 12" preserveAspectRatio="none"><path d="M3 8 C 80 2, 220 2, 297 9"/></svg></span>.
+        Agent vocal IA et automatisation
+        <span class="accent">n8n</span> pour
+        <span class="pen-underline">votre PME<svg viewBox="0 0 300 12" preserveAspectRatio="none"><path d="M3 8 C 80 2, 220 2, 297 9"/></svg></span>.
       </h1>
       <p class="lead hero__sub reveal" data-delay="0.16">
-        Vos équipes passent des heures sur des tâches qui se répètent : rendez-vous, relances, réponses types, saisies. On déploie des agents IA qui s'en chargent, dans vos outils actuels, sans rien casser.
+        LookAhead déploie des agents vocaux IA qui répondent au téléphone 24/7 et des automatisations n8n et Make qui traitent vos tâches répétitives : prise de rendez-vous, relances, devis, saisies CRM. Le tout dans vos outils actuels, avec des traitements conçus dans le respect du RGPD.
       </p>
       <div class="hero__actions reveal" data-delay="0.24">
-        <a href="reserver.html" class="btn btn--dark">
+        <a href="/reserver/" class="btn btn--dark">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           Demander un diagnostic gratuit
         </a>
@@ -605,7 +1003,7 @@ p { color: var(--body); }
     <div class="container">
       <div class="maxw-2 reveal">
         <span class="eyebrow">Le quotidien d'une PME</span>
-        <h2 class="h2" style="margin-top:12px;">La même liste de tâches. <span class="accent">Chaque matin.</span></h2>
+        <h2 class="h2" style="margin-top:12px;">Quelles tâches une PME peut-elle <span class="accent">automatiser</span> ?</h2>
       </div>
       <div class="grid grid-2" style="margin-top:48px;">
         <div class="reveal">
@@ -645,7 +1043,7 @@ p { color: var(--body); }
     <div class="container">
       <div class="maxw-2 reveal" style="margin-bottom:56px;">
         <span class="eyebrow">Notre méthode</span>
-        <h2 class="h2" style="margin-top:12px;">On commence par <span class="accent">comprendre</span>, pas par vendre.</h2>
+        <h2 class="h2" style="margin-top:12px;">Notre méthode de déploiement en 5 étapes : on commence par <span class="accent">comprendre</span>.</h2>
         <p class="lead" style="margin-top:16px;">La plupart des prestataires arrivent avec leur outil. Nous arrivons avec des questions. Tant qu'on n'a pas chiffré ce que vous coûtent vos tâches répétitives, on ne propose rien.</p>
       </div>
       <div class="timeline">
@@ -694,8 +1092,8 @@ p { color: var(--body); }
   <section class="section bg-soft">
     <div class="container">
       <div class="maxw-2 reveal" style="margin-bottom:48px;">
-        <span class="eyebrow">Ce qu'on automatise</span>
-        <h2 class="h2" style="margin-top:12px;">Les tâches à <span class="accent">faible valeur</span>, prises en charge.</h2>
+        <span class="eyebrow">Automatisation des tâches répétitives en PME</span>
+        <h2 class="h2" style="margin-top:12px;">Les tâches répétitives d'une PME, <span class="accent">automatisées</span>.</h2>
       </div>
       <div class="grid grid-services">
         <div class="reveal"><div class="card card--hover"><div class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.68 12 19.79 19.79 0 0 1 1.61 3.56 2 2 0 0 1 3.6 1.4h3a2 2 0 0 1 2 1.72 12.8 12.8 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.13 6.13l1.05-1.05a2 2 0 0 1 2.11-.45 12.8 12.8 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div><h3 class="h3">Voicebots vocaux</h3><p style="margin-top:8px;font-size:.95rem;color:var(--body2)">Un agent qui décroche, qualifie, prend des rendez-vous et relance vos prospects au téléphone.</p></div></div>
@@ -713,8 +1111,8 @@ p { color: var(--body); }
     <div class="container">
       <div class="split">
         <div class="fade">
-          <span class="eyebrow">Agent vocal IA</span>
-          <h2 class="h2" style="margin-top:12px;">Le standard téléphonique qui ne dort <span class="accent">jamais</span>.</h2>
+          <span class="eyebrow">Agent vocal IA · Voicebot 24/7</span>
+          <h2 class="h2" style="margin-top:12px;">Agent vocal IA : le standard téléphonique qui ne dort <span class="accent">jamais</span>.</h2>
           <p class="lead" style="margin-top:20px;">Un agent IA pour votre service client et votre prospection. Il prend les appels, qualifie la demande, cale les rendez-vous et rappelle vos anciens contacts. Les cas complexes sont transférés à un humain, en douceur.</p>
           <div class="feature-list">
             <div class="feature-item"><span class="fi-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.68 12 19.79 19.79 0 0 1 1.61 3.56 2 2 0 0 1 3.6 1.4h3a2 2 0 0 1 2 1.72"/></svg></span><div><h4>Disponible 24h/24, jamais en attente</h4><p>L'agent décroche à la première sonnerie, à n'importe quelle heure, sans menu à touches ni musique d'attente.</p></div></div>
@@ -764,8 +1162,8 @@ p { color: var(--body); }
           </div>
         </div>
         <div class="fade order-1">
-          <span class="eyebrow">Chatbot IA</span>
-          <h2 class="h2" style="margin-top:12px;">Chaque visiteur, <span class="accent">accueilli</span> aucun lead perdu.</h2>
+          <span class="eyebrow">Chatbot IA site web &amp; WhatsApp</span>
+          <h2 class="h2" style="margin-top:12px;">Chatbot IA : chaque visiteur <span class="accent">accueilli</span>, aucun lead perdu.</h2>
           <p class="lead" style="margin-top:20px;">Sur votre site et sur WhatsApp, le chatbot répond aux questions fréquentes, qualifie les demandes et déclenche la suite : email, rendez-vous, ou transfert vers le bon conseiller.</p>
           <ul class="bullets">
             <li><span class="b-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span> Répond en quelques secondes, pas en quelques heures</li>
@@ -782,8 +1180,8 @@ p { color: var(--body); }
   <section class="section" id="automatisations">
     <div class="container">
       <div class="maxw-2 fade" style="margin-bottom:56px;">
-        <span class="eyebrow">Automatisation des tâches répétitives</span>
-        <h2 class="h2" style="margin-top:12px;">Le travail invisible qui se fait <span class="accent">tout seul</span>.</h2>
+        <span class="eyebrow">Automatisation n8n &amp; Make</span>
+        <h2 class="h2" style="margin-top:12px;">Automatisation n8n et Make : le travail qui se fait <span class="accent">tout seul</span>.</h2>
         <p class="lead" style="margin-top:20px;">Entre vos outils, il y a des dizaines de petites tâches manuelles : recopier un lead, envoyer un email, créer une tâche, prévenir un collègue. On les relie une fois, elles tournent ensuite sans personne.</p>
       </div>
       <div class="split">
@@ -816,7 +1214,7 @@ p { color: var(--body); }
     <div class="container">
       <div class="maxw-2 reveal" style="margin-bottom:56px;">
         <span class="eyebrow eyebrow--light">Pourquoi nous</span>
-        <h2 class="h2" style="margin-top:12px;color:#fff;">Ce qui nous rend <span class="pen-circle"><span class="accent accent--light">différents</span><svg viewBox="0 0 220 80" preserveAspectRatio="none"><path d="M44 10 C 10 16, 8 60, 74 70 C 156 80, 214 58, 206 33 C 199 11, 120 4, 58 9"/></svg></span>.</h2>
+        <h2 class="h2" style="margin-top:12px;color:#fff;">Pourquoi choisir cette <span class="pen-circle"><span class="accent accent--light">agence IA</span><svg viewBox="0 0 220 80" preserveAspectRatio="none"><path d="M44 10 C 10 16, 8 60, 74 70 C 156 80, 214 58, 206 33 C 199 11, 120 4, 58 9"/></svg></span>.</h2>
       </div>
       <div class="grid grid-3">
         <div class="reveal"><div class="why-card"><div class="num">01</div><h3>Le diagnostic d'abord</h3><p>On chiffre le coût réel de vos tâches répétitives avant de proposer quoi que ce soit. La conversation porte sur la valeur, pas sur un outil.</p></div></div>
@@ -831,7 +1229,7 @@ p { color: var(--body); }
     <div class="container">
       <div class="maxw-2 reveal" style="margin-bottom:48px;">
         <span class="eyebrow">Ce que ça change</span>
-        <h2 class="h2" style="margin-top:12px;">Des résultats <span class="accent">concrets</span>, pas des promesses.</h2>
+        <h2 class="h2" style="margin-top:12px;">Résultats d'une automatisation IA en <span class="accent">PME</span>.</h2>
       </div>
       <div class="grid grid-3" style="margin-bottom:24px;">
         <div class="reveal"><div class="stat-card"><div class="big">−40 à 70 %</div><div class="lab">de demandes répétitives traitées sans votre équipe</div><div class="pf">Sur les flux à fort volume comme le support ou la prise de rendez-vous.</div></div></div>
@@ -853,7 +1251,7 @@ p { color: var(--body); }
     <div class="container">
       <div class="maxw-2 reveal">
         <span class="eyebrow">Tarifs</span>
-        <h2 class="h2" style="margin-top:12px;">Des offres claires. <span class="accent">Sans surprise.</span></h2>
+        <h2 class="h2" style="margin-top:12px;">Prix d'un agent vocal IA : des offres claires, <span class="accent">sans surprise.</span></h2>
         <p class="lead" style="margin-top:16px;">Un coût de mise en place unique, puis un abonnement mensuel qui couvre le suivi, les corrections et les optimisations. Le prix s'ajuste à la complexité de votre écosystème, jamais l'inverse.</p>
       </div>
       <div class="ai-cost reveal">
@@ -873,7 +1271,7 @@ p { color: var(--body); }
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Intégration à 1 outil (CRM ou agenda)</li>
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Reporting mensuel</li>
           </ul>
-          <a href="reserver.html" class="btn btn--dark">Démarrer simple <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          <a href="/reserver/" class="btn btn--dark">Démarrer simple <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
         </div>
         <div class="tier tier--featured reveal" data-delay="0.06">
           <div class="tier__badge">Le plus choisi</div>
@@ -889,7 +1287,7 @@ p { color: var(--body); }
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Transfert intelligent vers un humain</li>
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Suivi et optimisation continue</li>
           </ul>
-          <a href="reserver.html" class="btn btn--primary">Choisir Croissance <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          <a href="/reserver/" class="btn btn--primary">Choisir Croissance <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
         </div>
         <div class="tier reveal" data-delay="0.12">
           <div class="tier__name">Performance</div>
@@ -903,7 +1301,7 @@ p { color: var(--body); }
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Voix ultra-réaliste sur mesure</li>
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Chef de projet dédié</li>
           </ul>
-          <a href="reserver.html" class="btn btn--dark">Passer à l'échelle <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          <a href="/reserver/" class="btn btn--dark">Passer à l'échelle <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
         </div>
       </div>
 
@@ -913,7 +1311,7 @@ p { color: var(--body); }
           <h3>Quand votre écosystème est unique</h3>
           <p>Audit complet de vos processus, cartographie de chaque outil, et conception d'une infrastructure 100 % personnalisée. On regarde tout, on réfléchit au meilleur système possible, et on construit exactement ce dont vous avez besoin. Devis établi après le diagnostic.</p>
         </div>
-        <a href="reserver.html" class="btn btn--dark">Demander un diagnostic <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        <a href="/reserver/" class="btn btn--dark">Demander un diagnostic <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
       </div>
 
       <div class="compare-wrap reveal">
@@ -951,7 +1349,7 @@ p { color: var(--body); }
     <div class="container">
       <div class="letter reveal">
         <span class="eyebrow">Le mot du fondateur</span>
-        <h2 class="h2" style="margin-top:12px;">Pourquoi j'ai créé <span class="accent">Lookahead</span>.</h2>
+        <h2 class="h2" style="margin-top:12px;">Qui est derrière <span class="accent">LookAhead</span> ?</h2>
         <div class="letter__body">
           <p>Je n'ai pas lancé Lookahead pour vendre de l'intelligence artificielle. Je l'ai lancé parce que je voyais les mêmes dirigeants, partout, faire le même constat : leurs équipes passaient leurs journées sur des tâches qui n'avaient pas besoin d'eux.</p>
           <p>Rappeler un lead. Confirmer un rendez-vous. Répéter la même réponse pour la dixième fois de la journée. Des tâches utiles, mais qui prennent la place du travail qui fait vraiment avancer une entreprise.</p>
@@ -972,7 +1370,7 @@ p { color: var(--body); }
       <div class="maxw-2 reveal" style="margin-bottom:48px;">
         <div class="stars"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
         <span class="eyebrow">Ils l'ont déployé</span>
-        <h2 class="h2" style="margin-top:12px;">Des dirigeants <span class="accent">comme vous</span>.</h2>
+        <h2 class="h2" style="margin-top:12px;">Avis de dirigeants de <span class="accent">PME</span> clients.</h2>
       </div>
       <div class="testi__cols reveal">
         <div class="testi__col"><div class="testi__track" style="animation-duration:26s">
@@ -1004,15 +1402,128 @@ p { color: var(--body); }
   </section>
 
   <!-- ============ CTA FINALE ============ -->
+  <!-- ============ SERVICES : maillage interne hub -> spokes ============ -->
+  <section class="section" id="services">
+    <div class="container">
+      <div class="maxw-2 reveal">
+        <span class="eyebrow">Nos expertises</span>
+        <h2 class="h2" style="margin-top:12px;">Agence d'automatisation IA <span class="accent">française</span>, sur mesure.</h2>
+        <p class="lead" style="margin-top:16px;">LookAhead conçoit des agents IA et des automatisations adaptés à l'écosystème réel de chaque PME. Aucun logiciel imposé, aucune migration forcée, et une infrastructure facturée à prix coûtant. L'entreprise est basée en Isère, près de Grenoble, et intervient à distance partout en France : voir <a href="/agence-automatisation-ia-grenoble/" style="color:var(--accent);text-decoration:underline;">l'agence d'automatisation IA à Grenoble</a> ou <a href="/a-propos/" style="color:var(--accent);text-decoration:underline;">qui est derrière LookAhead</a>.</p>
+      </div>
+      <div class="grid grid-3" style="margin-top:44px;">
+        <a class="card card--hover reveal" href="/agent-vocal-ia/" style="display:block;">
+          <h3 style="font-size:17px;margin-bottom:8px;">Agent vocal IA</h3>
+          <p style="color:var(--body);font-size:14.5px;line-height:1.65;">Le standard téléphonique qui décroche la nuit, le week-end et pendant les congés. Qualifie, prend les rendez-vous, écrit dans le CRM.</p>
+          <p style="margin-top:12px;font-size:14px;"><span style="color:var(--accent);text-decoration:underline;">agent vocal IA qui répond à vos appels 24/7</span></p>
+        </a>
+        <a class="card card--hover reveal" href="/chatbot-ia-entreprise/" style="display:block;">
+          <h3 style="font-size:17px;margin-bottom:8px;">Chatbot IA</h3>
+          <p style="color:var(--body);font-size:14.5px;line-height:1.65;">L'agent conversationnel qui répond aux visiteurs, lève les objections et transforme une visite anonyme en demande qualifiée.</p>
+          <p style="margin-top:12px;font-size:14px;"><span style="color:var(--accent);text-decoration:underline;">chatbot IA pour votre site et WhatsApp</span></p>
+        </a>
+        <a class="card card--hover reveal" href="/automatisation-n8n-make/" style="display:block;">
+          <h3 style="font-size:17px;margin-bottom:8px;">Automatisation n8n et Make</h3>
+          <p style="color:var(--body);font-size:14.5px;line-height:1.65;">Les workflows qui font circuler vos données entre vos logiciels, sans ressaisie, sans oubli et sous supervision.</p>
+          <p style="margin-top:12px;font-size:14px;"><span style="color:var(--accent);text-decoration:underline;">automatisation n8n et Make sur mesure</span></p>
+        </a>
+        <a class="card card--hover reveal" href="/ia-souveraine-rgpd/" style="display:block;">
+          <h3 style="font-size:17px;margin-bottom:8px;">IA souveraine et RGPD</h3>
+          <p style="color:var(--body);font-size:14.5px;line-height:1.65;">Ce que le règlement impose vraiment, ce que recouvre la souveraineté des données, et comment cadrer avant de choisir les outils.</p>
+          <p style="margin-top:12px;font-size:14px;"><span style="color:var(--accent);text-decoration:underline;">automatisation IA conforme au RGPD</span></p>
+        </a>
+        <a class="card card--hover reveal" href="/recuperation-projet-ia/" style="display:block;">
+          <h3 style="font-size:17px;margin-bottom:8px;">Récupération de projet IA</h3>
+          <p style="color:var(--body);font-size:14.5px;line-height:1.65;">Workflows non documentés, agent désactivé, prestataire parti : auditer l'existant avant d'envisager de tout reconstruire.</p>
+          <p style="margin-top:12px;font-size:14px;"><span style="color:var(--accent);text-decoration:underline;">reprendre un projet IA raté</span></p>
+        </a>
+        <a class="card card--hover reveal" href="/tarifs/" style="display:block;">
+          <h3 style="font-size:17px;margin-bottom:8px;">Tarifs</h3>
+          <p style="color:var(--body);font-size:14.5px;line-height:1.65;">Une grille publique et l'infrastructure IA refacturée à prix coûtant, sans marge sur votre consommation.</p>
+          <p style="margin-top:12px;font-size:14px;"><span style="color:var(--accent);text-decoration:underline;">nos tarifs : 290 €, 690 € ou 1 490 €/mois</span></p>
+        </a>
+      </div>
+      <div class="center" style="margin-top:40px;">
+        <a href="/contact/" class="btn btn--outline">Demander un audit gratuit</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ (SEO longue traine + GEO / citation par les IA) ============ -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="maxw-2 reveal">
+        <span class="eyebrow">Questions fréquentes</span>
+        <h2 class="h2" style="margin-top:12px;">Agent vocal IA et automatisation : <span class="accent">vos questions</span>.</h2>
+        <p class="lead" style="margin-top:16px;">Les réponses que les dirigeants de PME nous posent avant de lancer un projet d'automatisation.</p>
+      </div>
+
+      <div class="faq" style="margin-top:48px;">
+
+        <details class="faq__item reveal" open>
+          <summary class="faq__q"><h3>Qu'est-ce que LookAhead ?</h3><span class="faq__ico" aria-hidden="true"></span></summary>
+          <div class="faq__a"><p>LookAhead est une agence française d'automatisation et d'agents IA, basée à Vaulnaveys-le-Haut en Isère, qui accompagne les PME et TPE partout en France. Elle déploie des agents vocaux IA, des chatbots et des workflows n8n et Make, facture l'infrastructure IA à prix coûtant et commence chaque mission par un diagnostic gratuit de 15 minutes.</p></div>
+        </details>
+
+        <details class="faq__item reveal">
+          <summary class="faq__q"><h3>Qu'est-ce qu'un agent vocal IA ?</h3><span class="faq__ico" aria-hidden="true"></span></summary>
+          <div class="faq__a"><p>Un agent vocal IA, aussi appelé voicebot, est un logiciel qui décroche le téléphone à la place d'un standardiste. Il comprend la demande de l'appelant en langage naturel, répond aux questions courantes, qualifie le prospect, prend un rendez-vous dans l'agenda et transfère à un humain lorsque la demande sort de son périmètre. Il fonctionne 24h/24 et 7j/7, sans file d'attente.</p></div>
+        </details>
+
+        <details class="faq__item reveal">
+          <summary class="faq__q"><h3>Combien coûte un agent vocal IA pour une PME ?</h3><span class="faq__ico" aria-hidden="true"></span></summary>
+          <div class="faq__a"><p>Chez LookAhead, un agent vocal IA démarre à 290 € par mois pour l'offre Essentiel, avec une mise en place à partir de 1 500 €. L'offre Croissance est à 690 € par mois (mise en place à partir de 2 500 €) et l'offre Performance à 1 490 € par mois (mise en place à partir de 4 500 €). Les minutes d'appel et les conversations IA sont refacturées à prix coûtant, sans marge.</p></div>
+        </details>
+
+        <details class="faq__item reveal">
+          <summary class="faq__q"><h3>n8n ou Make : quelle plateforme d'automatisation choisir ?</h3><span class="faq__ico" aria-hidden="true"></span></summary>
+          <div class="faq__a"><p>n8n et Make automatisent toutes deux des workflows entre logiciels métier. n8n est open source, auto-hébergeable et plus flexible techniquement, ce qui facilite la maîtrise de l'emplacement des données. Make est plus rapide à prendre en main grâce à son éditeur visuel et à son large catalogue de connecteurs. LookAhead choisit la plateforme après le diagnostic, selon les outils déjà en place et les contraintes de conformité de l'entreprise.</p></div>
+        </details>
+
+        <details class="faq__item reveal">
+          <summary class="faq__q"><h3>Les automatisations IA sont-elles conformes au RGPD ?</h3><span class="faq__ico" aria-hidden="true"></span></summary>
+          <div class="faq__a"><p>LookAhead conçoit ses automatisations dans le respect du RGPD : minimisation des données collectées, finalité définie pour chaque traitement, et choix d'hébergement discuté avec le client. L'emplacement exact des données dépend des fournisseurs retenus pour la téléphonie, le CRM et la plateforme d'automatisation. Ce point est cadré et validé pendant le diagnostic, avant tout déploiement.</p></div>
+        </details>
+
+        <details class="faq__item reveal">
+          <summary class="faq__q"><h3>Combien de temps faut-il pour déployer un agent IA ?</h3><span class="faq__ico" aria-hidden="true"></span></summary>
+          <div class="faq__a"><p>LookAhead met ses agents en production en moins de 4 semaines. Le déroulé est constant : cartographie des processus, identification des tâches répétitives, chiffrage de leur coût réel, conception de l'automatisation, puis déploiement et mesure. Un premier voicebot ou chatbot simple se déploie plus vite qu'un dispositif multicanal relié au CRM.</p></div>
+        </details>
+
+        <details class="faq__item reveal">
+          <summary class="faq__q"><h3>Faut-il changer de CRM ou d'outils pour automatiser son entreprise ?</h3><span class="faq__ico" aria-hidden="true"></span></summary>
+          <div class="faq__a"><p>Non. LookAhead se connecte aux outils déjà utilisés par l'entreprise, en lecture et en écriture, sans imposer de logiciel ni forcer de migration. Les agents IA et les workflows n8n ou Make viennent se greffer sur le CRM, l'agenda et la téléphonie existants.</p></div>
+        </details>
+
+        <details class="faq__item reveal">
+          <summary class="faq__q"><h3>Quelle différence entre un chatbot et un agent vocal IA ?</h3><span class="faq__ico" aria-hidden="true"></span></summary>
+          <div class="faq__a"><p>Un chatbot répond par écrit, sur un site web ou WhatsApp, à un visiteur déjà en ligne. Un agent vocal IA répond à la voix, au téléphone, et capte les appels entrants qui seraient autrement perdus en dehors des horaires d'ouverture. Les deux qualifient et prennent des rendez-vous. Beaucoup de PME déploient les deux, le téléphone captant les demandes les plus urgentes.</p></div>
+        </details>
+
+        <details class="faq__item reveal">
+          <summary class="faq__q"><h3>Quelles tâches une PME peut-elle automatiser en premier ?</h3><span class="faq__ico" aria-hidden="true"></span></summary>
+          <div class="faq__a"><p>Les gains les plus rapides viennent des tâches répétitives à faible valeur et à fort volume : réponse aux appels et aux questions fréquentes, prise de rendez-vous, relance des devis non signés, saisie des informations dans le CRM et génération des documents commerciaux. LookAhead chiffre le coût réel de ces tâches pendant le diagnostic gratuit avant de recommander quoi automatiser.</p></div>
+        </details>
+
+      </div>
+
+      <div class="center" style="margin-top:40px;">
+        <a href="/reserver/" class="btn btn--dark">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          Réserver un diagnostic gratuit de 15 minutes
+        </a>
+      </div>
+    </div>
+  </section>
+
   <section class="section bg-soft" id="contact">
     <div class="container" style="max-width:760px;">
       <div class="cta-box reveal">
         <div class="cta-box__glow"></div>
-        <h2 class="h2">Combien perdez-vous <span class="accent accent--light">en ce moment</span> ?</h2>
+        <h2 class="h2">Combien coûtent vos tâches <span class="accent accent--light">répétitives</span> ?</h2>
         <p>Le premier échange n'est pas un argumentaire. C'est un diagnostic de vos processus, pour poser un chiffre sur le problème avant de parler de la suite.</p>
         <div class="cta-box__actions">
-          <a href="reserver.html" class="btn btn--primary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg> Réserver mon diagnostic</a>
-          <a href="reserver.html" class="btn btn--ghost"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.68 12 19.79 19.79 0 0 1 1.61 3.56 2 2 0 0 1 3.6 1.4h3a2 2 0 0 1 2 1.72"/></svg> Nous appeler</a>
+          <a href="/reserver/" class="btn btn--primary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg> Réserver mon diagnostic</a>
+          <a href="/reserver/" class="btn btn--ghost"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.68 12 19.79 19.79 0 0 1 1.61 3.56 2 2 0 0 1 3.6 1.4h3a2 2 0 0 1 2 1.72"/></svg> Nous appeler</a>
         </div>
         <p class="fine">Réponse sous 24h. Sans engagement.</p>
       </div>
@@ -1033,36 +1544,38 @@ p { color: var(--body); }
         </div>
         <div class="footer__col">
           <h5>Services</h5>
-          <a href="#voicebots">Voicebots</a>
-          <a href="#chatbots">Chatbots</a>
-          <a href="#automatisations">Automatisation</a>
+          <a href="/agent-vocal-ia/">Voicebots</a>
+          <a href="/chatbot-ia-entreprise/">Chatbots</a>
+          <a href="/automatisation-n8n-make/">Automatisation</a>
           <a href="#tarifs">Tarifs</a>
         </div>
         <div class="footer__col">
           <h5>Entreprise</h5>
-          <a href="#apropos">À propos</a>
+          <a href="/a-propos/">À propos</a>
+          <a href="/agence-automatisation-ia-grenoble/">Agence IA Grenoble</a>
           <a href="#tarifs">Tarifs</a>
-          <a href="reserver.html">Diagnostic gratuit</a>
+          <a href="/reserver/">Diagnostic gratuit</a>
           <a href="mailto:luka@lookahead.fr">Contact</a>
         </div>
         <div class="footer__col">
           <h5>Légal</h5>
-          <a href="mentions-legales.html">Mentions légales</a>
-          <a href="cgv.html">Conditions générales de vente</a>
-          <a href="cgu.html">Conditions générales d'utilisation</a>
-          <a href="confidentialite.html">Politique de confidentialité</a>
-          <a href="cookies.html">Politique de cookies</a>
+          <a href="/mentions-legales/">Mentions légales</a>
+          <a href="/cgv/">Conditions générales de vente</a>
+          <a href="/cgu/">Conditions générales d'utilisation</a>
+          <a href="/confidentialite/">Politique de confidentialité</a>
+          <a href="/cookies/">Politique de cookies</a>
         </div>
       </div>
       <div class="footer__bottom">
         <span>© <span data-year>2025</span> Lookahead. Tous droits réservés.</span>
         <div class="footer__legal">
-          <a href="mentions-legales.html">Mentions légales</a>
-          <a href="confidentialite.html">Confidentialité</a>
-          <a href="cookies.html">Cookies</a>
+          <a href="/mentions-legales/">Mentions légales</a>
+          <a href="/confidentialite/">Confidentialité</a>
+          <a href="/cookies/">Cookies</a>
         </div>
       </div>
     </div>
+          <p style="margin-top:14px;font-size:13.5px;line-height:1.7;opacity:.72;">LookAhead — 24 chemin de Biaron, 38410 Vaulnaveys-le-Haut, Isère. Agence d'automatisation IA basée près de Grenoble, en Auvergne-Rhône-Alpes, intervenant à distance partout en France. SIRET 924 346 109 00029.</p>
   </footer>
 
   <script>
