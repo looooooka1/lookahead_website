@@ -167,6 +167,15 @@ h1 { letter-spacing: -0.02em; font-weight: 800; line-height: 1.08; color: var(--
           });
 
           Cal.ns["rendez-vous-lookahead"]("ui", {"cssVarsPerTheme":{"light":{"cal-brand":"#4B49EC"},"dark":{"cal-brand":"#4B49EC"}},"hideEventTypeDetails":false,"layout":"month_view"});
+
+          // Redirection vers la page de remerciement une fois la réservation confirmée.
+          // (Alternative gratuite au "Redirect on booking" du dashboard Cal.com, réservé aux plans payants.)
+          Cal.ns["rendez-vous-lookahead"]("on", {
+            action: "bookingSuccessful",
+            callback: function () {
+              window.location.href = "merci-rendez-vous.html";
+            },
+          });
         </script>
         <!-- Cal inline embed code ends -->
       </div>
