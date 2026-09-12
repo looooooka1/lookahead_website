@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18444294386"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18444294386');
+</script>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png?v=2" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192.png?v=2" />
+  <link rel="icon" type="image/png" href="/favicon.png?v=2" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=2" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+  <title>n8n, c'est quoi ? Le guide complet pour débutants (2026) | LOOKAHEAD</title>
+  <meta name="description" content="n8n expliqué simplement : qu'est-ce que c'est, comment ça marche, cloud vs self-hosted, tarifs, cas d'usage et différences avec Zapier et Make." />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <link rel="canonical" href="https://lookahead.fr/blog/n8n-cest-quoi/" />
+  <meta name="author" content="LOOKAHEAD" />
+  <meta name="geo.region" content="FR-ARA" />
+  <meta name="geo.placename" content="Grenoble, Auvergne-Rhône-Alpes" />
+
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="n8n, c'est quoi ? Le guide complet pour débutants (2026) | LOOKAHEAD" />
+  <meta property="og:description" content="n8n expliqué simplement : qu'est-ce que c'est, comment ça marche, cloud vs self-hosted, tarifs, cas d'usage et différences avec Zapier et Make." />
+  <meta property="og:url" content="https://lookahead.fr/blog/n8n-cest-quoi/" />
+  <meta property="og:site_name" content="LOOKAHEAD" />
+  <meta property="og:image" content="https://lookahead.fr/assets/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="n8n, c'est quoi ? Le guide complet pour débutants (2026) | LOOKAHEAD" />
+  <meta name="twitter:description" content="n8n expliqué simplement : qu'est-ce que c'est, comment ça marche, cloud vs self-hosted, tarifs, cas d'usage et différences avec Zapier et Make." />
+  <meta name="twitter:image" content="https://lookahead.fr/assets/og-image.png" />
+
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://lookahead.fr/#founder",
+      "name": "Luka Gallagher",
+      "jobTitle": "Fondateur",
+      "worksFor": {
+        "@id": "https://lookahead.fr/#organization"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/luka-gallagher-lookahead/"
+      ],
+      "email": "luka@lookahead.fr",
+      "url": "https://lookahead.fr/a-propos/"
+    },
+    {
+      "@type": [
+        "ProfessionalService",
+        "Organization"
+      ],
+      "@id": "https://lookahead.fr/#organization",
+      "name": "LookAhead",
+      "alternateName": "Lookahead",
+      "description": "LookAhead est une agence française qui déploie des agents vocaux IA et des automatisations n8n et Make pour les PME et TPE.",
+      "url": "https://lookahead.fr/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://lookahead.fr/favicon.png",
+        "width": 512,
+        "height": 512
+      },
+      "image": "https://lookahead.fr/assets/og-image.png",
+      "telephone": "+33642681006",
+      "priceRange": "290€ - 1490€ / mois",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "24 chemin de Biaron",
+        "postalCode": "38410",
+        "addressLocality": "Vaulnaveys-le-Haut",
+        "addressRegion": "Auvergne-Rhône-Alpes",
+        "addressCountry": "FR"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "France"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/luka-gallagher-lookahead/"
+      ],
+      "email": "luka@lookahead.fr",
+      "founder": {
+        "@id": "https://lookahead.fr/#founder"
+      },
+      "vatID": "FR92924346109",
+      "taxID": "92434610900029",
+      "identifier": [
+        {
+          "@type": "PropertyValue",
+          "name": "SIRET",
+          "value": "92434610900029"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "RCS",
+          "value": "924 346 109 RCS Grenoble"
+        }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://lookahead.fr/#website",
+      "url": "https://lookahead.fr/",
+      "name": "LookAhead",
+      "publisher": {
+        "@id": "https://lookahead.fr/#organization"
+      },
+      "inLanguage": "fr-FR"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://lookahead.fr/blog/n8n-cest-quoi/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://lookahead.fr/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://lookahead.fr/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "n8n, c'est quoi ?",
+          "item": "https://lookahead.fr/blog/n8n-cest-quoi/"
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://lookahead.fr/blog/n8n-cest-quoi/#webpage",
+      "url": "https://lookahead.fr/blog/n8n-cest-quoi/",
+      "name": "n8n, c'est quoi ? Le guide complet pour débutants (2026) | LOOKAHEAD",
+      "description": "n8n expliqué simplement : qu'est-ce que c'est, comment ça marche, cloud vs self-hosted, tarifs, cas d'usage et différences avec Zapier et Make.",
+      "inLanguage": "fr-FR",
+      "isPartOf": {
+        "@id": "https://lookahead.fr/#website"
+      },
+      "about": {
+        "@id": "https://lookahead.fr/#organization"
+      },
+      "breadcrumb": {
+        "@id": "https://lookahead.fr/blog/n8n-cest-quoi/#breadcrumb"
+      }
+    },
+    {
+      "@type": "Article",
+      "@id": "https://lookahead.fr/blog/n8n-cest-quoi/#article",
+      "headline": "n8n, c'est quoi ? Le guide complet pour débutants (2026)",
+      "description": "n8n expliqué simplement : qu'est-ce que c'est, comment ça marche, cloud vs self-hosted, tarifs, cas d'usage et différences avec Zapier et Make.",
+      "inLanguage": "fr-FR",
+      "author": {
+        "@id": "https://lookahead.fr/#organization"
+      },
+      "publisher": {
+        "@id": "https://lookahead.fr/#organization"
+      },
+      "mainEntityOfPage": {
+        "@id": "https://lookahead.fr/blog/n8n-cest-quoi/#webpage"
+      },
+      "datePublished": "2026-09-12",
+      "dateModified": "2026-09-12"
+    }
+  ]
+}
+  </script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/styles.css" />
+</head>
+<body>
+<header class="nav">
+    <div class="nav__inner">
+      <a href="/" class="nav__logo" aria-label="LOOKAHEAD, retour à l'accueil">LOOK<span>AHEAD</span></a>
+      <ul class="nav__links">
+        <li><a href="/agent-vocal-ia/">Agent vocal IA</a></li>
+        <li><a href="/chatbot-ia-entreprise/">Chatbot IA</a></li>
+        <li><a href="/automatisation-n8n-make/">Automatisation n8n</a></li>
+        <li><a href="/tarifs/">Tarifs</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/a-propos/">À propos</a></li>
+        <li><a href="/#faq">FAQ</a></li>
+      </ul>
+      <div class="nav__actions">
+        <a href="/reserver/" class="btn btn--dark">Diagnostic gratuit</a>
+        <button class="nav__burger" aria-label="Menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+    <div class="nav__mobile">
+      <a href="/agent-vocal-ia/">Agent vocal IA</a>
+      <a href="/chatbot-ia-entreprise/">Chatbot IA</a>
+      <a href="/automatisation-n8n-make/">Automatisation n8n</a>
+      <a href="/tarifs/">Tarifs</a>
+      <a href="/blog/">Blog</a>
+      <a href="/a-propos/">À propos</a>
+      <a href="/#faq">FAQ</a>
+      <a href="/reserver/" class="btn btn--dark">Diagnostic gratuit</a>
+    </div>
+  </header>
+
+  <section class="section" style="padding-top:140px;">
+    <div class="container">
+      <nav aria-label="Fil d'Ariane" style="max-width:900px;margin:0 auto 20px;font-size:13.5px;color:var(--muted);">
+        <a href="/" style="color:var(--muted);">Accueil</a> <span aria-hidden="true">›</span>
+        <a href="/blog/" style="color:var(--muted);">Blog</a> <span aria-hidden="true">›</span>
+        <span>n8n, c'est quoi ?</span>
+      </nav>
+      <div class="center">
+        <span class="badge reveal"><span class="dot"></span> Guide · Automatisation n8n et Make</span>
+        <h1 class="h1 reveal" data-delay="0.08" style="max-width:820px;margin-inline:auto;">n8n, c'est quoi ? Le guide complet pour débutants (2026)</h1>
+        <p class="lead hero__sub reveal" data-delay="0.16" style="max-width:700px;margin-inline:auto;">n8n expliqué simplement : qu'est-ce que c'est, comment ça marche, cloud vs self-hosted, tarifs, cas d'usage et différences avec Zapier et Make.</p>
+        <div class="blog-meta center" style="justify-content:center;">
+          <span>Par LOOKAHEAD</span>
+          <span>Mis à jour le 2026-09-12</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="maxw-3 reveal blog-body">
+        <p style="margin-top:16px;">Si vous tapez "n8n c'est quoi" dans un moteur de recherche, c'est probablement parce que vous avez croisé ce nom dans un tutoriel, une vidéo YouTube ou une conversation entre développeurs. Vous ne savez pas trop à quoi ça correspond. C'est normal. <strong>n8n</strong> reste moins connu du grand public que Zapier. Pourtant, c'est aujourd'hui l'un des outils d'automatisation les plus utilisés par les équipes techniques et les entreprises qui veulent garder le contrôle sur leurs données.</p>
+        <p style="margin-top:16px;">Ce guide explique ce qu'est n8n et comment l'outil fonctionne concrètement. Il détaille ce qui différencie la version cloud de la version auto-hébergée, combien ça coûte, et dans quels cas il a du sens de l'utiliser plutôt qu'une alternative comme Zapier ou Make.</p>
+        <div class="blog-callout"><div class="blog-callout__title">Points clés à retenir</div><ul><li>n8n est une plateforme d'automatisation de workflows open-source (sous licence "fair-code"), née à Berlin en 2019.</li><li>Elle fonctionne par assemblage visuel de "nœuds" (nodes) reliés entre eux, sans nécessairement écrire de code.</li><li>Elle peut être installée sur votre propre serveur (self-hosted, gratuit et illimité) ou utilisée en version cloud payante à partir d'environ 24 $/mois.</li><li>Elle se distingue de Zapier et Make par sa profondeur technique, sa tarification à l'exécution plutôt qu'à la tâche, et la possibilité d'héberger ses données soi-même.</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-soft">
+    <div class="container">
+      <div class="maxw-3 reveal blog-body">
+        <h2 class="h2" style="margin-top:12px;">Qu'est-ce que n8n exactement ?</h2>
+        <p style="margin-top:16px;"><strong>n8n</strong> (prononcé "nodemation", contraction de "node" et "automation") est une plateforme d'automatisation de workflows. Elle permet de connecter des applications entre elles pour qu'elles échangent des données et déclenchent des actions automatiquement, sans intervention manuelle répétée.</p>
+        <p style="margin-top:16px;">Concrètement, n8n sert à faire communiquer des outils qui, par défaut, ne se parlent pas. Exemples : envoyer automatiquement dans un CRM chaque nouveau contact reçu par formulaire, notifier une équipe sur Slack quand une commande dépasse un certain montant, ou synchroniser un tableur avec une base de données toutes les nuits.</p>
+        <p style="margin-top:16px;">L'outil a été lancé en 2019 par Jan Oberhauser à Berlin. Il est distribué sous une licence "fair-code" appelée Sustainable Use License. Ce modèle autorise l'accès au code source, sa modification et son auto-hébergement gratuits. Il restreint en revanche la revente du logiciel comme service hébergé concurrent. Ce n'est donc pas de l'open source au sens strict retenu par l'Open Source Initiative. L'essentiel des usages (voir, modifier, héberger soi-même) reste toutefois libre (<a href="https://docs.n8n.io/sustainable-use-license/" style="color:var(--accent);text-decoration:underline;" target="_blank" rel="noopener">n8n Docs</a>).</p>
+        <p style="margin-top:16px;">Le projet compte plus de 108 000 étoiles sur GitHub et revendiquait plus de 230 000 utilisateurs actifs avec plus de 2 200 modules communautaires indexés publiquement mi-2025 (<a href="https://github.com/n8n-io/n8n" style="color:var(--accent);text-decoration:underline;" target="_blank" rel="noopener">n8n GitHub</a>). L'outil propose plus de 400 intégrations natives avec des applications tierces.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="maxw-3 reveal blog-body">
+        <h2 class="h2" style="margin-top:12px;">Comment fonctionne n8n ?</h2>
+        <p style="margin-top:16px;">n8n fonctionne par assemblage visuel de blocs appelés "nœuds" (nodes) sur un canevas. Chaque nœud représente une étape précise d'un workflow : recevoir une donnée, la transformer, l'envoyer vers une application, appliquer une condition, ou encore interroger un modèle d'IA.</p>
+        <h3 style="margin-top:24px;">Les nœuds</h3>
+        <p style="margin-top:16px;">Un <strong>nœud</strong> correspond généralement à une action dans une application : envoyer un e-mail, créer une ligne dans Google Sheets, poster un message Slack. Il peut aussi représenter une opération logique, comme filtrer des données, boucler sur une liste ou attendre un délai. On relie les nœuds entre eux par des flèches pour définir l'ordre d'exécution. La sortie d'un nœud devient l'entrée du suivant.</p>
+        <h3 style="margin-top:24px;">Les triggers (déclencheurs)</h3>
+        <p style="margin-top:16px;">Chaque workflow démarre avec un nœud "trigger", c'est-à-dire l'événement qui déclenche l'automatisation. Cela peut être une action planifiée (tous les jours à 8h), la réception d'un webhook, un nouveau fichier déposé dans un dossier, ou un clic manuel pendant les tests.</p>
+        <h3 style="margin-top:24px;">Le mode "low-code"</h3>
+        <p style="margin-top:16px;">Contrairement à un outil purement no-code, n8n permet d'insérer du code JavaScript ou Python directement dans certains nœuds. Cela sert à gérer des cas complexes que l'interface visuelle ne couvre pas. C'est cette possibilité de mélanger interface graphique et code qui rend l'outil populaire auprès des développeurs. Elle reste néanmoins accessible à des profils moins techniques pour les cas simples.</p>
+        <p style="margin-top:16px;">Depuis 2024-2025, n8n a aussi intégré des fonctionnalités d'IA native : nœuds LangChain, agents IA, connexion directe à des modèles de langage. Cela permet de construire des workflows capables d'analyser du texte, de résumer des documents ou de prendre des décisions conditionnelles à partir d'un modèle d'IA plutôt que de règles fixes.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-soft">
+    <div class="container">
+      <div class="maxw-3 reveal blog-body">
+        <h2 class="h2" style="margin-top:12px;">n8n self-hosted vs n8n Cloud : quelle différence ?</h2>
+        <p style="margin-top:16px;">C'est l'une des questions les plus fréquentes des débutants, et c'est aussi ce qui distingue le plus n8n de ses concurrents.</p>
+        <p style="margin-top:16px;"><strong>n8n self-hosted (auto-hébergé)</strong> consiste à installer n8n sur son propre serveur (VPS, serveur d'entreprise, ou même une machine locale). Cette version communautaire (Community Edition) est gratuite. Elle ne limite ni le nombre d'exécutions ni le nombre de workflows, et les données ne quittent jamais l'infrastructure choisie par l'utilisateur. Le seul coût réel est celui du serveur, généralement de quelques euros à quelques dizaines d'euros par mois selon le volume traité.</p>
+        <p style="margin-top:16px;"><strong>n8n Cloud</strong> est la version hébergée directement par l'éditeur. Aucune installation n'est nécessaire, la mise à jour est automatique, et la facturation dépend du nombre d'exécutions mensuelles de workflows.</p>
+        <p style="margin-top:16px;">Le choix entre les deux dépend surtout de deux critères. Le premier est la compétence technique disponible en interne, car le self-hosted demande de savoir gérer un serveur au moins minimalement. Le second est l'exigence de confidentialité des données : le self-hosted permet par exemple d'héberger ses données en France si c'est une contrainte réglementaire ou commerciale.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="maxw-3 reveal blog-body">
+        <h2 class="h2" style="margin-top:12px;">Combien coûte n8n ?</h2>
+        <p style="margin-top:16px;">La tarification de n8n a été simplifiée en 2026. Voici les grandes lignes vérifiées :</p>
+        <ul style="margin-top:16px;"><li><strong>Self-hosted (Community Edition)</strong> : gratuit, exécutions illimitées, toutes les fonctionnalités principales incluses. Seul coût : l'hébergement du serveur (souvent entre 3 et 10 dollars par mois sur un hébergeur géré basique).</li><li><strong>n8n Cloud Starter</strong> : environ 24 $/mois pour 2 500 exécutions.</li><li><strong>n8n Cloud Pro</strong> : environ 60 $/mois pour 10 000 exécutions.</li><li><strong>n8n Cloud Business</strong> : un palier intermédiaire autour de 800 $/mois pour 40 000 exécutions, avant les offres Enterprise sur devis.</li></ul>
+        <p style="margin-top:16px;">Depuis 2026, tous les plans Cloud incluent des workflows et des utilisateurs illimités. Seul le volume d'exécutions mensuelles fait varier la facture. Cela simplifie la comparaison par rapport aux anciennes formules, limitées en nombre de workflows actifs ou d'utilisateurs.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-soft">
+    <div class="container">
+      <div class="maxw-3 reveal blog-body">
+        <h2 class="h2" style="margin-top:12px;">Pour qui est fait n8n ? Cas d'usage typiques</h2>
+        <p style="margin-top:16px;">n8n convient particulièrement à trois profils :</p>
+        <ul style="margin-top:16px;"><li><strong>Les équipes techniques et développeurs</strong> qui veulent une automatisation flexible, avec la possibilité d'ajouter du code personnalisé quand l'interface visuelle ne suffit pas.</li><li><strong>Les entreprises soucieuses de la souveraineté de leurs données</strong>, par exemple dans les secteurs réglementés (santé, finance, secteur public), où l'auto-hébergement permet de garder les données sur une infrastructure maîtrisée.</li><li><strong>Les organisations qui automatisent un fort volume d'exécutions</strong>, car le coût par exécution en self-hosted reste marginal comparé à une tarification à la tâche.</li></ul>
+        <p style="margin-top:16px;">Les cas d'usage les plus courants sont variés. On retrouve la synchronisation de CRM, quand un nouveau prospect est envoyé automatiquement vers l'outil commercial, la génération de rapports planifiés, et l'enrichissement de données, c'est-à-dire récupérer des informations complémentaires sur un contact ou une entreprise. S'y ajoutent les notifications internes automatisées et, de plus en plus, la construction d'agents IA capables de traiter des e-mails, des documents ou des demandes clients de façon semi-autonome.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="maxw-3 reveal blog-body">
+        <h2 class="h2" style="margin-top:12px;">n8n vs Zapier vs Make : quelles différences ?</h2>
+        <p style="margin-top:16px;">Ces trois outils répondent au même besoin de base (connecter des applications entre elles) mais avec des philosophies différentes.</p>
+        <div class="blog-table-wrap"><table class="blog-table"><thead><tr><th>Critère</th><th>n8n</th><th>Zapier</th><th>Make</th></tr></thead><tbody><tr><td>Facilité de prise en main</td><td>Interface technique, courbe d'apprentissage plus longue</td><td>Le plus simple, pensé pour les non-techniques</td><td>Intermédiaire entre les deux</td></tr><tr><td>Tarification</td><td>Par exécution (cloud) ou illimité (self-hosted)</td><td>Par tâche exécutée</td><td>Par opération</td></tr><tr><td>Hébergement des données</td><td>Self-hosted possible</td><td>Cloud uniquement</td><td>Cloud uniquement</td></tr><tr><td>Code personnalisé</td><td>JavaScript/Python intégrable</td><td>Limité</td><td>Limité</td></tr><tr><td>Origine</td><td>Allemagne</td><td>États-Unis</td><td>Europe (Tchéquie)</td></tr></tbody></table></div>
+        <p style="margin-top:16px;">Zapier reste la référence pour démarrer rapidement sans compétence technique. Make se positionne entre simplicité et puissance visuelle. n8n se distingue par la profondeur technique, la possibilité d'auto-hébergement, et un rapport coût/volume nettement plus avantageux à grande échelle. Pour un workflow exécuté 10 000 fois par mois, n8n permet de réduire le coût de 80 à 90 % par rapport à une tarification à la tâche type Zapier, selon plusieurs comparatifs indépendants publiés en 2026.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-soft">
+    <div class="container">
+      <div class="maxw-3 reveal blog-body">
+        <h2 class="h2" style="margin-top:12px;">Quels sont les avantages et les limites de n8n ?</h2>
+        <p style="margin-top:16px;"><strong>Avantages</strong> : maîtrise des données via le self-hosted, coût très bas à grande échelle, plus de 400 intégrations natives, flexibilité du mélange no-code/code, communauté active et fonctionnalités IA natives.</p>
+        <p style="margin-top:16px;"><strong>Limites</strong> : la courbe d'apprentissage est plus raide que Zapier pour un débutant complet. La version self-hosted demande une compétence serveur minimale, pour les mises à jour, la sécurité et les sauvegardes. Le support officiel reste aussi plus limité sur la version communautaire gratuite que sur les offres cloud payantes.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="maxw-3 reveal blog-body">
+        <h2 class="h2" style="margin-top:12px;">Comment commencer avec n8n ?</h2>
+        <p style="margin-top:16px;">Pour tester l'outil sans engagement, la façon la plus simple consiste à créer un compte sur n8n Cloud, avec une période d'essai, ou à lancer une instance locale via Docker en quelques commandes. La documentation officielle propose des workflows d'exemple prêts à l'emploi. Ils aident à se familiariser avec la logique des nœuds avant de construire ses propres automatisations.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-soft">
+    <div class="container">
+      <div class="maxw-3 reveal blog-body">
+        <div class="faq" style="margin-top:44px;"><details class="faq__item reveal" open><summary class="faq__q"><h3>n8n est-il gratuit ?</h3><span class="faq__ico" aria-hidden="true"></span></summary><div class="faq__a"><p>Oui, en version self-hosted (Community Edition), n8n est entièrement gratuit et sans limite d'exécutions. Seul l'hébergement du serveur a un coût. La version cloud, elle, est payante à partir d'environ 24 $/mois.</p></div></details><details class="faq__item reveal"><summary class="faq__q"><h3>Faut-il savoir coder pour utiliser n8n ?</h3><span class="faq__ico" aria-hidden="true"></span></summary><div class="faq__a"><p>Non, l'essentiel des workflows se construit visuellement sans écrire une ligne de code. Le code (JavaScript/Python) reste optionnel, réservé aux cas avancés ou aux transformations de données spécifiques.</p></div></details></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="maxw-3 reveal blog-body">
+        <h2 class="h2" style="margin-top:12px;">En résumé</h2>
+        <p style="margin-top:16px;">n8n est une plateforme d'automatisation open-source qui permet de connecter des applications et d'automatiser des tâches répétitives via un éditeur visuel de nœuds, avec la possibilité unique (parmi les outils grand public) de l'héberger soi-même gratuitement. Elle s'adresse en priorité aux équipes qui veulent de la flexibilité technique, du contrôle sur leurs données et un coût maîtrisé à grand volume, quitte à accepter une prise en main un peu plus technique que Zapier.</p>
+        <p style="margin-top:16px;">Si après cette lecture vous avez compris le principe mais que la mise en place technique (serveur, sécurité, maintenance, construction des workflows) vous semble chronophage ou hors de votre périmètre, il est possible de <a href="/automatisation-n8n-make/" style="color:var(--accent);text-decoration:underline;">faire appel à une agence d'automatisation n8n</a> pour déléguer la conception et le déploiement plutôt que de tout gérer en interne.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-soft">
+    <div class="container center">
+      <a href="/reserver/" class="btn btn--dark">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        Parler à une agence n8n
+      </a>
+    </div>
+  </section>
+
+<footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <div class="logo">LOOK<span>AHEAD</span></div>
+          <p>Agents IA vocaux, chatbots et automatisations sur mesure pour les PME qui veulent récupérer du temps sur les tâches répétitives.</p>
+          <div class="footer__social">
+            <a href="https://www.linkedin.com/in/luka-gallagher-lookahead/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+            <a href="mailto:luka@lookahead.fr" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg></a>
+            <a href="tel:+33642681006" aria-label="Téléphone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h2 class="footer__h">Services</h2>
+          <a href="/agent-vocal-ia/">Voicebots</a>
+          <a href="/chatbot-ia-entreprise/">Chatbots</a>
+          <a href="/automatisation-n8n-make/">Automatisation</a>
+          <a href="/tarifs/">Tarifs</a>
+        </div>
+        <div class="footer__col">
+          <h2 class="footer__h">Entreprise</h2>
+          <a href="/a-propos/">À propos</a>
+          <a href="/blog/">Blog</a>
+          <a href="/agence-automatisation-ia-grenoble/">Agence IA Grenoble</a>
+          <a href="/tarifs/">Tarifs</a>
+          <a href="/reserver/">Diagnostic gratuit</a>
+          <a href="mailto:luka@lookahead.fr">Contact</a>
+        </div>
+        <div class="footer__col">
+          <h2 class="footer__h">Légal</h2>
+          <a href="/mentions-legales/">Mentions légales</a>
+          <a href="/cgv/">Conditions générales de vente</a>
+          <a href="/cgu/">Conditions générales d'utilisation</a>
+          <a href="/confidentialite/">Politique de confidentialité</a>
+          <a href="/cookies/">Politique de cookies</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© <span data-year>2025</span> LOOKAHEAD. Tous droits réservés.</span>
+        <div class="footer__legal">
+          <a href="/mentions-legales/">Mentions légales</a>
+          <a href="/confidentialite/">Confidentialité</a>
+          <a href="/cookies/">Cookies</a>
+        </div>
+      </div>
+    </div>
+      <div class="container">
+        <p style="margin-top:8px;font-size:13px;line-height:1.7;opacity:.6;">LOOKAHEAD — 24 chemin de Biaron, 38410 Vaulnaveys-le-Haut, Isère. Agence d'automatisation IA basée près de Grenoble, en Auvergne-Rhône-Alpes, intervenant à distance partout en France. SIRET 924 346 109 00029.</p>
+      </div>
+  </footer>
+</body>
+</html>
