@@ -1,19 +1,781 @@
 <!doctype html>
 <html lang="fr">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18444294386"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18444294386');
+</script>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png?v=2" />
   <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192.png?v=2" />
   <link rel="icon" type="image/png" href="/favicon.png?v=2" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=2" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Redirection vers le chatbot IA de qualification</title>
-  <link rel="canonical" href="https://lookahead.fr/chatbot-ia-entreprise/" />
-  <meta name="robots" content="noindex, follow" />
-  <meta http-equiv="refresh" content="0; url=/chatbot-ia-entreprise/" />
-  <script>window.location.replace("/chatbot-ia-entreprise/");</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Agent IA de qualification de leads | LOOKAHEAD</title>
+  <meta name="description" content="Un agent IA qui qualifie vos demandes entrantes, les score selon vos critères et les écrit dans votre CRM. Un lead traité en minutes, pas le lendemain." />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <link rel="canonical" href="https://lookahead.fr/agent-ia-qualification-lead/" />
+  <meta name="author" content="LOOKAHEAD" />
+  <meta name="geo.region" content="FR-ARA" />
+  <meta name="geo.placename" content="Grenoble, Auvergne-Rhône-Alpes" />
+
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Agent IA de qualification de leads | LOOKAHEAD" />
+  <meta property="og:description" content="Un agent IA qui qualifie vos demandes entrantes, les score selon vos critères et les écrit dans votre CRM. À partir de 290 €/mois." />
+  <meta property="og:url" content="https://lookahead.fr/agent-ia-qualification-lead/" />
+  <meta property="og:site_name" content="LOOKAHEAD" />
+  <meta property="og:image" content="https://lookahead.fr/assets/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Agent IA de qualification de leads | LOOKAHEAD" />
+  <meta name="twitter:description" content="Un agent IA qui qualifie vos demandes entrantes, les score selon vos critères et les écrit dans votre CRM. À partir de 290 €/mois." />
+  <meta name="twitter:image" content="https://lookahead.fr/assets/og-image.png" />
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://lookahead.fr/#founder",
+      "name": "Luka Gallagher",
+      "jobTitle": "Fondateur",
+      "worksFor": {
+        "@id": "https://lookahead.fr/#organization"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/luka-gallagher-lookahead/"
+      ],
+      "email": "luka@lookahead.fr",
+      "url": "https://lookahead.fr/a-propos/"
+    },
+    {
+      "@type": [
+        "ProfessionalService",
+        "Organization"
+      ],
+      "@id": "https://lookahead.fr/#organization",
+      "name": "LookAhead",
+      "alternateName": "Lookahead",
+      "description": "LookAhead est une agence française qui déploie des agents vocaux IA et des automatisations n8n et Make pour les PME et TPE.",
+      "url": "https://lookahead.fr/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://lookahead.fr/favicon.png",
+        "width": 512,
+        "height": 512
+      },
+      "image": "https://lookahead.fr/assets/og-image.png",
+      "telephone": "+33642681006",
+      "priceRange": "290€ - 1490€ / mois",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "24 chemin de Biaron",
+        "postalCode": "38410",
+        "addressLocality": "Vaulnaveys-le-Haut",
+        "addressRegion": "Auvergne-Rhône-Alpes",
+        "addressCountry": "FR"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "France"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/luka-gallagher-lookahead/"
+      ],
+      "email": "luka@lookahead.fr",
+      "founder": {
+        "@id": "https://lookahead.fr/#founder"
+      },
+      "vatID": "FR92924346109",
+      "taxID": "92434610900029",
+      "identifier": [
+        {
+          "@type": "PropertyValue",
+          "name": "SIRET",
+          "value": "92434610900029"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "RCS",
+          "value": "924 346 109 RCS Grenoble"
+        }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://lookahead.fr/#website",
+      "url": "https://lookahead.fr/",
+      "name": "LookAhead",
+      "publisher": {
+        "@id": "https://lookahead.fr/#organization"
+      },
+      "inLanguage": "fr-FR"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://lookahead.fr/agent-ia-qualification-lead/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://lookahead.fr/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Agent IA de qualification de leads",
+          "item": "https://lookahead.fr/agent-ia-qualification-lead/"
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://lookahead.fr/agent-ia-qualification-lead/#webpage",
+      "url": "https://lookahead.fr/agent-ia-qualification-lead/",
+      "name": "Agent IA de qualification de leads | LOOKAHEAD",
+      "description": "Un agent IA qui qualifie vos demandes entrantes, les score selon vos critères et les écrit dans votre CRM. Un lead traité en minutes, pas le lendemain.",
+      "isPartOf": {
+        "@id": "https://lookahead.fr/#website"
+      },
+      "breadcrumb": {
+        "@id": "https://lookahead.fr/agent-ia-qualification-lead/#breadcrumb"
+      },
+      "inLanguage": "fr-FR",
+      "about": {
+        "@id": "https://lookahead.fr/agent-ia-qualification-lead/#service"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://lookahead.fr/agent-ia-qualification-lead/#service",
+      "name": "Agent IA de qualification de leads",
+      "serviceType": "Qualification automatisée de leads par IA",
+      "category": "Automatisation commerciale",
+      "description": "Conception d'agents IA qui qualifient les demandes entrantes des PME françaises, les scorent selon des critères métier et les écrivent directement dans le CRM.",
+      "provider": {
+        "@id": "https://lookahead.fr/#organization"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "France"
+      },
+      "audience": {
+        "@type": "BusinessAudience",
+        "name": "PME et TPE françaises"
+      },
+      "url": "https://lookahead.fr/agent-ia-qualification-lead/",
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Essentiel",
+          "price": "290",
+          "priceCurrency": "EUR",
+          "url": "https://lookahead.fr/tarifs/"
+        },
+        {
+          "@type": "Offer",
+          "name": "Croissance",
+          "price": "690",
+          "priceCurrency": "EUR",
+          "url": "https://lookahead.fr/tarifs/"
+        },
+        {
+          "@type": "Offer",
+          "name": "Performance",
+          "price": "1490",
+          "priceCurrency": "EUR",
+          "url": "https://lookahead.fr/tarifs/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://lookahead.fr/agent-ia-qualification-lead/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Qu'est-ce qu'un agent IA de qualification de leads ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "C'est un logiciel qui reçoit vos demandes entrantes (formulaire, email, chat, appel), pose les questions nécessaires pour évaluer si le prospect correspond à votre cible, attribue un score selon vos critères, crée la fiche dans votre CRM et alerte le bon commercial. Il ne remplace pas la vente : il supprime le tri manuel qui la précède."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Un agent IA peut-il vraiment juger de la qualité d'un lead ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Il applique les critères que vous lui donnez, avec constance. C'est là son avantage réel : il pose les mêmes questions à 22 heures qu'à 9 heures, et n'oublie jamais d'en poser une. En revanche, il ne remplace pas le jugement commercial sur les cas ambigus. Un bon paramétrage prévoit explicitement une catégorie « à examiner par un humain » plutôt que de forcer une décision."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Faut-il changer de CRM pour mettre en place un agent de qualification ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Non. L'agent écrit dans le CRM que vous utilisez déjà via son API ou via un workflow d'automatisation. Si votre CRM n'expose pas d'API, l'écriture passe par un connecteur intermédiaire. Changer d'outil au moment d'automatiser cumule deux chantiers et deux risques : nous le déconseillons."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "En combien de temps un agent de qualification est-il opérationnel ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Comptez deux à quatre semaines pour un périmètre standard : une semaine de cadrage des critères, une à deux semaines de construction et de tests, puis une phase d'observation en conditions réelles. Le délai dépend surtout de la clarté de vos critères de qualification, rarement de la technique."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Combien coûte un agent IA de qualification de leads ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Chez LOOKAHEAD, la qualification entrante est comprise dans l'offre Essentiel à 290 € par mois, avec une mise en place à partir de 1 500 €. Le scoring avancé, le routage multi-commercial et l'écriture bidirectionnelle dans le CRM relèvent de l'offre Croissance à 690 € par mois. L'infrastructure IA est refacturée à prix coûtant."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/styles.css" />
 </head>
 <body>
-  <p>Cette page a été déplacée. <a href="/chatbot-ia-entreprise/">Continuer vers le chatbot IA de qualification</a>.</p>
+<header class="nav">
+    <div class="nav__inner">
+      <a href="/" class="nav__logo" aria-label="LOOKAHEAD, retour à l'accueil">LOOK<span>AHEAD</span></a>
+      <ul class="nav__links">
+        <li><a href="/agent-vocal-ia/">Agent vocal IA</a></li>
+        <li><a href="/chatbot-ia-entreprise/">Chatbot IA</a></li>
+        <li><a href="/automatisation-n8n-make/">Automatisation n8n</a></li>
+        <li><a href="/tarifs/">Tarifs</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/a-propos/">À propos</a></li>
+        <li><a href="/#faq">FAQ</a></li>
+      </ul>
+      <div class="nav__actions">
+        <a href="/reserver/" class="btn btn--dark">Diagnostic gratuit</a>
+        <button class="nav__burger" aria-label="Menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+    <div class="nav__mobile">
+      <a href="/agent-vocal-ia/">Agent vocal IA</a>
+      <a href="/chatbot-ia-entreprise/">Chatbot IA</a>
+      <a href="/automatisation-n8n-make/">Automatisation n8n</a>
+      <a href="/tarifs/">Tarifs</a>
+      <a href="/blog/">Blog</a>
+      <a href="/a-propos/">À propos</a>
+      <a href="/#faq">FAQ</a>
+      <a href="/reserver/" class="btn btn--dark">Diagnostic gratuit</a>
+    </div>
+  </header>
+
+  <section class="hero" id="home" style="padding-top:140px;">
+    <div class="hero__glow"></div>
+    <div class="hero__dots"></div>
+    <div class="container">
+      <nav aria-label="Fil d'Ariane" style="max-width:900px;margin:0 auto 20px;font-size:13.5px;color:var(--muted);">
+        <a href="/" style="color:var(--muted);">Accueil</a> <span aria-hidden="true">›</span> <span>Agent IA de qualification de leads</span>
+      </nav>
+      <div class="center">
+        <span class="badge reveal"><span class="dot"></span> Qualification de leads · Entrant</span>
+        <h1 class="h1 reveal" data-delay="0.08" style="max-width:920px;margin-inline:auto;">Vos demandes entrantes, triées et <span class="accent">qualifiées</span> avant que vous ouvriez votre boîte mail.</h1>
+        <p class="lead hero__sub reveal" data-delay="0.16">LOOKAHEAD conçoit des agents IA qui reçoivent vos demandes, posent les bonnes questions, notent chaque lead selon vos critères et créent la fiche dans votre CRM. Vos commerciaux rappellent, ils ne trient plus.</p>
+        <div class="hero__actions reveal" data-delay="0.24">
+          <a href="/reserver/" class="btn btn--dark">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            Diagnostic gratuit de 15 minutes
+          </a>
+          <a href="/tarifs/" class="btn btn--outline">Voir les tarifs</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="maxw-3 reveal">
+        <span class="eyebrow">Définition</span>
+        <h2 class="h2" style="margin-top:12px;">Qu'est-ce qu'un agent IA de <span class="accent">qualification de leads</span> ?</h2>
+        <p style="margin-top:16px;">Un agent IA de qualification de leads est un logiciel qui reçoit vos demandes entrantes, pose les questions nécessaires pour évaluer si le prospect correspond à votre cible, attribue un score selon vos critères, écrit la fiche dans votre CRM et alerte le bon commercial. Il intervient entre le moment où quelqu'un vous contacte et le moment où un humain décide de le rappeler.</p>
+        <p style="margin-top:16px;">La distinction avec un simple formulaire est importante. Un formulaire collecte ce que le prospect veut bien écrire, dans l'ordre où vous l'avez prévu, sans relance. Un agent de qualification conduit un échange : il reformule une réponse floue, demande la précision manquante, et s'arrête quand il a de quoi trancher. Il travaille sur le même canal que le prospect, qu'il s'agisse d'un <a href="/chatbot-ia-entreprise/" style="color:var(--accent);text-decoration:underline;">chatbot sur votre site ou WhatsApp</a> ou d'un <a href="/agent-vocal-ia/" style="color:var(--accent);text-decoration:underline;">agent vocal qui répond au téléphone</a>.</p>
+        <p style="margin-top:16px;">Pour une PME, l'intérêt n'est pas de vendre à la place des commerciaux. Il est de leur éviter de passer leurs matinées à trier des demandes dont la moitié n'aboutira jamais, et de ne pas laisser refroidir celles qui comptent.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-soft">
+    <div class="container">
+      <div class="maxw-3 reveal">
+        <span class="eyebrow">Le problème</span>
+        <h2 class="h2" style="margin-top:12px;">Le tri manuel coûte surtout du <span class="accent">temps de réaction</span>.</h2>
+        <p style="margin-top:16px;">Le coût visible d'une qualification manuelle, c'est le temps passé à lire, recopier et classer. Le coût réel est ailleurs : dans le délai entre la demande et le premier contact.</p>
+        <p style="margin-top:16px;">Une étude portant sur 2 241 entreprises américaines a montré que celles qui contactaient un prospect dans l'heure suivant sa demande avaient sept fois plus de chances d'obtenir un échange qualifié avec un décideur que celles qui attendaient une heure de plus (Oldroyd, McElheran et Elkington, <a href="https://hbr.org/2011/03/the-short-life-of-online-sales-leads" rel="noopener" target="_blank" style="color:var(--accent);text-decoration:underline;">Harvard Business Review</a>, mars 2011). L'étude date, mais le mécanisme n'a pas changé : un prospect qui remplit un formulaire est en train de comparer, et il compare maintenant.</p>
+        <p style="margin-top:16px;">Or une demande arrivée le vendredi à 18 heures est traitée le lundi matin. Une demande arrivée pendant une réunion attend la fin de la réunion. Ce ne sont pas des défauts d'organisation, ce sont les conditions normales d'une PME. C'est précisément ce que l'automatisation absorbe.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="maxw-3 reveal">
+        <span class="eyebrow">Fonctionnement</span>
+        <h2 class="h2" style="margin-top:12px;">Quatre étapes, du premier message à la <span class="accent">fiche CRM</span>.</h2>
+        <p style="margin-top:16px;"><strong>1. La collecte.</strong> L'agent reçoit la demande, quel que soit le canal : formulaire, email entrant, conversation sur le site, message WhatsApp ou appel téléphonique. Il en extrait les informations déjà présentes plutôt que de les redemander.</p>
+        <p style="margin-top:16px;"><strong>2. La qualification.</strong> Il pose les questions manquantes, une par une, en langage naturel. Secteur, taille, échéance, budget approximatif, nature exacte du besoin : vous décidez de la liste, il la couvre systématiquement.</p>
+        <p style="margin-top:16px;"><strong>3. Le scoring.</strong> Il applique vos règles et classe la demande. Un artisan qui cherche un devis pour la semaine prochaine et un groupe qui étudie un projet pour l'an prochain ne méritent pas le même traitement, ni le même délai de rappel.</p>
+        <p style="margin-top:16px;"><strong>4. L'écriture et le routage.</strong> La fiche est créée ou mise à jour dans votre CRM avec le score et le résumé de l'échange, puis assignée au bon commercial selon la zone, le secteur ou la charge. Cette partie repose sur les mêmes mécanismes que nos <a href="/automatisation-n8n-make/" style="color:var(--accent);text-decoration:underline;">automatisations n8n et Make</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-soft">
+    <div class="container">
+      <div class="maxw-3 reveal">
+        <span class="eyebrow">Le vrai travail</span>
+        <h2 class="h2" style="margin-top:12px;">Vos critères de qualification comptent plus que <span class="accent">le modèle</span>.</h2>
+        <p style="margin-top:16px;">L'erreur la plus courante sur ce type de projet consiste à traiter la qualification comme un problème technique. Elle n'en est pas un. Le modèle de langage sait poser des questions et raisonner sur les réponses depuis un moment déjà.</p>
+        <p style="margin-top:16px;">La difficulté est ailleurs : la plupart des PME n'ont jamais écrit noir sur blanc ce qui distingue un bon lead d'un mauvais. Les commerciaux le savent d'expérience, chacun avec ses nuances, et personne ne l'a formalisé. Tant que ce travail n'est pas fait, l'agent automatise une règle floue et produit un tri flou.</p>
+        <p style="margin-top:16px;">La phase de cadrage sert donc surtout à cela : reprendre vos douze derniers dossiers gagnés et vos douze derniers dossiers perdus, et identifier ce qui les séparait réellement. C'est souvent la partie du projet qui apporte le plus de valeur, indépendamment de l'outil.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="maxw-3 reveal">
+        <span class="eyebrow">Limites</span>
+        <h2 class="h2" style="margin-top:12px;">Ce qu'un agent de qualification ne doit <span class="accent">pas</span> faire.</h2>
+        <p style="margin-top:16px;"><strong>Décider seul dans les cas ambigus.</strong> Un bon paramétrage prévoit une catégorie « à examiner », pas seulement « qualifié » et « écarté ». Forcer une décision binaire sur un dossier atypique fait perdre des affaires, et ce sont souvent les plus grosses.</p>
+        <p style="margin-top:16px;"><strong>Se faire passer pour un humain.</strong> Au-delà de la question réglementaire, c'est contre-productif : un prospect qui découvre la supercherie en fin de parcours perd confiance au moment précis où vous en avez besoin. L'agent annonce ce qu'il est, et cela ne fait pas chuter les taux de réponse.</p>
+        <p style="margin-top:16px;"><strong>Interroger le prospect plus que nécessaire.</strong> Chaque question supplémentaire fait abandonner une partie des visiteurs. Trois à cinq questions bien choisies qualifient mieux qu'un interrogatoire de douze, et le score gagné en précision ne compense jamais les leads perdus en route.</p>
+        <p style="margin-top:16px;"><strong>Écrire dans le CRM sans traçabilité.</strong> Chaque fiche créée par l'agent doit porter la trace de l'échange qui l'a produite. Sans cela, vos commerciaux ne font pas confiance au score, et le système est abandonné en trois mois.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-soft">
+    <div class="container">
+      <div class="maxw-3 reveal">
+        <span class="eyebrow">Coût</span>
+        <h2 class="h2" style="margin-top:12px;">Combien coûte un agent de qualification pour une <span class="accent">PME</span> ?</h2>
+        <p style="margin-top:16px;">La qualification des demandes entrantes est comprise dans l'offre <strong>Essentiel</strong> à 290 € par mois, avec une mise en place à partir de 1 500 €. Ce périmètre couvre un canal, un jeu de critères et l'écriture dans un CRM.</p>
+        <p style="margin-top:16px;">L'offre <strong>Croissance</strong>, à 690 € par mois et 2 500 € de mise en place, ajoute le scoring avancé, le routage entre plusieurs commerciaux, la lecture et l'écriture bidirectionnelles dans le CRM et les relances automatiques des leads sans réponse.</p>
+        <p style="margin-top:16px;">Comme sur l'ensemble de nos offres, <strong>l'infrastructure IA est refacturée à prix coûtant</strong> : les conversations et les minutes sont facturées au tarif exact des fournisseurs, sans marge. Le détail figure sur la <a href="/tarifs/" style="color:var(--accent);text-decoration:underline;">page tarifs</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="maxw-2 reveal">
+        <span class="eyebrow">Questions fréquentes</span>
+        <h2 class="h2" style="margin-top:12px;">Ce que les dirigeants <span class="accent">demandent</span>.</h2>
+      </div>
+      <div class="faq" style="margin-top:44px;"><details class="faq__item reveal" open><summary class="faq__q"><h3>Qu'est-ce qu'un agent IA de qualification de leads ?</h3><span class="faq__ico" aria-hidden="true"></span></summary><div class="faq__a"><p>C'est un logiciel qui reçoit vos demandes entrantes (formulaire, email, chat, appel), pose les questions nécessaires pour évaluer si le prospect correspond à votre cible, attribue un score selon vos critères, crée la fiche dans votre CRM et alerte le bon commercial. Il ne remplace pas la vente : il supprime le tri manuel qui la précède.</p></div></details><details class="faq__item reveal"><summary class="faq__q"><h3>Un agent IA peut-il vraiment juger de la qualité d'un lead ?</h3><span class="faq__ico" aria-hidden="true"></span></summary><div class="faq__a"><p>Il applique les critères que vous lui donnez, avec constance. C'est là son avantage réel : il pose les mêmes questions à 22 heures qu'à 9 heures, et n'oublie jamais d'en poser une. En revanche, il ne remplace pas le jugement commercial sur les cas ambigus. Un bon paramétrage prévoit explicitement une catégorie « à examiner par un humain » plutôt que de forcer une décision.</p></div></details><details class="faq__item reveal"><summary class="faq__q"><h3>Faut-il changer de CRM pour mettre en place un agent de qualification ?</h3><span class="faq__ico" aria-hidden="true"></span></summary><div class="faq__a"><p>Non. L'agent écrit dans le CRM que vous utilisez déjà via son API ou via un workflow d'automatisation. Si votre CRM n'expose pas d'API, l'écriture passe par un connecteur intermédiaire. Changer d'outil au moment d'automatiser cumule deux chantiers et deux risques : nous le déconseillons.</p></div></details><details class="faq__item reveal"><summary class="faq__q"><h3>En combien de temps un agent de qualification est-il opérationnel ?</h3><span class="faq__ico" aria-hidden="true"></span></summary><div class="faq__a"><p>Comptez deux à quatre semaines pour un périmètre standard : une semaine de cadrage des critères, une à deux semaines de construction et de tests, puis une phase d'observation en conditions réelles. Le délai dépend surtout de la clarté de vos critères de qualification, rarement de la technique.</p></div></details><details class="faq__item reveal"><summary class="faq__q"><h3>Combien coûte un agent IA de qualification de leads ?</h3><span class="faq__ico" aria-hidden="true"></span></summary><div class="faq__a"><p>Chez LOOKAHEAD, la qualification entrante est comprise dans l'offre Essentiel à 290 € par mois, avec une mise en place à partir de 1 500 €. Le scoring avancé, le routage multi-commercial et l'écriture bidirectionnelle dans le CRM relèvent de l'offre Croissance à 690 € par mois. L'infrastructure IA est refacturée à prix coûtant.</p></div></details></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="maxw-2 reveal">
+        <span class="eyebrow">Ressources</span>
+        <h2 class="h2" style="margin-top:12px;">Pour <span class="accent">approfondir</span>.</h2>
+      </div>
+      <div class="grid grid-3" style="margin-top:40px;">
+        <a class="card card--hover reveal" href="/blog/chatbot-vs-agent-conversationnel/" style="display:block;">
+          <h3 style="font-size:17px;margin-bottom:8px;">Chatbot ou agent conversationnel</h3>
+          <p style="color:var(--body);font-size:14.5px;line-height:1.65;">Trois niveaux de sophistication, et comment savoir lequel votre besoin justifie vraiment.</p>
+        </a>
+        <a class="card card--hover reveal" href="/blog/workflows-n8n-pme/" style="display:block;">
+          <h3 style="font-size:17px;margin-bottom:8px;">10 workflows n8n pour une PME</h3>
+          <p style="color:var(--body);font-size:14.5px;line-height:1.65;">Des automatisations concrètes, avec leur déclencheur et ce qu'elles font gagner.</p>
+        </a>
+        <a class="card card--hover reveal" href="/blog/chatbot-ia-entreprise-guide/" style="display:block;">
+          <h3 style="font-size:17px;margin-bottom:8px;">Chatbot IA : guide et tarifs</h3>
+          <p style="color:var(--body);font-size:14.5px;line-height:1.65;">Les quatre familles d'outils, les fourchettes de prix et les critères qui font la différence.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-soft">
+    <div class="container">
+      <div class="maxw-2 reveal">
+        <span class="eyebrow">Aller plus loin</span>
+        <h2 class="h2" style="margin-top:12px;">Les autres services <span class="accent">LOOKAHEAD</span>.</h2>
+      </div>
+      <div class="grid grid-3" style="margin-top:40px;">
+        <a class="card card--hover reveal" href="/agent-vocal-ia/" style="display:block;">
+          <h3 style="font-size:17px;margin-bottom:8px;">Agent vocal IA</h3>
+          <p style="color:var(--body);font-size:14.5px;line-height:1.65;">Répondre au téléphone 24/7, qualifier les appels et prendre les rendez-vous.</p>
+        </a>
+        <a class="card card--hover reveal" href="/chatbot-ia-entreprise/" style="display:block;">
+          <h3 style="font-size:17px;margin-bottom:8px;">Chatbot IA et agent conversationnel</h3>
+          <p style="color:var(--body);font-size:14.5px;line-height:1.65;">Répondre par écrit sur le site et WhatsApp, qualifier et convertir les visiteurs.</p>
+        </a>
+        <a class="card card--hover reveal" href="/automatisation-n8n-make/" style="display:block;">
+          <h3 style="font-size:17px;margin-bottom:8px;">Automatisation n8n et Make</h3>
+          <p style="color:var(--body);font-size:14.5px;line-height:1.65;">Connecter vos outils métier et supprimer les saisies manuelles.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+<footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <div class="logo">LOOK<span>AHEAD</span></div>
+          <p>Agents IA vocaux, chatbots et automatisations sur mesure pour les PME qui veulent récupérer du temps sur les tâches répétitives.</p>
+          <div class="footer__social">
+            <a href="https://www.linkedin.com/in/luka-gallagher-lookahead/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+            <a href="mailto:luka@lookahead.fr" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg></a>
+            <a href="tel:+33642681006" aria-label="Téléphone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h2 class="footer__h">Services</h2>
+          <a href="/agent-vocal-ia/">Voicebots</a>
+          <a href="/chatbot-ia-entreprise/">Chatbots</a>
+          <a href="/automatisation-n8n-make/">Automatisation</a>
+          <a href="/tarifs/">Tarifs</a>
+        </div>
+        <div class="footer__col">
+          <h2 class="footer__h">Entreprise</h2>
+          <a href="/a-propos/">À propos</a>
+          <a href="/blog/">Blog</a>
+          <a href="/agence-automatisation-ia-grenoble/">Agence IA Grenoble</a>
+          <a href="/tarifs/">Tarifs</a>
+          <a href="/reserver/">Diagnostic gratuit</a>
+          <a href="mailto:luka@lookahead.fr">Contact</a>
+        </div>
+        <div class="footer__col">
+          <h2 class="footer__h">Légal</h2>
+          <a href="/mentions-legales/">Mentions légales</a>
+          <a href="/cgv/">Conditions générales de vente</a>
+          <a href="/cgu/">Conditions générales d'utilisation</a>
+          <a href="/confidentialite/">Politique de confidentialité</a>
+          <a href="/cookies/">Politique de cookies</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© <span data-year>2025</span> LOOKAHEAD. Tous droits réservés.</span>
+        <div class="footer__legal">
+          <a href="/mentions-legales/">Mentions légales</a>
+          <a href="/confidentialite/">Confidentialité</a>
+          <a href="/cookies/">Cookies</a>
+        </div>
+      </div>
+    </div>
+      <div class="container">
+        <p style="margin-top:8px;font-size:13px;line-height:1.7;opacity:.6;">LOOKAHEAD — 24 chemin de Biaron, 38410 Vaulnaveys-le-Haut, Isère. Agence d'automatisation IA basée près de Grenoble, en Auvergne-Rhône-Alpes, intervenant à distance partout en France. SIRET 924 346 109 00029.</p>
+      </div>
+  </footer>
+
+  <script>
+/* =========================================================================
+   LOOKAHEAD — Interactions
+   Objectif : fluidité maximale, aucune animation qui décale la page.
+   ========================================================================= */
+(function () {
+  "use strict";
+
+  var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* ---------------- NAVIGATION ---------------- */
+  var nav = document.querySelector(".nav");
+  if (nav) {
+    var onScroll = function () { nav.classList.toggle("is-scrolled", window.scrollY > 30); };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+    var burger = nav.querySelector(".nav__burger");
+    var mobile = document.querySelector(".nav__mobile");
+    if (burger && mobile) {
+      burger.addEventListener("click", function () { mobile.classList.toggle("is-open"); });
+      mobile.querySelectorAll("a").forEach(function (a) {
+        a.addEventListener("click", function () { mobile.classList.remove("is-open"); });
+      });
+    }
+  }
+
+  /* ---------------- REVEAL (apparition, une fois) ---------------- */
+  var revealEls = document.querySelectorAll(".reveal");
+  if (revealEls.length) {
+    if (reduced) {
+      revealEls.forEach(function (el) { el.classList.add("is-visible"); });
+    } else {
+      var ro = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            var el = e.target;
+            var d = parseFloat(el.getAttribute("data-delay") || "0");
+            setTimeout(function () { el.classList.add("is-visible"); }, d * 1000);
+            ro.unobserve(el);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: "0px 0px -10% 0px" });
+      revealEls.forEach(function (el) { ro.observe(el); });
+    }
+  }
+
+  /* ---------------- FADE (apparait en descendant, s'estompe en remontant) ---------------- */
+  var fadeEls = document.querySelectorAll(".fade");
+  if (fadeEls.length) {
+    if (reduced) {
+      fadeEls.forEach(function (el) { el.classList.add("is-in"); });
+    } else {
+      var fo = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) { e.target.classList.toggle("is-in", e.isIntersecting); });
+      }, { threshold: 0.15, rootMargin: "-12% 0px -12% 0px" });
+      fadeEls.forEach(function (el) { fo.observe(el); });
+    }
+  }
+
+  /* ---------------- TIMELINE : remplissage au scroll ---------------- */
+  var timeline = document.querySelector(".timeline");
+  if (timeline) {
+    var fill = timeline.querySelector(".timeline__fill");
+    var updateFill = function () {
+      var r = timeline.getBoundingClientRect();
+      var vh = window.innerHeight;
+      var start = vh * 0.7, end = vh * 0.7;
+      var total = r.height;
+      var scrolled = Math.min(Math.max(start - r.top, 0), total + (start - end));
+      var ratio = Math.min(Math.max(scrolled / total, 0), 1);
+      if (fill) fill.style.transform = "scaleY(" + ratio + ")";
+    };
+    window.addEventListener("scroll", updateFill, { passive: true });
+    window.addEventListener("resize", updateFill);
+    updateFill();
+  }
+
+  /* Petit utilitaire : observer de visibilité pour piloter une animation */
+  function whenVisible(el, onShow, onHide) {
+    if (!el) return;
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { e.isIntersecting ? onShow() : onHide(); });
+    }, { threshold: 0.25 });
+    io.observe(el);
+  }
+
+  /* ---------------- DÉMO VOICEBOT ---------------- */
+  var voice = document.querySelector("[data-voice]");
+  if (voice) {
+    var SCRIPTS = {
+      service: {
+        caller: "Appel entrant · 21h47",
+        turns: [
+          { s: "ia", t: "Agence Lefèvre Immobilier, bonjour. Je suis l'assistante de l'agence, comment puis-je vous aider ?" },
+          { s: "client", t: "Bonsoir, je vous appelle pour le trois pièces rue des Capucins, il est toujours disponible ?" },
+          { s: "ia", t: "Oui, il est encore au catalogue. Souhaitez-vous que je vous bloque un créneau de visite cette semaine ?" },
+          { s: "client", t: "Jeudi en fin de journée si c'est possible." },
+          { s: "ia", t: "Jeudi 18h30 est libre. Je vous envoie la confirmation par SMS et je préviens le conseiller. C'est noté." }
+        ]
+      },
+      prospection: {
+        caller: "Appel sortant · relance lead",
+        turns: [
+          { s: "ia", t: "Bonjour Madame Rolland, LOOKAHEAD pour l'agence Lefèvre. Vous aviez estimé votre maison il y a deux mois, vous avez deux minutes ?" },
+          { s: "client", t: "Oui, mais je ne suis pas encore sûre de vouloir vendre." },
+          { s: "ia", t: "C'est tout à fait normal. Les prix de votre quartier ont bougé depuis. Voulez-vous une réévaluation gratuite, sans engagement ?" },
+          { s: "client", t: "Pourquoi pas, ça m'aiderait à décider." },
+          { s: "ia", t: "Parfait. Je cale un rendez-vous avec un conseiller mardi 14h et je vous envoie le récapitulatif. Bonne journée à vous." }
+        ]
+      }
+    };
+
+    var vConvo = voice.querySelector(".voice__convo");
+    var vCaller = voice.querySelector("[data-voice-caller]");
+    var vSpeaking = voice.querySelector(".voice__speaking");
+    var vWave = voice.querySelector(".wave");
+    var vTabs = voice.querySelectorAll(".voice__tab");
+
+    var mode = "service", turnIdx = 0, wordIdx = 0;
+    var vTimer = null, waveTimer = null, visible = false;
+
+    // build wave bars
+    if (vWave) { for (var i = 0; i < 28; i++) { var b = document.createElement("span"); vWave.appendChild(b); } }
+    var waveBars = vWave ? vWave.querySelectorAll("span") : [];
+
+    function renderVoice() {
+      var turns = SCRIPTS[mode].turns;
+      vConvo.innerHTML = "";
+      for (var ti = 0; ti <= turnIdx && ti < turns.length; ti++) {
+        var turn = turns[ti];
+        var words = turn.t.split(" ");
+        var visibleCount = ti === turnIdx ? wordIdx : words.length;
+        var wrap = document.createElement("div");
+        wrap.className = "turn " + turn.s;
+        var inner = '<div class="turn__wrap"><div class="turn__who">' + (turn.s === "ia" ? "Agent IA" : "Client") + '</div><div class="bubble">';
+        for (var w = 0; w < words.length; w++) {
+          var cls = "word";
+          if (w < visibleCount) cls += " spoken";
+          if (ti === turnIdx && w === visibleCount - 1) cls += " speaking";
+          inner += '<span class="' + cls + '">' + words[w] + (w < words.length - 1 ? " " : "") + "</span>";
+        }
+        inner += "</div></div>";
+        wrap.innerHTML = inner;
+        vConvo.appendChild(wrap);
+      }
+      vConvo.scrollTop = vConvo.scrollHeight; // ancre en bas, jamais de décalage de page
+      var sp = turns[turnIdx] ? turns[turnIdx].s : "ia";
+      if (vSpeaking) vSpeaking.textContent = sp === "ia" ? "L'agent parle" : "Le client parle";
+    }
+
+    function stepVoice() {
+      if (!visible || reduced) return;
+      var turns = SCRIPTS[mode].turns;
+      var words = turns[turnIdx].t.split(" ");
+      if (wordIdx < words.length) {
+        var word = words[wordIdx];
+        var dur = 130 + Math.min(word.length * 24, 220) + (/[.,!?]$/.test(word) ? 260 : 0);
+        wordIdx++;
+        renderVoice();
+        vTimer = setTimeout(stepVoice, dur);
+      } else {
+        vTimer = setTimeout(function () {
+          if (turnIdx < turns.length - 1) { turnIdx++; wordIdx = 0; renderVoice(); vTimer = setTimeout(stepVoice, 120); }
+          else { vTimer = setTimeout(function () { turnIdx = 0; wordIdx = 0; renderVoice(); vTimer = setTimeout(stepVoice, 200); }, 2200); }
+        }, 650);
+      }
+    }
+
+    function animateWave() {
+      if (!visible) return;
+      for (var k = 0; k < waveBars.length; k++) {
+        var h = 20 + Math.abs(Math.sin((k + turnIdx + wordIdx + Date.now() / 220) * 0.9)) * 80;
+        waveBars[k].style.height = Math.round(h) + "%";
+      }
+      waveTimer = setTimeout(animateWave, 180);
+    }
+
+    function startVoice() {
+      visible = true;
+      if (!reduced) { stepVoice(); animateWave(); }
+      else { var t = SCRIPTS[mode].turns; turnIdx = t.length - 1; wordIdx = t[turnIdx].t.split(" ").length; renderVoice(); }
+    }
+    function stopVoice() {
+      visible = false;
+      clearTimeout(vTimer); clearTimeout(waveTimer);
+    }
+
+    vTabs.forEach(function (tab) {
+      tab.addEventListener("click", function () {
+        vTabs.forEach(function (t) { t.classList.remove("is-active"); });
+        tab.classList.add("is-active");
+        mode = tab.getAttribute("data-mode");
+        if (vCaller) vCaller.textContent = SCRIPTS[mode].caller;
+        clearTimeout(vTimer);
+        turnIdx = 0; wordIdx = 0; renderVoice();
+        if (visible && !reduced) vTimer = setTimeout(stepVoice, 400);
+      });
+    });
+
+    if (vCaller) vCaller.textContent = SCRIPTS[mode].caller;
+    renderVoice();
+    whenVisible(voice, startVoice, stopVoice);
+  }
+
+  /* ---------------- DÉMO CHATBOT ---------------- */
+  var chat = document.querySelector("[data-chat]");
+  if (chat) {
+    var CHAT = [
+      { f: "bot", t: "Bonjour 👋 Vous cherchez à louer, acheter, ou faire estimer un bien ?" },
+      { f: "user", t: "Acheter, un T3 vers le centre." },
+      { f: "bot", t: "Parfait. Quel est votre budget maximum, frais inclus ?" },
+      { f: "user", t: "Autour de 280 000 €." },
+      { f: "bot", t: "Top. J'ai 4 biens qui correspondent. Je vous envoie la sélection par email et je réserve un créneau de visite ?" },
+      { f: "user", t: "Oui, samedi matin si possible." },
+      { f: "bot", t: "C'est noté pour samedi 10h. Un conseiller vous confirme dans la foulée. À samedi !" }
+    ];
+    var cBody = chat.querySelector(".chat__body");
+    var cCount = 1, cTimer = null, cVisible = false, cTyping = false;
+
+    function renderChat() {
+      cBody.innerHTML = "";
+      for (var i = 0; i < cCount && i < CHAT.length; i++) {
+        var m = CHAT[i];
+        var d = document.createElement("div");
+        d.className = "cmsg show " + m.f;
+        d.innerHTML = '<div class="b">' + m.t + "</div>";
+        cBody.appendChild(d);
+      }
+      if (cTyping) {
+        var tp = document.createElement("div");
+        tp.className = "cmsg bot show";
+        tp.innerHTML = '<div class="typing"><span></span><span></span><span></span></div>';
+        cBody.appendChild(tp);
+      }
+      cBody.scrollTop = cBody.scrollHeight; // page jamais décalée
+    }
+
+    function stepChat() {
+      if (!cVisible || reduced) return;
+      if (cCount >= CHAT.length) {
+        cTimer = setTimeout(function () { cCount = 1; renderChat(); cTimer = setTimeout(stepChat, 900); }, 2600);
+        return;
+      }
+      var next = CHAT[cCount];
+      if (next.f === "bot") {
+        cTyping = true; renderChat();
+        cTimer = setTimeout(function () {
+          cTyping = false; cCount++; renderChat();
+          cTimer = setTimeout(stepChat, 900);
+        }, 1100);
+      } else {
+        cTimer = setTimeout(function () { cCount++; renderChat(); cTimer = setTimeout(stepChat, 700); }, 600);
+      }
+    }
+
+    renderChat();
+    whenVisible(chat,
+      function () { cVisible = true; if (reduced) { cCount = CHAT.length; renderChat(); } else { cTimer = setTimeout(stepChat, 1000); } },
+      function () { cVisible = false; clearTimeout(cTimer); }
+    );
+  }
+
+  /* ---------------- DÉMO AUTOMATISATION ---------------- */
+  var auto = document.querySelector("[data-auto]");
+  if (auto) {
+    var rows = auto.querySelectorAll(".auto__row");
+    var aTimer = null, aVisible = false, aI = -1;
+    function setActive(n) { rows.forEach(function (r, idx) { r.classList.toggle("on", idx <= n); }); }
+    function stepAuto() {
+      if (!aVisible || reduced) return;
+      aI++;
+      if (aI >= rows.length) {
+        aTimer = setTimeout(function () { aI = -1; setActive(-1); aTimer = setTimeout(stepAuto, 800); }, 2200);
+        return;
+      }
+      setActive(aI);
+      aTimer = setTimeout(stepAuto, 950);
+    }
+    whenVisible(auto,
+      function () { aVisible = true; if (reduced) { setActive(rows.length - 1); } else { aI = -1; setActive(-1); aTimer = setTimeout(stepAuto, 500); } },
+      function () { aVisible = false; clearTimeout(aTimer); }
+    );
+  }
+
+  /* ---------------- Année footer ---------------- */
+  var yr = document.querySelector("[data-year]");
+  if (yr) yr.textContent = new Date().getFullYear();
+})();
+
+</script>
 </body>
 </html>
