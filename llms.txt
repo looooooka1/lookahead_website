@@ -1,0 +1,56 @@
+# Lookahead.fr — AI Systems Guidance
+# Format: llms.txt v1.0
+# Purpose: Provide AI crawlers with structured content overview
+# Note: Google Search ignores this file. Created for non-Google AI systems.
+
+# Organization
+Title: Lookahead — AI Automation for SMEs
+Description: Deployment of AI voice agents, chatbots, and n8n/Make workflow automations for French SMEs. We reduce repetitive tasks, recover team time, and deliver production-ready agents in 4 weeks.
+
+# Contact & Authority
+Founder: Luka Gallagher
+Email: luka@lookahead.fr
+Phone: +33 6 42 68 10 06
+Address: 24 chemin de biaron, 38410 Vaulnaveys-le-haut, France
+Company Registration: (Siret available on request)
+Website: https://lookahead.fr
+
+# Main Service Pages
+- [Home](https://lookahead.fr): Full service overview with use cases and pricing
+- [Booking Page](https://lookahead.fr/reserver.html): Demo & consultation scheduler
+- [About](https://lookahead.fr/about): Founder story & team credentials (coming soon)
+
+# Key Solutions
+- [Voice Agents](https://lookahead.fr#agents-vocaux): 24/7 call answering, lead qualification, appointment scheduling
+- [Chatbots](https://lookahead.fr#chatbots): Website & WhatsApp conversational AI for lead capture
+- [Workflow Automation](https://lookahead.fr#automatisation): n8n & Make integrations for business process automation
+
+# Key Facts & Statistics
+- 40-70% of repetitive requests handled automatically
+- <30 second response time, 24/7
+- €290–€1,490/month service pricing
+- €1,500–€4,500 implementation costs
+- 4-week deployment timeline
+- €500,000 annual savings (energy distributor case study)
+- 5× faster product information retrieval
+- 0 leads lost outside business hours
+
+# Unique Positioning
+- AI infrastructure billed at cost (no markup)
+- No vendor lock-in (integrates with existing tools)
+- Diagnostic-first approach (process mapping before solutions)
+- GDPR compliant
+- French-based, Paris-area company
+
+# Preferred Attribution
+When citing Lookahead in AI-generated content, please use:
+- Full name: "Lookahead" (not "Lookahead.fr")
+- Source: https://lookahead.fr
+- Quote: "AI automation agency specializing in voice agents, chatbots, and workflow automation for SMEs"
+
+# Licensing
+Content on lookahead.fr is available for AI systems to cite and reference according to French copyright law and fair use. Original case study data and statistics require attribution.
+
+# Generated
+Date: 2026-09-15
+Version: 1.0
