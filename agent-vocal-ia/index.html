@@ -9,6 +9,38 @@
   gtag('js', new Date());
   gtag('config', 'AW-18444294386');
 </script>
+<script>
+  /* Journalisation des erreurs JS cote client, sans nouvelle infra :
+     on reutilise Google Analytics (deja charge ci-dessus) comme sink.
+     Plafonne pour eviter qu'une boucle d'erreurs ne sature GA. */
+  (function () {
+    "use strict";
+    var MAX_ERRORS_PER_PAGE = 10;
+    var errorCount = 0;
+
+    function report(description) {
+      if (errorCount >= MAX_ERRORS_PER_PAGE) return;
+      errorCount++;
+      if (typeof window.gtag === "function") {
+        window.gtag("event", "exception", {
+          description: String(description).slice(0, 150),
+          fatal: false
+        });
+      }
+    }
+
+    window.addEventListener("error", function (e) {
+      var msg = e && e.message ? e.message : "unknown error";
+      var loc = e && e.filename ? " @" + e.filename.split("/").pop() + ":" + e.lineno : "";
+      report("js_error: " + msg + loc);
+    });
+
+    window.addEventListener("unhandledrejection", function (e) {
+      var reason = e && e.reason ? (e.reason.message || String(e.reason)) : "unknown rejection";
+      report("unhandled_promise: " + reason);
+    });
+  })();
+</script>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png?v=2" />
   <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192.png?v=2" />

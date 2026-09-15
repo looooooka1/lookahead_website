@@ -10,6 +10,38 @@
 
   gtag('config', 'AW-18444294386');
 </script>
+<script>
+  /* Journalisation des erreurs JS cote client, sans nouvelle infra :
+     on reutilise Google Analytics (deja charge ci-dessus) comme sink.
+     Plafonne pour eviter qu'une boucle d'erreurs ne sature GA. */
+  (function () {
+    "use strict";
+    var MAX_ERRORS_PER_PAGE = 10;
+    var errorCount = 0;
+
+    function report(description) {
+      if (errorCount >= MAX_ERRORS_PER_PAGE) return;
+      errorCount++;
+      if (typeof window.gtag === "function") {
+        window.gtag("event", "exception", {
+          description: String(description).slice(0, 150),
+          fatal: false
+        });
+      }
+    }
+
+    window.addEventListener("error", function (e) {
+      var msg = e && e.message ? e.message : "unknown error";
+      var loc = e && e.filename ? " @" + e.filename.split("/").pop() + ":" + e.lineno : "";
+      report("js_error: " + msg + loc);
+    });
+
+    window.addEventListener("unhandledrejection", function (e) {
+      var reason = e && e.reason ? (e.reason.message || String(e.reason)) : "unknown rejection";
+      report("unhandled_promise: " + reason);
+    });
+  })();
+</script>
   <meta charset="UTF-8" />
   <meta property="og:image" content="https://lookahead.fr/assets/og-image.png" />
   <meta property="og:image:width" content="1200" />
@@ -250,7 +282,29 @@ h1 { letter-spacing: -0.02em; font-weight: 800; line-height: 1.08; color: var(--
 
 /* ---------- Page réservation ---------- */
 .booking { padding: 130px 0 96px; }
-.booking__frame { max-width: 760px; margin: 24px auto 0; border: 1px solid var(--line); border-radius: var(--radius-lg); overflow: hidden; background: #fff; box-shadow: var(--shadow-card); min-height: 700px; }
+.booking__frame { position: relative; max-width: 760px; margin: 24px auto 0; border: 1px solid var(--line); border-radius: var(--radius-lg); overflow: hidden; background: #fff; box-shadow: var(--shadow-card); min-height: 700px; }
+
+/* ---------- État de chargement du widget de réservation ---------- */
+.booking__status {
+  position: absolute; inset: 0; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 16px;
+  background: #fff; padding: 40px 24px; text-align: center;
+}
+.booking__spinner {
+  width: 36px; height: 36px; border-radius: 50%;
+  border: 3px solid var(--line); border-top-color: var(--accent);
+  animation: booking-spin 0.8s linear infinite;
+}
+@keyframes booking-spin { to { transform: rotate(360deg); } }
+.booking__status p { color: var(--muted); font-size: 14px; margin: 0; }
+.booking__fallback { display: none; }
+.booking__fallback.is-visible { display: flex; }
+.booking__fallback h3 { font-size: 18px; font-weight: 700; color: var(--ink); margin: 0; }
+.booking__fallback p { color: var(--body); font-size: 14px; line-height: 1.6; max-width: 420px; margin: 0; }
+.booking__fallback .btn { margin-top: 4px; }
+@media (prefers-reduced-motion: reduce) {
+  .booking__spinner { animation-duration: 1.6s; }
+}
 
 /* ---------- Accessibilité : mouvement réduit ---------- */
 @media (prefers-reduced-motion: reduce) {
@@ -283,30 +337,131 @@ h1 { letter-spacing: -0.02em; font-weight: 800; line-height: 1.08; color: var(--
       <p class="lead" style="margin-top:16px;">Choisissez un créneau ci-dessous. Le premier échange n'est pas un argumentaire : c'est un diagnostic de vos processus, sans engagement. En 15 minutes, LOOKAHEAD chiffre le coût réel de vos tâches répétitives et vous dit si un agent vocal IA ou une automatisation n8n est rentable chez vous.</p>
 
       <div class="booking__frame">
+        <!-- État de chargement : visible tant que le widget Cal.com n'a rien affiché -->
+        <div class="booking__status" id="booking-loading" role="status" aria-live="polite">
+          <div class="booking__spinner" aria-hidden="true"></div>
+          <p>Chargement du calendrier de réservation…</p>
+        </div>
+
+        <!-- État d'erreur : affiché si le widget ne charge pas (script bloqué,
+             hors ligne, panne Cal.com) après un délai raisonnable -->
+        <div class="booking__status booking__fallback" id="booking-fallback" role="alert">
+          <h3>Le calendrier n'a pas pu se charger</h3>
+          <p>
+            Cela peut venir d'un bloqueur de publicités/traqueurs ou d'une coupure
+            réseau. Vous pouvez réessayer, ou nous contacter directement pour
+            fixer un créneau.
+          </p>
+          <div style="display:flex; gap:12px; flex-wrap:wrap; justify-content:center;">
+            <button type="button" class="btn btn--primary" id="booking-retry">Réessayer</button>
+            <a href="mailto:luka@lookahead.fr" class="btn btn--outline">Nous écrire</a>
+          </div>
+          <p style="margin-top:4px;">Ou appelez le <a href="tel:+33642681006" style="color:var(--accent);font-weight:600;">+33 6 42 68 10 06</a></p>
+        </div>
+
         <!-- Cal inline embed code begins -->
         <div style="width:100%;height:100%;overflow:scroll" id="my-cal-inline-rendez-vous-lookahead"></div>
         <script type="text/javascript">
-          (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
-          Cal("init", "rendez-vous-lookahead", {origin:"https://app.cal.com"});
-          Cal.config = Cal.config || {};
-          Cal.config.forwardQueryParams = true;
+        (function () {
+          "use strict";
 
-          Cal.ns["rendez-vous-lookahead"]("inline", {
-            elementOrSelector:"#my-cal-inline-rendez-vous-lookahead",
-            config: {"layout":"month_view","useSlotsViewOnSmallScreen":"true"},
-            calLink: "luka.lookahead/rendez-vous-lookahead",
-          });
+          var loadingEl = document.getElementById("booking-loading");
+          var fallbackEl = document.getElementById("booking-fallback");
+          var containerEl = document.getElementById("my-cal-inline-rendez-vous-lookahead");
+          var TIMEOUT_MS = 12000; // délai raisonnable avant de considérer l’embed en échec
+          var settled = false; // évite les états concurrents (succès + timeout en même temps)
+          var timeoutId = null;
+          var observer = null;
 
-          Cal.ns["rendez-vous-lookahead"]("ui", {"cssVarsPerTheme":{"light":{"cal-brand":"#4B49EC"},"dark":{"cal-brand":"#4B49EC"}},"hideEventTypeDetails":false,"layout":"month_view"});
+          function showFallback() {
+            if (settled) return;
+            settled = true;
+            if (observer) observer.disconnect();
+            if (timeoutId) clearTimeout(timeoutId);
+            if (loadingEl) loadingEl.style.display = "none";
+            if (fallbackEl) fallbackEl.classList.add("is-visible");
+          }
 
-          // Redirection vers la page de remerciement une fois la réservation confirmée.
-          // (Alternative gratuite au "Redirect on booking" du dashboard Cal.com, réservé aux plans payants.)
-          Cal.ns["rendez-vous-lookahead"]("on", {
-            action: "bookingSuccessful",
-            callback: function () {
-              window.location.href = "/merci-rendez-vous/";
-            },
-          });
+          function markLoaded() {
+            if (settled) return;
+            settled = true;
+            if (observer) observer.disconnect();
+            if (timeoutId) clearTimeout(timeoutId);
+            if (loadingEl) loadingEl.style.display = "none";
+          }
+
+          function initCalEmbed() {
+            settled = false;
+            if (loadingEl) loadingEl.style.display = "flex";
+            if (fallbackEl) fallbackEl.classList.remove("is-visible");
+            if (containerEl) containerEl.innerHTML = "";
+
+            // Détecte l'apparition réelle du contenu Cal.com dans son
+            // conteneur (le SDK n’expose pas d'événement "ready" fiable
+            // en embed inline, donc on observe le DOM directement).
+            if (containerEl && "MutationObserver" in window) {
+              observer = new MutationObserver(function (mutations) {
+                for (var i = 0; i < mutations.length; i++) {
+                  if (mutations[i].addedNodes && mutations[i].addedNodes.length > 0) {
+                    markLoaded();
+                    break;
+                  }
+                }
+              });
+              observer.observe(containerEl, { childList: true, subtree: true });
+            }
+
+            // Filet de sécurité : si rien n'est apparu après TIMEOUT_MS,
+            // on suppose un échec (script bloqué, panne, hors ligne) et on
+            // bascule sur le contact direct plutôt que de laisser un cadre
+            // vide indéfiniment.
+            timeoutId = setTimeout(showFallback, TIMEOUT_MS);
+
+            try {
+              (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; var s = d.createElement("script"); s.src = A; s.onerror = showFallback; d.head.appendChild(s); cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+              Cal("init", "rendez-vous-lookahead", {origin:"https://app.cal.com"});
+              Cal.config = Cal.config || {};
+              Cal.config.forwardQueryParams = true;
+
+              Cal.ns["rendez-vous-lookahead"]("inline", {
+                elementOrSelector:"#my-cal-inline-rendez-vous-lookahead",
+                config: {"layout":"month_view","useSlotsViewOnSmallScreen":"true"},
+                calLink: "luka.lookahead/rendez-vous-lookahead",
+              });
+
+              Cal.ns["rendez-vous-lookahead"]("ui", {"cssVarsPerTheme":{"light":{"cal-brand":"#4B49EC"},"dark":{"cal-brand":"#4B49EC"}},"hideEventTypeDetails":false,"layout":"month_view"});
+
+              // Redirection vers la page de remerciement une fois la réservation confirmée.
+              // (Alternative gratuite au "Redirect on booking" du dashboard Cal.com, réservé aux plans payants.)
+              Cal.ns["rendez-vous-lookahead"]("on", {
+                action: "bookingSuccessful",
+                callback: function () {
+                  window.location.href = "/merci-rendez-vous/";
+                },
+              });
+            } catch (err) {
+              // L'API Cal.com a levé une exception synchrone (ex : script
+              // déjà cassé) : on bascule immédiatement sur le contact direct
+              // plutôt que de laisser l'utilisateur face à un cadre vide.
+              showFallback();
+              if (window.gtag) {
+                gtag("event", "exception", { description: "cal_embed_init_failed: " + (err && err.message), fatal: false });
+              }
+            }
+          }
+
+          var retryBtn = document.getElementById("booking-retry");
+          if (retryBtn) {
+            retryBtn.addEventListener("click", function () {
+              // Cal.loaded reste vrai après un premier échec : on force un
+              // rechargement complet plutôt que de tenter une ré-init
+              // partielle de l’objet Cal, plus fiable en cas d'échec réseau.
+              window.location.reload();
+            });
+          }
+
+          initCalEmbed();
+        })();
         </script>
         <!-- Cal inline embed code ends -->
       </div>
