@@ -352,12 +352,34 @@
 
   <section class="section">
     <div class="container">
-      <div class="maxw-3 reveal">
-        <span class="eyebrow">Définition</span>
-        <h2 class="h2" style="margin-top:12px;">Qu'est-ce qu'un <span class="accent">agent conversationnel</span> IA ?</h2>
-        <p style="margin-top:16px;">Un agent conversationnel IA, couramment appelé chatbot IA, est un logiciel qui dialogue par écrit avec un visiteur. Il comprend une question formulée librement, y répond à partir de vos contenus et de vos données métier, puis exécute une action : qualifier la demande, proposer un créneau, créer une fiche dans le CRM. LOOKAHEAD conçoit ces agents au sein de son <a href="/" style="color:var(--accent);text-decoration:underline;">agence d'automatisation IA pour PME</a>.</p>
-        <p style="margin-top:16px;">La rupture avec les chatbots à scénarios est nette. Un chatbot à arbre de décision suit des boutons prédéfinis et se bloque dès que la question sort du script. Un agent conversationnel IA raisonne sur le sens de la phrase et reformule sa réponse, y compris pour des demandes qu'aucun scénario n'avait anticipées.</p>
-        <p style="margin-top:16px;">Pour une PME, l'enjeu est la conversion. Un visiteur qui ne trouve pas sa réponse en trente secondes quitte le site. Un agent conversationnel maintient le dialogue, lève l'objection et transforme une visite anonyme en demande qualifiée.</p>
+      <div class="tabset__grid" style="align-items:start;">
+        <div class="reveal">
+          <span class="eyebrow">Définition</span>
+          <h2 class="h2" style="margin-top:12px;">Qu'est-ce qu'un <span class="accent">agent conversationnel IA</span> ?</h2>
+          <p style="margin-top:16px;">Un agent conversationnel IA, couramment appelé chatbot IA, est un logiciel qui dialogue par écrit avec un visiteur. Il comprend une question formulée librement, y répond à partir de vos contenus et de vos données métier, puis exécute une action : qualifier la demande, proposer un créneau, créer une fiche dans le CRM. LOOKAHEAD conçoit ces agents au sein de son <a href="/" style="color:var(--accent);text-decoration:underline;">agence d'automatisation IA pour PME</a>.</p>
+          <p style="margin-top:16px;">La rupture avec les chatbots à scénarios est nette. Un chatbot à arbre de décision suit des boutons prédéfinis et se bloque dès que la question sort du script. Un agent conversationnel IA raisonne sur le sens de la phrase et reformule sa réponse, y compris pour des demandes qu'aucun scénario n'avait anticipées.</p>
+          <p style="margin-top:16px;">Pour une PME, l'enjeu est la conversion. Un visiteur qui ne trouve pas sa réponse en trente secondes quitte le site. Un agent conversationnel maintient le dialogue, lève l'objection et transforme une visite anonyme en demande qualifiée.</p>
+        </div>
+
+        <div class="reveal" data-delay="0.1">
+          <div class="convo" data-convo>
+            <div class="convo__bar">
+              <span class="convo__badge" aria-hidden="true">LA</span>
+              <span class="convo__who">Agent LOOKAHEAD</span>
+              <span class="convo__state" data-convo-state>En attente</span>
+            </div>
+            <div class="convo__body">
+              <div class="convo__msg convo__msg--user"><p class="convo__bubble">Bonsoir, vous intervenez sur Voiron pour un dépannage ?</p></div>
+              <div class="convo__msg convo__msg--bot"><p class="convo__bubble">Oui, Voiron fait partie de notre zone d'intervention. Il s'agit d'une urgence ou d'une intervention à planifier ?</p></div>
+              <div class="convo__msg convo__msg--user"><p class="convo__bubble">À planifier, plutôt la semaine prochaine.</p></div>
+              <div class="convo__msg convo__msg--bot"><p class="convo__bubble">Parfait. Il me reste mardi matin et jeudi après-midi. Lequel vous arrange ?</p></div>
+              <div class="convo__msg convo__msg--user"><p class="convo__bubble">Jeudi après-midi.</p></div>
+              <div class="convo__msg convo__msg--bot"><p class="convo__bubble">C'est noté pour jeudi 14 h. Vous recevez la confirmation par SMS, et le technicien a déjà le motif de l'intervention.</p></div>
+              <div class="convo__typing" hidden aria-hidden="true"><span></span><span></span><span></span></div>
+            </div>
+            <div class="convo__foot">Exemple d'échange. Il est 21 h 40, personne n'est au bureau, et la demande est déjà dans l'agenda.</div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -378,10 +400,40 @@
   <section class="section bg-soft">
     <div class="container">
       <div class="maxw-3 reveal">
-        <span class="eyebrow">Connexion</span>
-        <h2 class="h2" style="margin-top:12px;">Un chatbot relié à <span class="accent">vos données</span>, pas à un script figé.</h2>
-        <p style="margin-top:16px;">Un agent conversationnel n'a de valeur que s'il connaît votre réalité : catalogue, disponibilités, délais, historique client. LOOKAHEAD le connecte aux outils existants, en lecture et en écriture, par des workflows. La mécanique est détaillée sur la page <a href="/automatisation-n8n-make/" style="color:var(--accent);text-decoration:underline;">connecter le chatbot à votre CRM via n8n</a>.</p>
-        <p style="margin-top:16px;">L'agent est cadré par des garde-fous explicites : périmètre de réponse, sujets interdits, escalade obligatoire sur les questions contractuelles ou sensibles. Il ne devine pas un prix, il le lit dans votre grille.</p>
+        <span class="eyebrow">Données et garde-fous</span>
+        <h2 class="h2" style="margin-top:12px;">Un chatbot relié à <span class="accent">vos données</span>,<br>pas à un script figé.</h2>
+      </div>
+
+      <div class="stage reveal" data-delay="0.08" style="margin-top:48px;">
+        <div class="stage__side stage__side--a">
+          <p class="stage__label">Un script figé</p>
+          <p class="stage__head">Il répond ce qu'on a écrit dedans.</p>
+          <p class="stage__body">Les réponses sont saisies à la main, une par une. Dès que la réalité bouge, elles deviennent fausses sans que personne ne s'en aperçoive.</p>
+          <ul class="stage__list">
+            <li class="stage__li"><svg class="stage__ico" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg><span>Il annonce un délai qui n'est plus le bon</span></li>
+            <li class="stage__li"><svg class="stage__ico" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg><span>Il ignore une nouvelle zone d'intervention</span></li>
+            <li class="stage__li"><svg class="stage__ico" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg><span>Il invente un prix pour ne pas rester muet</span></li>
+            <li class="stage__li"><svg class="stage__ico" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg><span>Il se bloque dès que la question sort du scénario</span></li>
+          </ul>
+        </div>
+
+        <div class="stage__div" aria-hidden="true"></div>
+
+        <div class="stage__side stage__side--b">
+          <p class="stage__label">Relié à vos outils</p>
+          <p class="stage__head">Il lit la réponse là où elle est vraie.</p>
+          <p class="stage__body">Un agent conversationnel n'a de valeur que s'il connaît votre réalité : catalogue, disponibilités, délais, historique client. LOOKAHEAD le connecte aux outils existants, en lecture et en écriture, par des workflows. La mécanique est détaillée sur la page <a href="/automatisation-n8n-make/" style="color:var(--accent);text-decoration:underline;">connecter le chatbot à votre CRM via n8n</a>.</p>
+          <ul class="stage__list">
+            <li class="stage__li"><svg class="stage__ico" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Il lit la disponibilité dans l'agenda, à l'instant</span></li>
+            <li class="stage__li"><svg class="stage__ico" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Il connaît le périmètre qu'on lui a défini</span></li>
+            <li class="stage__li"><svg class="stage__ico" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Il ne devine pas un prix, il le lit dans votre outil</span></li>
+            <li class="stage__li"><svg class="stage__ico" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Il escalade vers un humain plutôt que d'improviser</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="maxw-3 reveal" style="margin-top:48px;">
+        <p>L'agent est cadré par des garde-fous explicites : périmètre de réponse, sujets interdits, escalade obligatoire sur les questions contractuelles ou sensibles. Il ne devine pas un prix, il le lit dans votre grille.</p>
         <p style="margin-top:16px;">Les conversations contiennent des données personnelles. Leur durée de conservation, leur lieu de traitement et les droits des personnes sont cadrés avant la mise en ligne. Voir la <a href="/ia-souveraine-rgpd/" style="color:var(--accent);text-decoration:underline;">conformité RGPD des données conversationnelles</a>.</p>
       </div>
     </div>
@@ -491,6 +543,24 @@
           <h3 style="font-size:17px;margin-bottom:8px;">Récupération de projet IA</h3>
           <p style="color:var(--body);font-size:14.5px;line-height:1.65;">Workflows non documentés, agent désactivé : auditer l'existant avant de reconstruire.</p>
         </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-soft">
+    <div class="container" style="max-width:760px;">
+      <div class="cta-box reveal">
+        <div class="cta-box__glow"></div>
+        <h2 class="h2">Combien de visiteurs partent <span class="accent accent--light">sans écrire</span> ?</h2>
+        <p>Quinze minutes pour regarder vos demandes entrantes réelles, celles du soir et du week-end comprises, et dire si un agent conversationnel change quelque chose chez vous. Si la réponse est non, on vous le dit pendant l'appel.</p>
+        <div class="cta-box__actions">
+          <a href="/reserver/" class="btn btn--primary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            Réserver mon diagnostic
+          </a>
+          <a href="/agent-vocal-ia/" class="btn btn--ghost">Voir l'agent vocal</a>
+        </div>
+        <p class="fine">Réponse sous 24 heures ouvrées. Sans engagement.</p>
       </div>
     </div>
   </section>

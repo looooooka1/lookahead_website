@@ -464,3 +464,140 @@
     vo.observe(root);
   });
 })();
+
+/* =========================================================================
+   LOOKAHEAD — Composants interactifs v3
+   ========================================================================= */
+(function () {
+  "use strict";
+
+  var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* ---------------- CONVO : la conversation se joue toute seule ----------------
+     Les messages sont écrits dans le HTML (lisibles par un moteur de recherche
+     et par un lecteur d'écran même sans JS). Le script ne fait que les révéler
+     l'un après l'autre. */
+  document.querySelectorAll("[data-convo]").forEach(function (root) {
+    var msgs = Array.prototype.slice.call(root.querySelectorAll(".convo__msg"));
+    if (!msgs.length) return;
+
+    var state = root.querySelector("[data-convo-state]");
+    var typing = root.querySelector(".convo__typing");
+    var i = 0, timer = null, playing = false;
+
+    function reset() {
+      msgs.forEach(function (m) { m.classList.remove("is-in"); });
+      i = 0;
+      if (typing) typing.hidden = true;
+    }
+
+    function step() {
+      if (!playing) return;
+      if (i >= msgs.length) {
+        if (state) state.textContent = "Conversation terminée";
+        if (typing) typing.hidden = true;
+        timer = setTimeout(function () { reset(); step(); }, 4200);
+        return;
+      }
+      var msg = msgs[i];
+      var isBot = msg.classList.contains("convo__msg--bot");
+
+      function reveal() {
+        if (typing) typing.hidden = true;
+        msg.classList.add("is-in");
+        if (state) state.textContent = isBot ? "L'agent répond" : "Le visiteur écrit";
+        i++;
+        timer = setTimeout(step, 1100);
+      }
+
+      if (isBot && typing && !reduced) {
+        typing.hidden = false;
+        if (state) state.textContent = "L'agent rédige";
+        timer = setTimeout(reveal, 700);
+      } else {
+        reveal();
+      }
+    }
+
+    if (reduced) {
+      msgs.forEach(function (m) { m.classList.add("is-in"); });
+      if (state) state.textContent = "Conversation complète";
+      return;
+    }
+
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting && !playing) {
+          playing = true;
+          reset();
+          step();
+        } else if (!e.isIntersecting && playing) {
+          playing = false;
+          clearTimeout(timer);
+        }
+      });
+    }, { threshold: 0.3 });
+    io.observe(root);
+
+    document.addEventListener("visibilitychange", function () {
+      if (document.hidden) { playing = false; clearTimeout(timer); }
+    });
+  });
+
+  /* ---------------- CATALOG : un objet s'ouvre au clic ---------------- */
+  document.querySelectorAll("[data-catalog]").forEach(function (root) {
+    var items = Array.prototype.slice.call(root.querySelectorAll(".catalog__item"));
+    items.forEach(function (item) {
+      var detail = item.querySelector(".catalog__detail");
+      if (!detail) return;
+      item.setAttribute("aria-expanded", "false");
+      detail.hidden = true;
+      item.addEventListener("click", function () {
+        var open = item.getAttribute("aria-expanded") === "true";
+        // Un seul ouvert à la fois : le catalogue reste lisible.
+        items.forEach(function (other) {
+          other.setAttribute("aria-expanded", "false");
+          var d = other.querySelector(".catalog__detail");
+          if (d) d.hidden = true;
+        });
+        if (!open) {
+          item.setAttribute("aria-expanded", "true");
+          detail.hidden = false;
+        }
+      });
+    });
+  });
+
+  /* ---------------- SCORER : le visiteur coche ses critères ---------------- */
+  document.querySelectorAll("[data-scorer]").forEach(function (root) {
+    var boxes = Array.prototype.slice.call(root.querySelectorAll("input[type='checkbox']"));
+    if (!boxes.length) return;
+
+    var fill = root.querySelector("[data-scorer-fill]");
+    var verdict = root.querySelector("[data-scorer-verdict]");
+    var desc = root.querySelector("[data-scorer-desc]");
+    var count = root.querySelector("[data-scorer-count]");
+
+    var levels = [
+      { min: 0, t: "Rien à automatiser pour l'instant", d: "Aucun critère coché. Si votre tri de demandes tient en quelques minutes par jour, un agent de qualification n'est pas prioritaire. Gardez l'énergie pour autre chose." },
+      { min: 1, t: "Un gain possible, à chiffrer", d: "Un ou deux signaux présents. Le diagnostic gratuit permet de vérifier si le volume justifie une automatisation, ou si un simple formulaire mieux conçu suffirait." },
+      { min: 3, t: "Un agent de qualification se justifie", d: "Plusieurs signaux réunis. À ce stade, le tri manuel coûte assez de temps de réaction pour qu'une automatisation se rembourse rapidement." },
+      { min: 5, t: "Le tri manuel vous coûte déjà cher", d: "La majorité des signaux sont présents. Chaque jour sans automatisation se paie en délais de réponse, donc en demandes perdues au profit d'un concurrent plus rapide." }
+    ];
+
+    function update() {
+      var n = boxes.filter(function (b) { return b.checked; }).length;
+      var pct = Math.round((n / boxes.length) * 100);
+      if (fill) fill.style.width = pct + "%";
+      if (count) count.textContent = n + " critère" + (n > 1 ? "s" : "") + " sur " + boxes.length;
+
+      var lvl = levels[0];
+      levels.forEach(function (l) { if (n >= l.min) lvl = l; });
+      if (verdict) verdict.textContent = lvl.t;
+      if (desc) desc.textContent = lvl.d;
+    }
+
+    boxes.forEach(function (b) { b.addEventListener("change", update); });
+    update();
+  });
+})();
