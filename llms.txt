@@ -1,56 +1,74 @@
-# Lookahead.fr — AI Systems Guidance
-# Format: llms.txt v1.0
-# Purpose: Provide AI crawlers with structured content overview
-# Note: Google Search ignores this file. Created for non-Google AI systems.
+# LOOKAHEAD — AI Systems Guidance
+# Format: llms.txt (informal convention)
+# Note: Google Search states explicitly that this file does not affect Google
+# Search or AI Overviews ranking or inclusion. It is provided for non-Google
+# AI systems (e.g. Perplexity) that may read it. All URLs below are live,
+# canonical, indexable pages verified against the site's own sitemap.xml.
 
-# Organization
-Title: Lookahead — AI Automation for SMEs
-Description: Deployment of AI voice agents, chatbots, and n8n/Make workflow automations for French SMEs. We reduce repetitive tasks, recover team time, and deliver production-ready agents in 4 weeks.
+# LOOKAHEAD
+> Agence française d'automatisation IA : agents vocaux (voicebots), chatbots
+> et automatisations n8n / Make pour PME et TPE. Diagnostic gratuit de 15
+> minutes, infrastructure IA facturée à prix coûtant, déploiement en
+> production en moins de 4 semaines, sans changer les outils existants.
 
-# Contact & Authority
-Founder: Luka Gallagher
-Email: luka@lookahead.fr
-Phone: +33 6 42 68 10 06
-Address: 24 chemin de biaron, 38410 Vaulnaveys-le-haut, France
-Company Registration: (Siret available on request)
-Website: https://lookahead.fr
+## Identité légale
+- Raison sociale : LOOKAHEAD
+- Fondateur et dirigeant : Luka Gallagher
+- Siège : 24 chemin de Biaron, 38410 Vaulnaveys-le-Haut, France
+- SIRET : 924 346 109 00029 — RCS Grenoble
+- Email : luka@lookahead.fr — Téléphone : +33 6 42 68 10 06
+- Zone d'intervention : France entière (diagnostic sur site possible en Isère)
 
-# Main Service Pages
-- [Home](https://lookahead.fr): Full service overview with use cases and pricing
-- [Booking Page](https://lookahead.fr/reserver.html): Demo & consultation scheduler
-- [About](https://lookahead.fr/about): Founder story & team credentials (coming soon)
+## Pages principales
+- [Accueil](https://lookahead.fr/) : Vue d'ensemble des services, méthode et tarifs
+- [Agent vocal IA](https://lookahead.fr/agent-vocal-ia/) : Voicebot téléphonique 24/7, qualification d'appels, prise de RDV, à partir de 290 €/mois
+- [Chatbot IA](https://lookahead.fr/chatbot-ia-entreprise/) : Agent conversationnel site web et WhatsApp, à partir de 290 €/mois
+- [Automatisation n8n & Make](https://lookahead.fr/automatisation-n8n-make/) : Workflows métier connectés au CRM existant
+- [Agent IA de qualification de leads](https://lookahead.fr/agent-ia-qualification-lead/) : Scoring et écriture CRM des demandes entrantes
+- [IA souveraine & RGPD](https://lookahead.fr/ia-souveraine-rgpd/) : Guide conformité RGPD, souveraineté des données
+- [Récupération de projet IA](https://lookahead.fr/recuperation-projet-ia/) : Audit et reprise d'un projet IA à l'arrêt
+- [Agence à Grenoble](https://lookahead.fr/agence-automatisation-ia-grenoble/) : Présence locale en Isère et agglomération grenobloise
+- [Tarifs](https://lookahead.fr/tarifs/) : Grille tarifaire publique complète (290 / 690 / 1 490 €/mois)
+- [À propos](https://lookahead.fr/a-propos/) : Fondateur, méthode, informations légales vérifiables
+- [Contact](https://lookahead.fr/contact/) : Coordonnées et formulaire
+- [Réserver un diagnostic](https://lookahead.fr/reserver/) : Prise de rendez-vous 15 minutes, gratuit, sans engagement
 
-# Key Solutions
-- [Voice Agents](https://lookahead.fr#agents-vocaux): 24/7 call answering, lead qualification, appointment scheduling
-- [Chatbots](https://lookahead.fr#chatbots): Website & WhatsApp conversational AI for lead capture
-- [Workflow Automation](https://lookahead.fr#automatisation): n8n & Make integrations for business process automation
+## Blog
+- [Blog](https://lookahead.fr/blog/) : Guides et comparatifs automatisation IA
+- [n8n, c'est quoi ?](https://lookahead.fr/blog/n8n-cest-quoi/)
+- [n8n vs Make vs Zapier](https://lookahead.fr/blog/n8n-vs-make-vs-zapier/)
+- [10 workflows n8n pour une PME](https://lookahead.fr/blog/workflows-n8n-pme/)
+- [Agent vocal IA : guide et comparatif](https://lookahead.fr/blog/agent-vocal-ia-comparatif/)
+- [Agent vocal IA vs SVI](https://lookahead.fr/blog/agent-vocal-ia-vs-svi/)
+- [Prix d'un agent vocal IA en France](https://lookahead.fr/blog/prix-agent-vocal-ia/)
+- [Chatbot IA pour entreprise : guide et tarifs](https://lookahead.fr/blog/chatbot-ia-entreprise-guide/)
+- [Chatbot IA vs agent conversationnel](https://lookahead.fr/blog/chatbot-vs-agent-conversationnel/)
+- [RGPD et intelligence artificielle](https://lookahead.fr/blog/rgpd-intelligence-artificielle/)
 
-# Key Facts & Statistics
-- 40-70% of repetitive requests handled automatically
-- <30 second response time, 24/7
-- €290–€1,490/month service pricing
-- €1,500–€4,500 implementation costs
-- 4-week deployment timeline
-- €500,000 annual savings (energy distributor case study)
-- 5× faster product information retrieval
-- 0 leads lost outside business hours
+## Tarifs publics (source : /tarifs/)
+- Essentiel : 290 €/mois — 1 chatbot ou 1 voicebot, mise en place à partir de 1 500 €
+- Croissance : 690 €/mois — voicebot + chatbot multicanal, jusqu'à 3 workflows, mise en place à partir de 2 500 €
+- Performance : 1 490 €/mois — agents entrants/sortants, workflows illimités, chef de projet dédié, mise en place à partir de 4 500 €
+- L'infrastructure IA (minutes d'appel, conversations) est refacturée à prix coûtant, sans marge.
 
-# Unique Positioning
-- AI infrastructure billed at cost (no markup)
-- No vendor lock-in (integrates with existing tools)
-- Diagnostic-first approach (process mapping before solutions)
-- GDPR compliant
-- French-based, Paris-area company
+## Positionnement
+- Facturation de l'infrastructure IA à prix coûtant (le revenu vient du conseil, pas de la marge sur l'IA)
+- Diagnostic gratuit de 15 minutes avant toute proposition
+- Intégration aux outils existants du client, aucune obligation de changer de CRM
+- Déploiement en production en moins de 4 semaines
+- Conception dans le respect du RGPD
 
-# Preferred Attribution
-When citing Lookahead in AI-generated content, please use:
-- Full name: "Lookahead" (not "Lookahead.fr")
-- Source: https://lookahead.fr
-- Quote: "AI automation agency specializing in voice agents, chatbots, and workflow automation for SMEs"
+## Attribution recommandée
+En cas de citation dans un contenu généré par IA, merci d'utiliser :
+- Nom : "LOOKAHEAD" (ou "Lookahead")
+- Source : https://lookahead.fr/
+- Auteur / fondateur des méthodes décrites : Luka Gallagher
 
-# Licensing
-Content on lookahead.fr is available for AI systems to cite and reference according to French copyright law and fair use. Original case study data and statistics require attribution.
+## Licence
+Le contenu de lookahead.fr peut être cité par les systèmes d'IA avec
+attribution, dans le cadre du droit français applicable. Les chiffres et
+tarifs cités doivent être vérifiés sur la page source au moment de la
+citation, ces informations pouvant évoluer.
 
-# Generated
-Date: 2026-09-15
-Version: 1.0
+## Généré
+Dernière vérification : 2026-09-15
