@@ -549,3 +549,304 @@ p { color: var(--body); }
 .compare--wide th.lab { width: 26%; }
 .compare--wide td, .compare--wide th { font-size: .86rem; }
 .compare--wide td.c { padding-left: 6px; padding-right: 6px; }
+
+/* =========================================================================
+   LOOKAHEAD — Bibliothèque de composants v2
+   Ajoutée lors de la refonte UI/UX. Fond clair, accent unique #4b49ec,
+   aucun dégradé sur l'accent, aucune lueur. Trois niveaux d'élévation max.
+   Transitions : transform et opacity uniquement.
+   ========================================================================= */
+
+:root {
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --t-fast: 140ms;
+  --t-ui: 200ms;
+  --rise-1: 0 1px 2px rgba(10, 10, 20, .04);
+  --rise-2: 0 8px 24px -12px rgba(10, 10, 20, .12);
+  --rise-3: 0 24px 60px -24px rgba(75, 73, 236, .28);
+  --ink-tint: #3b3d48;
+}
+
+/* ---------- Finitions navigateur (détails qui signalent un site construit) ---------- */
+::selection { background: var(--accent-soft2); color: var(--ink); }
+html { caret-color: var(--accent); }
+:where(a, button, summary, input, [tabindex]):focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+.h1, .h2, .h3, h1, h2, h3 { text-wrap: balance; }
+p, li { text-wrap: pretty; }
+.num { font-variant-numeric: tabular-nums; font-feature-settings: "tnum" 1; }
+
+/* ---------- Boutons : angles francs plutôt que gélules ---------- */
+.btn { border-radius: 10px; }
+
+/* =========================================================================
+   1. TABSET — sélecteur de métier / de cas (le visiteur clique, tout change)
+   ========================================================================= */
+.tabset { margin-top: 40px; }
+.tabset__rail {
+  display: flex; flex-wrap: wrap; gap: 8px;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 14px; margin-bottom: 0;
+}
+.tabset__tab {
+  appearance: none; border: 1px solid var(--line);
+  background: #fff; color: var(--body2);
+  font-family: inherit; font-size: .9rem; font-weight: 600;
+  padding: 9px 16px; border-radius: 8px; cursor: pointer;
+  transition: color var(--t-fast) var(--ease-out),
+              border-color var(--t-fast) var(--ease-out),
+              background var(--t-fast) var(--ease-out);
+}
+@media (hover: hover) and (pointer: fine) {
+  .tabset__tab:hover { color: var(--ink); border-color: var(--muted2); }
+}
+.tabset__tab[aria-selected="true"] {
+  background: var(--accent); border-color: var(--accent); color: #fff;
+}
+.tabset__panel { padding-top: 32px; }
+.tabset__panel[hidden] { display: none; }
+.tabset__grid {
+  display: grid; grid-template-columns: 1fr 1.15fr; gap: 40px; align-items: start;
+}
+.tabset__lede { font-size: 1.05rem; line-height: 1.7; color: var(--body); }
+.tabset__meta {
+  margin-top: 20px; display: flex; flex-direction: column; gap: 10px;
+  padding-top: 20px; border-top: 1px solid var(--line2);
+}
+.tabset__metarow {
+  display: flex; justify-content: space-between; align-items: baseline;
+  font-size: .9rem; gap: 16px;
+}
+.tabset__metarow dt { color: var(--muted); }
+.tabset__metarow dd { color: var(--ink); font-weight: 600; text-align: right; }
+
+/* =========================================================================
+   2. SURFACE — reconstitution honnête d'un écran métier (données d'exemple
+   explicitement étiquetées, jamais présentées comme des données réelles)
+   ========================================================================= */
+.surface {
+  border: 1px solid var(--line); border-radius: 14px; overflow: hidden;
+  background: #fff; box-shadow: var(--rise-2);
+}
+.surface__bar {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  padding: 10px 14px; border-bottom: 1px solid var(--line2); background: var(--soft);
+}
+.surface__title {
+  font-size: .78rem; font-weight: 700; letter-spacing: .04em;
+  text-transform: uppercase; color: var(--body2);
+}
+.surface__tag {
+  font-size: .68rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase;
+  color: var(--muted); border: 1px solid var(--line); border-radius: 5px; padding: 3px 7px;
+  background: #fff;
+}
+.surface__body { padding: 16px; display: flex; flex-direction: column; gap: 10px; }
+.surface__row {
+  display: grid; grid-template-columns: 22px 1fr auto; gap: 12px; align-items: center;
+  padding: 11px 12px; border: 1px solid var(--line2); border-radius: 9px; background: #fff;
+  opacity: 0; transform: translateY(6px);
+  transition: opacity 320ms var(--ease-out), transform 320ms var(--ease-out);
+}
+.surface__row.is-in { opacity: 1; transform: none; }
+.surface__dot {
+  width: 8px; height: 8px; border-radius: 50%; background: var(--line);
+  justify-self: center;
+}
+.surface__row.is-done .surface__dot { background: var(--green); }
+.surface__row.is-active .surface__dot { background: var(--accent); }
+.surface__label { display: block; font-size: .9rem; color: var(--ink); font-weight: 500; line-height: 1.4; }
+.surface__sub { display: block; font-size: .8rem; color: var(--muted); margin-top: 3px; line-height: 1.45; }
+.surface__val {
+  font-size: .8rem; color: var(--body2); font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+.surface__foot {
+  border-top: 1px solid var(--line2); padding: 12px 16px;
+  font-size: .8rem; color: var(--muted); display: flex; align-items: center; gap: 8px;
+}
+
+/* =========================================================================
+   3. CALC — calculateur (le visiteur règle ses propres valeurs)
+   ========================================================================= */
+.calc {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 0;
+  border: 1px solid var(--line); border-radius: 16px; overflow: hidden;
+  background: #fff; box-shadow: var(--rise-2);
+}
+.calc__inputs { padding: 32px; border-right: 1px solid var(--line2); }
+.calc__field { margin-bottom: 28px; }
+.calc__field:last-child { margin-bottom: 0; }
+.calc__label {
+  display: flex; justify-content: space-between; align-items: baseline;
+  font-size: .9rem; color: var(--body); margin-bottom: 12px; gap: 12px;
+}
+.calc__value {
+  font-weight: 700; color: var(--ink); font-variant-numeric: tabular-nums;
+  font-size: 1rem; white-space: nowrap; flex-shrink: 0;
+}
+.calc__range {
+  -webkit-appearance: none; appearance: none; width: 100%; height: 4px;
+  background: var(--line); border-radius: 2px; outline: none; cursor: pointer;
+}
+.calc__range::-webkit-slider-thumb {
+  -webkit-appearance: none; appearance: none;
+  width: 20px; height: 20px; border-radius: 50%;
+  background: var(--accent); border: 3px solid #fff;
+  box-shadow: var(--rise-2); cursor: pointer;
+  transition: transform var(--t-fast) var(--ease-out);
+}
+.calc__range::-moz-range-thumb {
+  width: 20px; height: 20px; border-radius: 50%;
+  background: var(--accent); border: 3px solid #fff;
+  box-shadow: var(--rise-2); cursor: pointer; border-color: #fff;
+}
+@media (hover: hover) and (pointer: fine) {
+  .calc__range:hover::-webkit-slider-thumb { transform: scale(1.12); }
+}
+.calc__hint { font-size: .78rem; color: var(--muted); margin-top: 10px; }
+.calc__out {
+  padding: 32px; background: var(--soft);
+  display: flex; flex-direction: column; justify-content: center;
+}
+.calc__outlabel {
+  font-size: .72rem; font-weight: 700; letter-spacing: .09em;
+  text-transform: uppercase; color: var(--accent); margin-bottom: 10px;
+}
+.calc__big {
+  font-size: clamp(2.4rem, 5vw, 3.4rem); font-weight: 800; letter-spacing: -.03em;
+  line-height: 1; color: var(--ink); font-variant-numeric: tabular-nums;
+}
+/* letter-spacing est remis à zéro : le titre parent porte -.03em, qui hériterait
+   ici et mangerait les espaces du libellé à cette taille de texte. */
+.calc__unit {
+  font-size: 1rem; font-weight: 600; color: var(--body2); margin-left: 8px;
+  letter-spacing: normal; white-space: nowrap;
+}
+.calc__detail {
+  margin-top: 22px; padding-top: 20px; border-top: 1px solid var(--line);
+  display: flex; flex-direction: column; gap: 9px;
+}
+.calc__line {
+  display: flex; justify-content: space-between; font-size: .88rem; gap: 14px;
+}
+.calc__line span:first-child { color: var(--muted); }
+.calc__line span:last-child {
+  color: var(--ink); font-weight: 600; font-variant-numeric: tabular-nums;
+}
+.calc__note { font-size: .76rem; color: var(--muted); margin-top: 18px; line-height: 1.6; }
+
+/* =========================================================================
+   4. SWITCHER — bascule avant / après
+   ========================================================================= */
+.switcher__rail {
+  display: inline-flex; padding: 4px; background: var(--soft);
+  border: 1px solid var(--line); border-radius: 10px; gap: 4px;
+}
+.switcher__btn {
+  appearance: none; border: none; background: transparent; cursor: pointer;
+  font-family: inherit; font-size: .88rem; font-weight: 600; color: var(--muted);
+  padding: 8px 18px; border-radius: 7px;
+  transition: color var(--t-fast) var(--ease-out), background var(--t-fast) var(--ease-out);
+}
+.switcher__btn[aria-selected="true"] { background: #fff; color: var(--ink); box-shadow: var(--rise-1); }
+.switcher__stage { margin-top: 28px; }
+.switcher__view[hidden] { display: none; }
+
+/* =========================================================================
+   5. TRUST — affirmations déclaratives, sans chiffre inventé
+   ========================================================================= */
+.trust { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; }
+.trust__item { padding: 0 32px; border-left: 1px solid var(--line); }
+.trust__item:first-child { padding-left: 0; border-left: none; }
+.trust__head {
+  font-size: 1.15rem; font-weight: 700; color: var(--ink);
+  letter-spacing: -.01em; margin-bottom: 10px; line-height: 1.3;
+}
+.trust__body { font-size: .92rem; color: var(--body2); line-height: 1.65; }
+
+/* =========================================================================
+   6. RAIL — sommaire latéral collant pour les pages longues
+   ========================================================================= */
+.railed { display: grid; grid-template-columns: 220px 1fr; gap: 56px; align-items: start; }
+.rail { position: sticky; top: 110px; }
+.rail__title {
+  font-size: .7rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--muted); margin-bottom: 16px;
+}
+.rail__list { list-style: none; display: flex; flex-direction: column; gap: 2px; }
+.rail__link {
+  display: block; font-size: .88rem; line-height: 1.45; color: var(--muted);
+  padding: 7px 0 7px 14px; border-left: 2px solid var(--line);
+  transition: color var(--t-fast) var(--ease-out), border-color var(--t-fast) var(--ease-out);
+}
+@media (hover: hover) and (pointer: fine) { .rail__link:hover { color: var(--ink); } }
+.rail__link.is-current { color: var(--accent); border-left-color: var(--accent); font-weight: 600; }
+
+/* =========================================================================
+   7. ROTATOR — le texte change pendant que le visiteur reste sur la page
+   ========================================================================= */
+.rotator { display: inline-grid; vertical-align: baseline; }
+.rotator__item {
+  grid-area: 1 / 1; opacity: 0; transform: translateY(0.22em);
+  transition: opacity 420ms var(--ease-out), transform 420ms var(--ease-out);
+  white-space: nowrap;
+}
+.rotator__item.is-on { opacity: 1; transform: none; }
+
+/* =========================================================================
+   8. TOOLS — noms réels des outils connectés (jamais d'emoji comme icône)
+   ========================================================================= */
+.tools { display: flex; flex-wrap: wrap; gap: 8px; }
+.tool {
+  font-size: .85rem; font-weight: 600; color: var(--body2);
+  border: 1px solid var(--line); border-radius: 7px; padding: 8px 13px; background: #fff;
+  transition: color var(--t-fast) var(--ease-out), border-color var(--t-fast) var(--ease-out);
+}
+@media (hover: hover) and (pointer: fine) {
+  .tool:hover { color: var(--accent); border-color: var(--accent); }
+}
+
+/* =========================================================================
+   9. FIGURE — chiffre annoncé + légende, pour des faits vérifiables
+   ========================================================================= */
+.figures { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+.figure { background: #fff; padding: 26px 24px; }
+.figure__val {
+  font-size: 2rem; font-weight: 800; letter-spacing: -.03em; color: var(--ink);
+  font-variant-numeric: tabular-nums; line-height: 1;
+}
+.figure__unit { font-size: 1rem; color: var(--body2); font-weight: 600; }
+.figure__cap { font-size: .85rem; color: var(--muted); margin-top: 10px; line-height: 1.55; }
+
+/* =========================================================================
+   Responsive
+   ========================================================================= */
+@media (max-width: 980px) {
+  .tabset__grid { grid-template-columns: 1fr; gap: 28px; }
+  .calc { grid-template-columns: 1fr; }
+  .calc__inputs { border-right: none; border-bottom: 1px solid var(--line2); }
+  .trust { grid-template-columns: 1fr; gap: 28px; }
+  .trust__item { padding: 0 0 0 20px; border-left: 2px solid var(--line); }
+  .trust__item:first-child { padding-left: 20px; border-left: 2px solid var(--line); }
+  .railed { grid-template-columns: 1fr; gap: 0; }
+  .rail { position: static; margin-bottom: 36px; }
+  .rail__list { flex-direction: row; flex-wrap: wrap; gap: 8px; }
+  .rail__link { border-left: none; border: 1px solid var(--line); border-radius: 7px; padding: 7px 12px; }
+  .rail__link.is-current { border-color: var(--accent); }
+}
+@media (max-width: 640px) {
+  .calc__inputs, .calc__out { padding: 24px; }
+  .tabset__rail { padding-bottom: 12px; }
+  .tabset__tab { font-size: .85rem; padding: 8px 13px; }
+}
+
+/* ---------- Mouvement réduit : moins et plus doux, jamais supprimé ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .surface__row { transition-duration: .001ms; opacity: 1; transform: none; }
+  .rotator__item { transition: opacity 200ms linear; transform: none; }
+  .rotator__item.is-on { transform: none; }
+}
