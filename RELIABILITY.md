@@ -10,6 +10,17 @@ donc soit implémenté réellement, soit explicitement documenté comme sans obj
 
 **Dernière vérification : 2026-09-15.**
 
+> ⚠️ **Action manuelle requise pour le monitoring d'uptime.** Le token
+> GitHub utilisé dans cette session n'a pas le scope `workflow`, que GitHub
+> exige délibérément pour créer ou modifier un fichier sous
+> `.github/workflows/` — une protection anti-abus, pas un bug. Le fichier
+> `.github/workflows/uptime.yml` décrit plus bas n'est donc **pas encore
+> dans le dépôt distant**. Il existe en local et son contenu est prêt ; il
+> faut l'ajouter manuellement via l'interface GitHub (Add file → Create new
+> file → coller le contenu → Commit) pour que le monitoring soit réellement
+> actif. Tant que ce n'est pas fait, la section "Monitoring d'uptime"
+> ci-dessous décrit un fichier testé et prêt, pas un fichier en production.
+
 ---
 
 ## ✅ Implémenté (réel, testé avant publication)
