@@ -354,67 +354,65 @@
 
   <section class="section">
     <div class="container">
-      <div class="maxw-3 reveal">
-        <span class="eyebrow">Le cadre</span>
-        <h2 class="h2" style="margin-top:12px;">Ce que le <span class="accent">RGPD</span> exige d'une automatisation IA.</h2>
-        <p style="margin-top:16px;">Une automatisation qui traite des noms, des emails, des numéros de téléphone ou des enregistrements d'appels traite des données à caractère personnel. Elle entre donc dans le champ du <a href="https://www.legifrance.gouv.fr/eli/reg/2016/679/oj" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:underline;">règlement (UE) 2016/679</a>, au même titre qu'un fichier client. Le fait que le traitement soit automatique ne change rien à l'obligation.</p>
-        <p style="margin-top:16px;">Quatre principes structurent la conformité d'un projet d'automatisation. La <strong>finalité</strong> : chaque traitement doit avoir un objectif défini à l'avance, pas un usage découvert après coup. La <strong>minimisation</strong> : ne collecter que les données nécessaires à cette finalité. La <strong>limitation de conservation</strong> : fixer une durée et purger ensuite. La <strong>sécurité</strong> : chiffrement, contrôle des accès, journalisation.</p>
-        <p style="margin-top:16px;">S'y ajoute une obligation de <strong>transparence</strong>. Une personne qui parle à un agent vocal ou écrit à un chatbot doit pouvoir savoir qu'elle s'adresse à un système automatisé, et comment exercer ses droits d'accès, de rectification et d'effacement.</p>
-        <p style="margin-top:16px;">Point souvent mal compris : la responsabilité juridique ne se délègue pas. Le responsable de traitement reste l'entreprise cliente, même quand l'automatisation est conçue par un prestataire et exécutée chez un fournisseur tiers. Le prestataire est sous-traitant au sens du règlement, ce qui impose un contrat encadrant précisément ce qu'il peut faire des données.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section bg-soft">
-    <div class="container">
-      <div class="maxw-3 reveal">
-        <span class="eyebrow">Souveraineté</span>
-        <h2 class="h2" style="margin-top:12px;"><span class="accent">Souveraineté</span> des données : ce que le mot recouvre vraiment.</h2>
-        <p style="margin-top:16px;">La souveraineté des données ne se réduit pas à la localisation géographique des serveurs. Un serveur situé en France mais opéré par une société soumise à une législation extraterritoriale peut rester exposé à des demandes d'accès émanant d'un État tiers. La question pertinente est double : <strong>où</strong> les données sont stockées, et <strong>qui</strong> contrôle juridiquement l'entité qui les opère.</p>
-        <p style="margin-top:16px;">Dans un projet d'automatisation IA, trois couches doivent être examinées séparément. La <strong>plateforme d'orchestration</strong> : n8n auto-hébergé permet de choisir l'infrastructure, Make est un service hébergé par son éditeur. Le <strong>modèle de langage</strong> : le choix du fournisseur détermine où part le contenu des conversations. Les <strong>services périphériques</strong> : téléphonie, transcription, synthèse vocale, CRM, chacun avec sa propre politique.</p>
-        <p style="margin-top:16px;">Une automatisation peut donc être partiellement souveraine : orchestrée en France, mais s'appuyant sur un modèle opéré hors d'Europe. Ce n'est pas nécessairement un défaut, à condition que ce soit documenté, assumé, et cohérent avec la sensibilité des données traitées.</p>
-        <p style="margin-top:16px;">Concrètement, l'option la plus maîtrisable consiste à auto-héberger l'orchestrateur. C'est ce que permet n8n, décrit sur la page <a href="/automatisation-n8n-make/" style="color:var(--accent);text-decoration:underline;">automatisation n8n et Make</a>.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <div class="maxw-3 reveal">
-        <span class="eyebrow">Méthode</span>
-        <h2 class="h2" style="margin-top:12px;">Comment cadrer la conformité <span class="accent">avant</span> de déployer.</h2>
-        <p style="margin-top:16px;"><strong>1. Cartographier les données réellement touchées.</strong> Avant de choisir un outil, lister ce qui transite : identité, coordonnées, contenu des échanges, éventuelles données sensibles. Beaucoup de projets découvrent tardivement qu'un workflow manipule des données de santé ou bancaires.</p>
-        <p style="margin-top:16px;"><strong>2. Définir la finalité et la durée de conservation.</strong> Par traitement, pas globalement. Un enregistrement d'appel conservé pour améliorer un agent n'a pas la même durée légitime qu'une fiche client — voir les <a href="https://www.cnil.fr/fr/les-durees-de-conservation-des-donnees" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:underline;">recommandations de la CNIL sur les durées de conservation</a>.</p>
-        <p style="margin-top:16px;"><strong>3. Choisir les fournisseurs en connaissance de cause.</strong> Pour chaque brique, vérifier le lieu de traitement, le rattachement juridique de l'éditeur, et ce que prévoit le contrat sur la réutilisation des données, notamment pour l'entraînement de modèles — la CNIL détaille les règles applicables aux <a href="https://www.cnil.fr/fr/RGPD-transferts-donnees-hors-UE" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:underline;">transferts de données hors UE</a>.</p>
-        <p style="margin-top:16px;"><strong>4. Écrire ce qui a été décidé.</strong> Registre des traitements, contrat de sous-traitance, mentions d'information, procédure d'exercice des droits. Une conformité non documentée est une conformité invérifiable.</p>
-        <p style="margin-top:16px;"><strong>5. Prévoir la réversibilité.</strong> Pouvoir récupérer ses workflows, ses données et ses historiques, et changer de prestataire sans repartir de zéro.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section bg-soft">
-    <div class="container">
-      <div class="maxw-3 reveal">
-        <span class="eyebrow">Position</span>
-        <h2 class="h2" style="margin-top:12px;">L'approche de <span class="accent">LOOKAHEAD</span> sur ces sujets.</h2>
-        <p style="margin-top:16px;">LOOKAHEAD est une agence française qui conçoit ses automatisations dans le respect du RGPD. Concrètement, le cadrage de conformité fait partie du diagnostic initial et précède le choix des outils, plutôt que d'être traité après coup. C'est le fonctionnement décrit sur la page de <a href="/" style="color:var(--accent);text-decoration:underline;">notre approche d'automatisation IA sur mesure</a>.</p>
-        <p style="margin-top:16px;">Le lieu de traitement dépend des fournisseurs retenus pour la téléphonie, le modèle de langage et le CRM. Ce point est arbitré avec le client selon la sensibilité de ses données, et non imposé par défaut. Quand la maîtrise de l'hébergement est une contrainte forte, l'orchestrateur est auto-hébergé.</p>
-        <p style="margin-top:16px;">Les workflows et les configurations produits pendant la mission restent accessibles au client. L'objectif est qu'une entreprise puisse reprendre la main ou changer de prestataire sans perdre son investissement.</p>
-        <p style="margin-top:16px;">Une automatisation déjà en place peut aussi être auditée et mise en conformité sans être reconstruite : voir <a href="/recuperation-projet-ia/" style="color:var(--accent);text-decoration:underline;">mettre en conformité une automatisation déjà en place</a>.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <div class="maxw-3 reveal">
-        <span class="eyebrow">Erreurs</span>
-        <h2 class="h2" style="margin-top:12px;">Les <span class="accent">erreurs</span> les plus fréquentes.</h2>
-        <p style="margin-top:16px;"><strong>Confondre hébergement européen et souveraineté.</strong> La localisation est une condition nécessaire, pas suffisante. Le rattachement juridique de l'opérateur compte autant.</p>
-        <p style="margin-top:16px;"><strong>Laisser les données alimenter l'entraînement d'un modèle.</strong> Certaines offres grand public réutilisent les contenus soumis. Les offres professionnelles l'excluent contractuellement, mais cela se vérifie, cela ne se suppose pas.</p>
-        <p style="margin-top:16px;"><strong>Conserver sans limite.</strong> Les enregistrements d'appels et les historiques de conversation s'accumulent silencieusement. Sans purge programmée, la durée de conservation devient indéfendable.</p>
-        <p style="margin-top:16px;"><strong>Oublier la transparence.</strong> Ne pas indiquer qu'un interlocuteur parle à une IA expose à un grief de loyauté, en plus du risque réputationnel.</p>
-        <p style="margin-top:16px;"><strong>Traiter la conformité en dernier.</strong> Remettre un projet en conformité après coup coûte plus cher que de le cadrer au départ, et impose parfois de changer de fournisseur.</p>
+      <div class="railed">
+        <nav class="rail" data-rail aria-label="Sommaire de la page">
+          <p class="rail__title">Sur cette page</p>
+          <ul class="rail__list">
+            <li><a class="rail__link" href="#cadre">Le cadre RGPD</a></li>
+            <li><a class="rail__link" href="#souverainete">La souveraineté</a></li>
+            <li><a class="rail__link" href="#methode">La méthode</a></li>
+            <li><a class="rail__link" href="#position">Notre position</a></li>
+            <li><a class="rail__link" href="#erreurs">Les erreurs</a></li>
+          </ul>
+        </nav>
+        <div>
+          <div class="reveal" id="cadre">
+            <span class="eyebrow">Le cadre</span>
+            <h2 class="h2" style="margin-top:12px;">Ce que le <span class="accent">RGPD</span> exige d'une automatisation IA.</h2>
+            <p style="margin-top:16px;">Une automatisation qui traite des noms, des emails, des numéros de téléphone ou des enregistrements d'appels traite des données à caractère personnel. Elle entre donc dans le champ du <a href="https://www.legifrance.gouv.fr/eli/reg/2016/679/oj" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:underline;">règlement (UE) 2016/679</a>, au même titre qu'un fichier client. Le fait que le traitement soit automatique ne change rien à l'obligation.</p>
+            <p style="margin-top:16px;">Quatre principes structurent la conformité d'un projet d'automatisation. La <strong>finalité</strong> : chaque traitement doit avoir un objectif défini à l'avance, pas un usage découvert après coup. La <strong>minimisation</strong> : ne collecter que les données nécessaires à cette finalité. La <strong>limitation de conservation</strong> : fixer une durée et purger ensuite. La <strong>sécurité</strong> : chiffrement, contrôle des accès, journalisation.</p>
+            <p style="margin-top:16px;">S'y ajoute une obligation de <strong>transparence</strong>. Une personne qui parle à un agent vocal ou écrit à un chatbot doit pouvoir savoir qu'elle s'adresse à un système automatisé, et comment exercer ses droits d'accès, de rectification et d'effacement.</p>
+            <p style="margin-top:16px;">Point souvent mal compris : la responsabilité juridique ne se délègue pas. Le responsable de traitement reste l'entreprise cliente, même quand l'automatisation est conçue par un prestataire et exécutée chez un fournisseur tiers. Le prestataire est sous-traitant au sens du règlement, ce qui impose un contrat encadrant précisément ce qu'il peut faire des données.</p>
+          </div>
+          <div class="reveal" id="souverainete" style="margin-top:72px;padding-top:64px;border-top:1px solid var(--line);">
+            <span class="eyebrow">Souveraineté</span>
+            <h2 class="h2" style="margin-top:12px;"><span class="accent">Souveraineté</span> des données : ce que le mot recouvre vraiment.</h2>
+            <p style="margin-top:16px;">La souveraineté des données ne se réduit pas à la localisation géographique des serveurs. Un serveur situé en France mais opéré par une société soumise à une législation extraterritoriale peut rester exposé à des demandes d'accès émanant d'un État tiers. La question pertinente est double : <strong>où</strong> les données sont stockées, et <strong>qui</strong> contrôle juridiquement l'entité qui les opère.</p>
+            <p style="margin-top:16px;">Dans un projet d'automatisation IA, trois couches doivent être examinées séparément. La <strong>plateforme d'orchestration</strong> : n8n auto-hébergé permet de choisir l'infrastructure, Make est un service hébergé par son éditeur. Le <strong>modèle de langage</strong> : le choix du fournisseur détermine où part le contenu des conversations. Les <strong>services périphériques</strong> : téléphonie, transcription, synthèse vocale, CRM, chacun avec sa propre politique.</p>
+            <p style="margin-top:16px;">Une automatisation peut donc être partiellement souveraine : orchestrée en France, mais s'appuyant sur un modèle opéré hors d'Europe. Ce n'est pas nécessairement un défaut, à condition que ce soit documenté, assumé, et cohérent avec la sensibilité des données traitées.</p>
+            <p style="margin-top:16px;">Concrètement, l'option la plus maîtrisable consiste à auto-héberger l'orchestrateur. C'est ce que permet n8n, décrit sur la page <a href="/automatisation-n8n-make/" style="color:var(--accent);text-decoration:underline;">automatisation n8n et Make</a>.</p>
+          </div>
+          <div class="reveal" id="methode" style="margin-top:72px;padding-top:64px;border-top:1px solid var(--line);">
+            <span class="eyebrow">Méthode</span>
+            <h2 class="h2" style="margin-top:12px;">Comment cadrer la conformité <span class="accent">avant</span> de déployer.</h2>
+            <ul class="stage__list" style="margin-top:24px;gap:18px;">
+              <li class="stage__li"><span class="catalog__num" style="margin-top:3px;">01</span><span><strong style="color:var(--ink);">Cartographier les données réellement touchées.</strong> Avant de choisir un outil, lister ce qui transite : identité, coordonnées, contenu des échanges, éventuelles données sensibles. Beaucoup de projets découvrent tardivement qu'un workflow manipule des données de santé ou bancaires.</span></li>
+              <li class="stage__li"><span class="catalog__num" style="margin-top:3px;">02</span><span><strong style="color:var(--ink);">Définir la finalité et la durée de conservation.</strong> Par traitement, pas globalement. Un enregistrement d'appel conservé pour améliorer un agent n'a pas la même durée légitime qu'une fiche client. Voir les recommandations de la CNIL sur les durées de conservation.</span></li>
+              <li class="stage__li"><span class="catalog__num" style="margin-top:3px;">03</span><span><strong style="color:var(--ink);">Choisir les fournisseurs en connaissance de cause.</strong> Pour chaque brique, vérifier le lieu de traitement, le rattachement juridique de l'éditeur, et ce que prévoit le contrat sur la réutilisation des données, notamment pour l'entraînement de modèles. La CNIL détaille les règles applicables aux transferts de données hors UE.</span></li>
+              <li class="stage__li"><span class="catalog__num" style="margin-top:3px;">04</span><span><strong style="color:var(--ink);">Écrire ce qui a été décidé.</strong> Registre des traitements, contrat de sous-traitance, mentions d'information, procédure d'exercice des droits. Une conformité non documentée est une conformité invérifiable.</span></li>
+              <li class="stage__li"><span class="catalog__num" style="margin-top:3px;">05</span><span><strong style="color:var(--ink);">Prévoir la réversibilité.</strong> Pouvoir récupérer ses workflows, ses données et ses historiques, et changer de prestataire sans repartir de zéro.</span></li>
+            </ul>
+          </div>
+          <div class="reveal" id="position" style="margin-top:72px;padding-top:64px;border-top:1px solid var(--line);">
+            <span class="eyebrow">Position</span>
+            <h2 class="h2" style="margin-top:12px;">L'approche de <span class="accent">LOOKAHEAD</span> sur ces sujets.</h2>
+            <p style="margin-top:16px;">LOOKAHEAD est une agence française qui conçoit ses automatisations dans le respect du RGPD. Concrètement, le cadrage de conformité fait partie du diagnostic initial et précède le choix des outils, plutôt que d'être traité après coup. C'est le fonctionnement décrit sur la page de <a href="/" style="color:var(--accent);text-decoration:underline;">notre approche d'automatisation IA sur mesure</a>.</p>
+            <p style="margin-top:16px;">Le lieu de traitement dépend des fournisseurs retenus pour la téléphonie, le modèle de langage et le CRM. Ce point est arbitré avec le client selon la sensibilité de ses données, et non imposé par défaut. Quand la maîtrise de l'hébergement est une contrainte forte, l'orchestrateur est auto-hébergé.</p>
+            <p style="margin-top:16px;">Les workflows et les configurations produits pendant la mission restent accessibles au client. L'objectif est qu'une entreprise puisse reprendre la main ou changer de prestataire sans perdre son investissement.</p>
+            <p style="margin-top:16px;">Une automatisation déjà en place peut aussi être auditée et mise en conformité sans être reconstruite : voir <a href="/recuperation-projet-ia/" style="color:var(--accent);text-decoration:underline;">mettre en conformité une automatisation déjà en place</a>.</p>
+          </div>
+          <div class="reveal" id="erreurs" style="margin-top:72px;padding-top:64px;border-top:1px solid var(--line);">
+            <span class="eyebrow">Erreurs</span>
+            <h2 class="h2" style="margin-top:12px;">Les <span class="accent">erreurs</span> les plus fréquentes.</h2>
+            <ul class="stage__list" style="margin-top:24px;gap:18px;">
+              <li class="stage__li"><svg class="stage__ico" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg><span><strong style="color:var(--ink);"><strong>Confondre hébergement européen et souveraineté.</strong> </strong> La localisation est une condition nécessaire, pas suffisante. Le rattachement juridique de l'opérateur compte autant.</span></li>
+              <li class="stage__li"><svg class="stage__ico" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg><span><strong style="color:var(--ink);"><strong>Laisser les données alimenter l'entraînement d'un modèle.</strong> </strong> Certaines offres grand public réutilisent les contenus soumis. Les offres professionnelles l'excluent contractuellement, mais cela se vérifie, cela ne se suppose pas.</span></li>
+              <li class="stage__li"><svg class="stage__ico" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg><span><strong style="color:var(--ink);"><strong>Conserver sans limite.</strong> </strong> Les enregistrements d'appels et les historiques de conversation s'accumulent silencieusement. Sans purge programmée, la durée de conservation devient indéfendable.</span></li>
+              <li class="stage__li"><svg class="stage__ico" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg><span><strong style="color:var(--ink);"><strong>Oublier la transparence.</strong> </strong> Ne pas indiquer qu'un interlocuteur parle à une IA expose à un grief de loyauté, en plus du risque réputationnel.</span></li>
+              <li class="stage__li"><svg class="stage__ico" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg><span><strong style="color:var(--ink);"><strong>Traiter la conformité en dernier.</strong> </strong> Remettre un projet en conformité après coup coûte plus cher que de le cadrer au départ, et impose parfois de changer de fournisseur.</span></li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -568,7 +566,7 @@
       </div>
     </div>
       <div class="container">
-        <p style="margin-top:8px;font-size:13px;line-height:1.7;opacity:.6;">LOOKAHEAD — 24 chemin de Biaron, 38410 Vaulnaveys-le-Haut, Isère. Agence d'automatisation IA basée près de Grenoble, en Auvergne-Rhône-Alpes, intervenant à distance partout en France. SIRET 924 346 109 00029.</p>
+        <p style="margin-top:8px;font-size:13px;line-height:1.7;opacity:.6;">LOOKAHEAD, 24 chemin de Biaron, 38410 Vaulnaveys-le-Haut, Isère. Agence d'automatisation IA basée près de Grenoble, en Auvergne-Rhône-Alpes, intervenant à distance partout en France. SIRET 924 346 109 00029.</p>
       </div>
   </footer>
 
