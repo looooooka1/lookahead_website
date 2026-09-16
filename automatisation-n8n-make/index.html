@@ -378,13 +378,106 @@
   <section class="section bg-soft">
     <div class="container">
       <div class="maxw-3 reveal">
-        <span class="eyebrow">Exemples</span>
+        <span class="eyebrow">Catalogue</span>
         <h2 class="h2" style="margin-top:12px;">Les workflows que les <span class="accent">PME</span> déploient en premier.</h2>
-        <p style="margin-top:16px;"><strong>Du formulaire au CRM.</strong> Une demande entrante crée la fiche, l'assigne au bon commercial selon la zone, et envoie l'accusé de réception. Zéro saisie.</p>
-        <p style="margin-top:16px;"><strong>De l'appel au dossier.</strong> Un appel traité par un agent vocal génère la fiche, le compte rendu et la tâche de suivi.</p>
-        <p style="margin-top:16px;"><strong>Du devis à la relance.</strong> Un devis non signé déclenche une relance à sept jours, puis à vingt et un jours, et s'arrête dès que le client répond.</p>
-        <p style="margin-top:16px;"><strong>De la facture au tableau de bord.</strong> Les factures émises alimentent un suivi de trésorerie mis à jour sans intervention.</p>
-        <p style="margin-top:16px;"><strong>Du document à la donnée.</strong> Une pièce jointe est lue, les champs utiles sont extraits et injectés dans l'outil de gestion.</p>
+        <p style="margin-top:16px;color:var(--body2);">Cinq automatisations que nous mettons en place le plus souvent. Ouvrez-en une pour voir la suite d'étapes qu'elle exécute.</p>
+      </div>
+
+      <div class="catalog reveal" data-catalog data-delay="0.08" style="margin-top:44px;">
+        <button class="catalog__item" type="button">
+          <span class="catalog__head">
+            <span>
+              <span class="catalog__num">01</span>
+              <span class="catalog__name">Du formulaire au CRM</span>
+              <span class="catalog__spec">Zéro saisie manuelle</span>
+            </span>
+            <span class="catalog__toggle" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></span>
+          </span>
+          <span class="catalog__detail">
+            <span class="catalog__spec" style="display:block;margin-bottom:14px;">Du formulaire au CRM. Une demande entrante crée la fiche, l'assigne au bon commercial selon la zone, et envoie l'accusé de réception. Zéro saisie.</span>
+            <ul class="catalog__steps">
+                  <li class="catalog__step">Le formulaire est rempli sur le site</li>
+                  <li class="catalog__step">La fiche est créée dans le CRM</li>
+                  <li class="catalog__step">Elle est assignée au bon commercial selon la zone</li>
+                  <li class="catalog__step">L'accusé de réception part au demandeur</li>
+            </ul>
+          </span>
+        </button>
+        <button class="catalog__item" type="button">
+          <span class="catalog__head">
+            <span>
+              <span class="catalog__num">02</span>
+              <span class="catalog__name">De l'appel au dossier</span>
+              <span class="catalog__spec">Le compte rendu s'écrit seul</span>
+            </span>
+            <span class="catalog__toggle" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></span>
+          </span>
+          <span class="catalog__detail">
+            <span class="catalog__spec" style="display:block;margin-bottom:14px;">De l'appel au dossier. Un appel traité par un agent vocal génère la fiche, le compte rendu et la tâche de suivi.</span>
+            <ul class="catalog__steps">
+                  <li class="catalog__step">L'agent vocal traite l'appel</li>
+                  <li class="catalog__step">La fiche est générée</li>
+                  <li class="catalog__step">Le compte rendu est rédigé</li>
+                  <li class="catalog__step">La tâche de suivi est créée</li>
+            </ul>
+          </span>
+        </button>
+        <button class="catalog__item" type="button">
+          <span class="catalog__head">
+            <span>
+              <span class="catalog__num">03</span>
+              <span class="catalog__name">Du devis à la relance</span>
+              <span class="catalog__spec">La relance s'arrête toute seule</span>
+            </span>
+            <span class="catalog__toggle" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></span>
+          </span>
+          <span class="catalog__detail">
+            <span class="catalog__spec" style="display:block;margin-bottom:14px;">Du devis à la relance. Un devis non signé déclenche une relance à sept jours, puis à vingt et un jours, et s'arrête dès que le client répond.</span>
+            <ul class="catalog__steps">
+                  <li class="catalog__step">Le devis est envoyé</li>
+                  <li class="catalog__step">Sans réponse, relance à sept jours</li>
+                  <li class="catalog__step">Toujours sans réponse, relance à vingt et un jours</li>
+                  <li class="catalog__step">Le client répond, la séquence s'arrête</li>
+            </ul>
+          </span>
+        </button>
+        <button class="catalog__item" type="button">
+          <span class="catalog__head">
+            <span>
+              <span class="catalog__num">04</span>
+              <span class="catalog__name">De la facture au tableau de bord</span>
+              <span class="catalog__spec">La trésorerie se met à jour seule</span>
+            </span>
+            <span class="catalog__toggle" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></span>
+          </span>
+          <span class="catalog__detail">
+            <span class="catalog__spec" style="display:block;margin-bottom:14px;">De la facture au tableau de bord. Les factures émises alimentent un suivi de trésorerie mis à jour sans intervention.</span>
+            <ul class="catalog__steps">
+                  <li class="catalog__step">La facture est émise</li>
+                  <li class="catalog__step">La ligne alimente le suivi de trésorerie</li>
+                  <li class="catalog__step">Le tableau se met à jour sans intervention</li>
+            </ul>
+          </span>
+        </button>
+        <button class="catalog__item" type="button">
+          <span class="catalog__head">
+            <span>
+              <span class="catalog__num">05</span>
+              <span class="catalog__name">Du document à la donnée</span>
+              <span class="catalog__spec">Plus de recopie de pièces jointes</span>
+            </span>
+            <span class="catalog__toggle" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></span>
+          </span>
+          <span class="catalog__detail">
+            <span class="catalog__spec" style="display:block;margin-bottom:14px;">Du document à la donnée. Une pièce jointe est lue, les champs utiles sont extraits et injectés dans l'outil de gestion.</span>
+            <ul class="catalog__steps">
+                  <li class="catalog__step">La pièce jointe arrive</li>
+                  <li class="catalog__step">Elle est lue automatiquement</li>
+                  <li class="catalog__step">Les champs utiles sont extraits</li>
+                  <li class="catalog__step">Les données sont injectées dans l'outil de gestion</li>
+            </ul>
+          </span>
+        </button>
       </div>
     </div>
   </section>
@@ -394,7 +487,7 @@
       <div class="maxw-3 reveal">
         <span class="eyebrow">Pourquoi nous</span>
         <h2 class="h2" style="margin-top:12px;">Pourquoi choisir <span class="accent">LOOKAHEAD</span> comme agence n8n et Make.</h2>
-        <p style="margin-top:16px;">La plupart des agences françaises facturent l'automatisation au projet, entre 800 € et 5 000 € selon la complexité, sans suivi inclus une fois la livraison faite. LOOKAHEAD fonctionne en abonnement mensuel : la mise en place initiale est suivie d'un forfait qui couvre la maintenance, les corrections et les optimisations, pas seulement la livraison d'un workflow figé.</p>
+        <p style="margin-top:16px;">LOOKAHEAD fonctionne en abonnement mensuel plutôt qu'au projet : la mise en place initiale est suivie d'un forfait qui couvre la maintenance, les corrections et les optimisations, pas seulement la livraison d'un workflow figé. Un workflow livré puis abandonné casse dès que l'un des logiciels qu'il relie change d'interface.</p>
         <p style="margin-top:16px;">Le choix entre n8n et Make se fait après le diagnostic, pas avant : LOOKAHEAD propose l'auto-hébergement de n8n pour les entreprises soumises à une contrainte forte sur l'emplacement des données, décrit en détail sur la page <a href="/ia-souveraine-rgpd/" style="color:var(--accent);text-decoration:underline;">IA souveraine et RGPD</a>.</p>
         <p style="margin-top:16px;">La grille tarifaire est publique, sans marge cachée sur les coûts d'exécution : le détail complet est sur la page <a href="/tarifs/" style="color:var(--accent);text-decoration:underline;">tarifs</a>.</p>
       </div>
@@ -509,6 +602,24 @@
           <h3 style="font-size:17px;margin-bottom:8px;">IA souveraine et RGPD</h3>
           <p style="color:var(--body);font-size:14.5px;line-height:1.65;">Héberger vos workflows n8n là où vous le décidez.</p>
         </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container" style="max-width:760px;">
+      <div class="cta-box reveal">
+        <div class="cta-box__glow"></div>
+        <h2 class="h2">Quelle tâche vous fait <span class="accent accent--light">recopier</span> la même information ?</h2>
+        <p>Quinze minutes pour suivre le parcours réel d une demande chez vous, repérer les endroits où la même donnée est saisie deux fois, et chiffrer ce que ça coûte. Si le calcul ne justifie pas d automatiser, on vous le dit pendant l appel.</p>
+        <div class="cta-box__actions">
+          <a href="/reserver/" class="btn btn--primary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            Réserver mon diagnostic
+          </a>
+          <a href="/ia-souveraine-rgpd/" class="btn btn--ghost">Héberger n8n en France</a>
+        </div>
+        <p class="fine">Réponse sous 24 heures ouvrées. Sans engagement.</p>
       </div>
     </div>
   </section>

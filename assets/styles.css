@@ -936,7 +936,9 @@ p, li { text-wrap: pretty; }
 /* =========================================================================
    12. CATALOG — un catalogue d'objets, étiquetés comme des faits
    ========================================================================= */
-.catalog { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
+/* Une seule colonne : avec deux colonnes, l'ouverture d'un objet laissait
+   des trous en face et la grille devenait illisible. */
+.catalog { display: grid; grid-template-columns: 1fr; gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
 .catalog__item {
   background: #fff; padding: 0; border: none; text-align: left; width: 100%;
   font-family: inherit; cursor: pointer; display: block;
@@ -944,22 +946,25 @@ p, li { text-wrap: pretty; }
 }
 @media (hover: hover) and (pointer: fine) { .catalog__item:hover { background: var(--soft); } }
 .catalog__item[aria-expanded="true"] { background: var(--soft); }
-.catalog__head { padding: 22px 24px; display: grid; grid-template-columns: 1fr auto; gap: 14px; align-items: start; }
+.catalog__head { padding: 22px 24px; display: grid; grid-template-columns: 1fr auto; gap: 14px; align-items: center; }
 .catalog__num {
-  font-size: .72rem; font-weight: 700; color: var(--muted2);
+  display: block; font-size: .72rem; font-weight: 700; color: var(--muted2);
   font-variant-numeric: tabular-nums; letter-spacing: .06em;
 }
-.catalog__name { font-size: 1rem; font-weight: 700; color: var(--ink); margin-top: 6px; line-height: 1.35; }
-.catalog__spec { font-size: .82rem; color: var(--muted); margin-top: 8px; line-height: 1.55; }
+.catalog__name { display: block; font-size: 1.05rem; font-weight: 700; color: var(--ink); margin-top: 6px; line-height: 1.35; }
+.catalog__spec { display: block; font-size: .85rem; color: var(--muted); margin-top: 6px; line-height: 1.55; }
 .catalog__toggle {
   width: 26px; height: 26px; border-radius: 6px; border: 1px solid var(--line);
   display: grid; place-items: center; color: var(--muted); flex-shrink: 0;
   transition: transform var(--t-ui) var(--ease-out), border-color var(--t-fast) var(--ease-out);
 }
 .catalog__item[aria-expanded="true"] .catalog__toggle {
-  transform: rotate(45deg); border-color: var(--accent); color: var(--accent);
+  border-color: var(--accent); color: var(--accent);
 }
-.catalog__detail { padding: 0 24px 24px; }
+/* Seule l'icone tourne : faire tourner le cadre le transformait en losange. */
+.catalog__toggle svg { transition: transform var(--t-ui) var(--ease-out); }
+.catalog__item[aria-expanded="true"] .catalog__toggle svg { transform: rotate(45deg); }
+.catalog__detail { display: block; padding: 0 24px 24px; max-width: 760px; }
 .catalog__detail[hidden] { display: none; }
 .catalog__steps { list-style: none; display: flex; flex-direction: column; gap: 0; border-left: 1px solid var(--line); margin-left: 5px; }
 .catalog__step {
@@ -1001,7 +1006,6 @@ p, li { text-wrap: pretty; }
   .stage { grid-template-columns: 1fr; }
   .stage__side, .stage__side--a, .stage__side--b { padding: 28px 0; }
   .stage__div { width: 100%; height: 1px; }
-  .catalog { grid-template-columns: 1fr; }
   .scorer { grid-template-columns: 1fr; }
   .scorer__side--criteria { border-right: none; border-bottom: 1px solid var(--line2); }
 }
