@@ -601,3 +601,34 @@
     update();
   });
 })();
+
+/* ---------------- INDEX : filtrage par catégorie ---------------- */
+(function () {
+  "use strict";
+  var root = document.querySelector("[data-index]");
+  if (!root) return;
+
+  var filters = Array.prototype.slice.call(root.querySelectorAll(".filter"));
+  var rows = Array.prototype.slice.call(root.querySelectorAll(".index__row"));
+  var counter = root.querySelector("[data-index-count]");
+
+  function apply(cat) {
+    var shown = 0;
+    rows.forEach(function (row) {
+      var on = cat === "tous" || row.getAttribute("data-cat") === cat;
+      row.hidden = !on;
+      if (on) shown++;
+    });
+    filters.forEach(function (f) {
+      f.setAttribute("aria-pressed", f.getAttribute("data-filter") === cat ? "true" : "false");
+    });
+    if (counter) {
+      counter.textContent = shown + (shown > 1 ? " articles affichés" : " article affiché");
+    }
+  }
+
+  filters.forEach(function (f) {
+    f.addEventListener("click", function () { apply(f.getAttribute("data-filter")); });
+  });
+  apply("tous");
+})();

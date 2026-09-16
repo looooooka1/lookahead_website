@@ -1021,3 +1021,93 @@ p, li { text-wrap: pretty; }
   .convo__bubble { transition-duration: .001ms; opacity: 1; transform: none; }
   .convo__typing span { animation: none; opacity: .5; }
 }
+
+/* =========================================================================
+   14. LADDER — quatre options ordonnées par coût, la dernière en recours
+   ========================================================================= */
+.ladder { display: grid; gap: 12px; }
+.ladder__row {
+  display: grid; grid-template-columns: 150px 1fr auto; gap: 24px; align-items: center;
+  border: 1px solid var(--line); border-radius: 12px; padding: 20px 24px; background: #fff;
+  transition: border-color var(--t-fast) var(--ease-out), transform var(--t-fast) var(--ease-out);
+}
+@media (hover: hover) and (pointer: fine) {
+  .ladder__row:hover { border-color: var(--muted2); transform: translateY(-1px); }
+}
+.ladder__name { font-size: 1.05rem; font-weight: 700; color: var(--ink); letter-spacing: -.01em; }
+.ladder__body { font-size: .92rem; color: var(--body2); line-height: 1.6; }
+.ladder__cost { display: flex; gap: 4px; align-items: center; }
+.ladder__tick { width: 7px; height: 22px; border-radius: 2px; background: var(--line); }
+.ladder__tick.is-on { background: var(--accent); }
+.ladder__row--last { border-color: var(--line); background: var(--soft); }
+.ladder__row--last .ladder__tick.is-on { background: var(--ink); }
+.ladder__legend {
+  display: flex; justify-content: space-between; font-size: .78rem; color: var(--muted);
+  padding: 0 24px; margin-bottom: 4px;
+}
+@media (max-width: 768px) {
+  .ladder__row { grid-template-columns: 1fr; gap: 10px; padding: 18px 20px; }
+  .ladder__legend { display: none; }
+}
+
+/* =========================================================================
+   15. INDEX — index d'articles filtrable, une ligne par objet
+   ========================================================================= */
+.filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 4px; }
+.filter {
+  appearance: none; border: 1px solid var(--line); background: #fff; color: var(--body2);
+  font-family: inherit; font-size: .88rem; font-weight: 600; padding: 8px 15px;
+  border-radius: 8px; cursor: pointer;
+  transition: color var(--t-fast) var(--ease-out), border-color var(--t-fast) var(--ease-out), background var(--t-fast) var(--ease-out);
+}
+@media (hover: hover) and (pointer: fine) { .filter:hover { color: var(--ink); border-color: var(--muted2); } }
+.filter[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: #fff; }
+.index { border-top: 1px solid var(--line); margin-top: 28px; }
+.index__row {
+  display: grid; grid-template-columns: 180px 1fr 150px; gap: 28px; align-items: baseline;
+  padding: 24px 4px; border-bottom: 1px solid var(--line);
+  transition: background var(--t-fast) var(--ease-out);
+}
+.index__row[hidden] { display: none; }
+@media (hover: hover) and (pointer: fine) {
+  .index__row:hover { background: var(--soft); }
+  .index__row:hover .index__title { color: var(--accent); }
+}
+.index__cat {
+  font-size: .72rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+  color: var(--muted);
+}
+.index__title {
+  font-size: 1.08rem; font-weight: 700; color: var(--ink); line-height: 1.4;
+  letter-spacing: -.01em; transition: color var(--t-fast) var(--ease-out);
+}
+.index__desc { font-size: .9rem; color: var(--body2); line-height: 1.6; margin-top: 7px; }
+.index__meta {
+  font-size: .82rem; color: var(--muted); text-align: right;
+  font-variant-numeric: tabular-nums; white-space: nowrap;
+}
+.index__count { font-size: .85rem; color: var(--muted); margin-top: 20px; }
+@media (max-width: 860px) {
+  .index__row { grid-template-columns: 1fr; gap: 8px; padding: 20px 2px; }
+  .index__meta { text-align: left; }
+}
+
+/* =========================================================================
+   16. FACTS — faits vérifiables, un par ligne (mentions légales, identité)
+   ========================================================================= */
+.facts { margin: 0; border: 1px solid var(--line); border-radius: 14px; padding: 10px 26px 22px; background: #fff; }
+.facts__row {
+  display: grid; grid-template-columns: 230px 1fr; gap: 20px;
+  padding: 14px 0; border-top: 1px solid var(--line2);
+}
+.facts__row dt { color: var(--muted); font-size: .9rem; }
+.facts__row dd {
+  color: var(--ink); font-weight: 600; font-size: .94rem; margin: 0;
+  font-variant-numeric: tabular-nums; overflow-wrap: anywhere;
+}
+@media (max-width: 620px) {
+  .facts { padding: 6px 20px 18px; }
+  /* Une colonne sous 620px : a deux colonnes, une valeur longue comme une
+     adresse email debordait de la fenetre. */
+  .facts__row { grid-template-columns: 1fr; gap: 4px; padding: 13px 0; }
+}

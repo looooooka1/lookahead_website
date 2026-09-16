@@ -356,7 +356,37 @@
       <div class="maxw-3 reveal">
         <span class="eyebrow">Les suites</span>
         <h2 class="h2" style="margin-top:12px;">Reprendre plutôt que <span class="accent">tout refaire</span>.</h2>
-        <p style="margin-top:16px;">La reprise consiste à documenter, stabiliser et remettre sous supervision l'existant. Un scénario Make fonctionnel n'a pas besoin d'être réécrit sur n8n pour la seule raison qu'un prestataire préfère n8n. Le choix de plateforme est détaillé sur la page <a href="/automatisation-n8n-make/" style="color:var(--accent);text-decoration:underline;">reconstruction sur n8n ou Make</a>.</p>
+        <p style="margin-top:16px;color:var(--body2);">Quatre réponses possibles, de la moins coûteuse à la plus coûteuse. L'audit dit laquelle s'applique, poste par poste.</p>
+      </div>
+
+      <div style="max-width:940px;margin-top:40px;">
+        <div class="ladder__legend"><span>Option</span><span>Coût relatif</span></div>
+        <div class="ladder">
+        <div class="ladder__row reveal" data-delay="0.00">
+          <span class="ladder__name">Reprendre</span>
+          <span class="ladder__body">Documenter, stabiliser et remettre sous supervision ce qui fonctionne déjà. Un scénario opérationnel n'a pas besoin d'être réécrit pour être fiable.</span>
+          <span class="ladder__cost" aria-label="Coût relatif : 1 sur 4"><span class="ladder__tick is-on"></span><span class="ladder__tick"></span><span class="ladder__tick"></span><span class="ladder__tick"></span></span>
+        </div>
+        <div class="ladder__row reveal" data-delay="0.06">
+          <span class="ladder__name">Corriger</span>
+          <span class="ladder__body">Réparer les points qui échouent : clés expirées, comptes personnels, doublons, exécutions bloquées. Le reste est laissé en l'état.</span>
+          <span class="ladder__cost" aria-label="Coût relatif : 2 sur 4"><span class="ladder__tick is-on"></span><span class="ladder__tick is-on"></span><span class="ladder__tick"></span><span class="ladder__tick"></span></span>
+        </div>
+        <div class="ladder__row reveal" data-delay="0.12">
+          <span class="ladder__name">Migrer</span>
+          <span class="ladder__body">Changer de plateforme quand le coût d'exécution devient prohibitif, ou qu'une contrainte de souveraineté l'impose. Pas avant.</span>
+          <span class="ladder__cost" aria-label="Coût relatif : 3 sur 4"><span class="ladder__tick is-on"></span><span class="ladder__tick is-on"></span><span class="ladder__tick is-on"></span><span class="ladder__tick"></span></span>
+        </div>
+        <div class="ladder__row ladder__row--last reveal" data-delay="0.18">
+          <span class="ladder__name">Reconstruire</span>
+          <span class="ladder__body">Dernier recours, et seulement sur les briques dont l'audit a montré qu'elles ne sont pas récupérables.</span>
+          <span class="ladder__cost" aria-label="Coût relatif : 4 sur 4"><span class="ladder__tick is-on"></span><span class="ladder__tick is-on"></span><span class="ladder__tick is-on"></span><span class="ladder__tick is-on"></span></span>
+        </div>
+        </div>
+      </div>
+
+      <div class="maxw-3 reveal" style="margin-top:44px;">
+        <p>La reprise consiste à documenter, stabiliser et remettre sous supervision l'existant. Un scénario Make fonctionnel n'a pas besoin d'être réécrit sur n8n pour la seule raison qu'un prestataire préfère n8n. Le choix de plateforme est détaillé sur la page <a href="/automatisation-n8n-make/" style="color:var(--accent);text-decoration:underline;">reconstruction sur n8n ou Make</a>.</p>
         <p style="margin-top:16px;">La migration n'intervient que lorsqu'elle est justifiée par un coût d'exécution devenu prohibitif, une contrainte de souveraineté, ou une limite technique bloquante.</p>
         <p style="margin-top:16px;">La reconstruction reste possible, mais elle est proposée en dernier recours et seulement sur les briques dont l'audit a montré qu'elles ne sont pas récupérables.</p>
         <p style="margin-top:16px;">Quand le motif de la reprise est réglementaire, le cadrage suit la méthode décrite sur la page <a href="/ia-souveraine-rgpd/" style="color:var(--accent);text-decoration:underline;">automatisation IA et RGPD</a>.</p>
