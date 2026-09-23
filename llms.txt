@@ -38,6 +38,7 @@
 - [n8n, c'est quoi ?](https://lookahead.fr/blog/n8n-cest-quoi/)
 - [n8n vs Make vs Zapier](https://lookahead.fr/blog/n8n-vs-make-vs-zapier/)
 - [10 workflows n8n pour une PME](https://lookahead.fr/blog/workflows-n8n-pme/)
+- [Agent IA ou secrétariat : quel choix pour sa PME ?](https://lookahead.fr/blog/agent-ia-vs-secretariat-telephonique/)
 - [Comment un voicebot IA prend vos rendez-vous automatiquement](https://lookahead.fr/blog/voicebot-prise-de-rendez-vous-automatique/)
 - [Agent vocal IA : guide et comparatif](https://lookahead.fr/blog/agent-vocal-ia-comparatif/)
 - [Agent vocal IA vs SVI](https://lookahead.fr/blog/agent-vocal-ia-vs-svi/)
